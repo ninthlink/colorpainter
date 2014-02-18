@@ -1,2 +1,5 @@
 /* jquerymobile css tweaks here */
 .ui-block-c.twocol { width: 75% }
+.ui-page-theme-a label a, html .ui-bar-a label a, html .ui-body-a label a, html body .ui-group-theme-a label a { font-weight: 400; text-decoration: none }
+
+#logo { margin: 10px auto; max-width: 100%; height: auto; display: block; }
