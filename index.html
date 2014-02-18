@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ROI Calculator | Seiko</title>
+<link rel="stylesheet" href="includes/jquery.mobile-1.4.1.min.css" type="text/css" />
+<link rel="stylesheet" href="includes/roi.css" type="text/css" />
+</head>
+
+<body>
+<div id="page" data-role="page">
+  <form action="#" method="post">
+  <div data-role="header">
+  	<h1>ROI Calculator</h1>
+  </div>
+  <div data-role="content">
+      <div class="ui-body ui-body-a ui-corner-all">
+        <fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
+          <legend>Units of Measurment</legend>
+          <label for="measure-inch">inches</label>
+          <input type="radio" name="measure" id="measure-inch" value="inch" checked="checked" />
+          <label for="measure-metric">metric</label>
+          <input type="radio" name="measure" id="measure-metric" value="metric" disabled="disabled" />	
+        </fieldset>
+			</div>
+      
+      <br />
+      
+      <div class="ui-body ui-body-a ui-corner-all">
+        <div class="ui-field-contain">
+          <label for="price">MSRP Price of Competitive Printer</label><input name="price" id="price" min="0" max="75000" step="50" value="20000" type="range" />
+        </div>
+        <div class="ui-field-contain ui-nodisc-icon ui-alt-icon">
+          <label for="speed"><span class="ui-grid-c"><span class="ui-block-c twocol">Advertised Product/Normal Mode Speed SQFT per Hour</span><span class="ui-block-c"><a href="#speedinfo" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline" title="Learn more">*</a></span></span></label><input name="speed" id="speed" value="128" type="number" />
+          
+<div data-role="popup" id="speedinfo" class="ui-content" data-theme="a">
+  <p>Other factors can affect this such as ink density,...</p>
+</div>
+        </div>
+        <div class="ui-field-contain">
+          <label for="inkpersqft">Cost of Ink per SQFT</label><input name="inkpersqft" id="inkpersqft" min="0" max="1" step="0.01" value="0.28" type="range" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="rollsperwk">Number of 54"x50YD rolls/week</label><input name="rollsperwk" id="rollsperwk" min="0.5" max="5" step="0.5" value="3" type="range" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="sqftperwk">Number of 54"x50YD rolls/week</label><input name="sqftperwk" id="sqftperwk" value="1800" type="text" readonly="readonly" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="inkpermonth">Total Ink Cost per Month</label><input name="inkpermonth" id="inkpermonth" value="2184" type="text" readonly="readonly" />
+        </div>
+        <fieldset class="ui-field-contain" data-role="controlgroup" data-type="horizontal">
+        <!--
+          <label for="amortper">Amortization Period Years</label>
+          <select name="amortper" id="amortper">
+            <option value="3">3</option>
+            <option value="5">5</option>
+          </select>
+        -->
+          <legend>Amortization Period Years</legend>
+          <label for="amortper-3">3</label>
+          <input type="radio" name="amortper" id="amortper-3" value="3" checked="checked" />
+          <label for="amortper-5">5</label>
+          <input type="radio" name="amortper" id="amortper-5" value="5" />
+        </fieldset>
+        <div class="ui-field-contain">
+          <label for="monthlyamort">Monthly Amortization</label><input name="monthlyamort" id="monthlyamort" value="375" type="text" readonly="readonly" />
+        </div>
+      </div>
+      
+      <br />
+      
+      <div class="ui-body ui-body-a ui-corner-all">
+        <fieldset class="ui-field-contain">
+          <label for="printer">Seiko Printer Looking At</label>
+          <select name="printer" id="printer">
+            <option value="m64">M-64 7 Color</option>
+          </select>
+        </fieldset>
+        <div class="ui-field-contain">
+          <label for="psellprice">Sell Price of Printer</label><input name="psellprice" id="psellprice" value="42600" type="text" readonly="readonly" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="pinkpersqft">Cost of Ink Per SQFT</label><input name="pinkpersqft" id="pinkpersqft" value="0.16" type="text" readonly="readonly" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="psqftperwk">Number of SQFT Per Week</label><input name="psqftperwk" id="psqftperwk" value="1800" type="number" readonly="readonly" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="pinkpermonth">Total Ink Cost per Month</label><input name="pinkpermonth" id="pinkpermonth" value="1248" type="text" readonly="readonly" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="pamortper">Amortization Period Years</label><input name="pamortper" id="pamortper" value="3" type="number" readonly="readonly" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="pmonthlyamort">Monthly Amortization</label><input name="pmonthlyamort" id="pmonthlyamort" value="1183.33" type="text" readonly="readonly" />
+        </div>
+      </div>
+      
+      <br />
+      
+      <div class="ui-body ui-body-a ui-corner-all">
+        <div class="ui-field-contain">
+          <label for="costpermonth">Savings or loss including Ink cost Per Month</label><input name="costpermonth" id="costpermonth" value="127.67" type="text" readonly="readonly" />
+        </div>
+        <div class="ui-field-contain">
+          <label for="additional">Additional Profit or Loss for Term of Lease</label><input name="additional" id="additional" value="383" type="text" readonly="readonly" />
+        </div>
+      </div>
+  </div>
+  </form>
+</div>
+<script type="text/javascript" src="includes/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="includes/jquery.mobile-1.4.1.min.js"></script>
+<script type="text/javascript" src="includes/roi.js"></script>
+</body>
+</html>
