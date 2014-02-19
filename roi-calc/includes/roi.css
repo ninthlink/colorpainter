@@ -1,4 +1,6 @@
 /* and then */
+.ui-page-theme-a .ui-bar-inherit { background: #fff }
+
 .ui-block-c.twocol { width: 75% }
 .ui-page-theme-a label a, html .ui-bar-a label a, html .ui-body-a label a, html body .ui-group-theme-a label a { font-weight: 400; text-decoration: none }
 
