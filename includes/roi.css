@@ -24,7 +24,9 @@ select,
 .ui-select .ui-btn ,
 .printerinfos,
 .plaintext.stripe,
-.plaintext.stripe input {
+.plaintext.stripe input,
+a.rpop,
+.ui-popup {
 	font-family: Arial, sans-serif;
 }
 body,
@@ -32,7 +34,7 @@ body,
 .ui-btn {
 	font-family: 'Montserrat-Regular', Arial, sans-serif;
 }
-.ui-header h1.ui-title strong,
+h1.ui-title strong,
 .ui-mobile label strong {
 	font-family: 'Montserrat-Bold', Arial, sans-serif;
 	font-weight: 400;
@@ -53,12 +55,16 @@ body,
 }
 .ui-body-a.ui-popup {
 	background: #fff;
+	font-size: 13px;
+	line-height: 1.2;
+	text-shadow: none;
 }
 .ui-body-a,
 .ui-header .ui-title {
 	width: 676px;
 	margin: 0 auto;
 }
+h1.ui-title,
 .ui-header h1.ui-title {
 	color: #31669a;
 	font-size: 3em;
@@ -67,10 +73,10 @@ body,
 	padding: 0.5em 0;
 	text-align: left;
 }
-.ui-header h1.ui-title strong {
+h1.ui-title strong {
 	color: #333;
 }
-.ui-header h1.ui-title  img {
+h1.ui-title  img {
 	display: block;
 	margin-bottom: 0.3em;
 }
@@ -80,15 +86,15 @@ body,
 .ui-input-text input.bold { font-weight: 700 }
 
 .ui-field-contain>label {
-	width: 83%;
+	width: 81%;
 }
 .ui-field-contain>label~[class*=ui-],
 .ui-field-contain .ui-controlgroup-controls {
-	width: 15%;
+	width: 17%;
 }
 .ui-field-contain.mo>label,
 .ui-field-contain.nomo>label {
-	width: 78%;
+	width: 75%;
 }
 .ui-field-contain.nomo>label~[class*=ui-] {
 	width: 20%;
@@ -98,7 +104,7 @@ body,
 	font-size: 0.9em;
 	line-height: 1.5;
 	margin: 0.5em 0 0;
-	width: 5%;
+	width: 6%;
 }
 .ui-page-theme-a .plaintext .ui-input-text.ui-body-inherit,
 html .plaintext .ui-input-text.ui-body-inherit,
@@ -219,7 +225,7 @@ label.ui-btn.ui-btn-active.ui-radio-on {
 	width: 80%;
 }
 .plaintext .ui-field-contain.bigger input {
-	font-size: 4em;
+	font-size: 3.8em;
 	padding: 0 0 0.4em;
 }
 .plaintext .ui-field-contain.bigger.mo small {
@@ -247,6 +253,9 @@ h4 {
 .printerinfos {
 	margin-bottom: 4em;
 }
+.printonly {
+	display: none;
+}
 .ui-mobile .mainline label {
 	font-size: 0.95em;
 	margin-top: 1em;
@@ -265,4 +274,40 @@ h4 {
 }
 .plaintext.stripe .ui-field-contain>label~[class*=ui-] {
 	width: 41%;
+}
+p.disc {
+	margin: 2em 0;
+}
+.rbtns {
+	float: left;
+	width: 74px;
+	position: absolute;
+	top: 1.5em;
+	right: 0.4em;
+}
+a.rpop,
+.ui-mobile .ui-page-theme-a label a.rpop {
+	font-size: 13px;
+	font-weight: 700;
+	color: #efefef;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	background: #bbb;
+	border-radius: 9px;
+	text-align: center;
+}
+.rbtns a.rpop {
+	float: left;
+	width: 32px;
+	height: 32px;
+	background: #0085ca url(images/btns.gif) no-repeat 0 0;
+	border-radius: 16px;
+	text-align: left;
+	text-indent: -999em;
+}
+.rbtns a.rpop.save {
+	background-position: -32px 0;
+	margin-left: 10px;
 }

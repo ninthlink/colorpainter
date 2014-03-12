@@ -10,6 +10,7 @@
 		
 <link rel="stylesheet" href="includes/jquery.mobile-1.4.1.min.css" type="text/css" />
 <link rel="stylesheet" href="includes/roi.css" type="text/css" />
+<link rel="stylesheet" href="includes/print.css" type="text/css" media="print" />
 </head>
 
 <body>
@@ -32,13 +33,17 @@
 		</div>
 		<div class="fieldrow disabled">
 			<label for="rollsperwk">Number of 54"x50 YD Rolls per Week</label>
-			<!--input name="rollsperwk" id="rollsperwk" min="0.5" max="5" step="0.5" value="2" type="range" /-->
 			<select name="rollsperwk" id="rollsperwk" disabled="disabled">
 				<option value="1">1</option>
 				<option value="2" selected="selected">2</option>
 				<option value="3">3</option>
 				<option value="4">4</option>
 				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
 			</select>
 		</div>
 		<div class="fieldrow disabled">
@@ -50,7 +55,7 @@
 			<label for="amortper-3">3</label>
 			<input type="radio" name="amortper" id="amortper-3" value="3" disabled="disabled" />
 			<label for="amortper-5">5</label>
-			<input type="radio" name="amortper" id="amortper-5" value="5" checked="checked" disabled="disabled" />
+			<input type="radio" name="amortper" id="amortper-5" value="5" disabled="disabled" />
 		</fieldset>
 		<div class="plaintext disabled">
 			<div class="ui-field-contain">
@@ -85,17 +90,17 @@
 			<input name="price" id="price" value="20000" type="text" class="money" data-m-dec="0" />
 		</div>
 		<div class="fieldrow ui-nodisc-icon ui-alt-icon">
-			<label for="speed">Advertised Product/Normal Mode Speed SQFT per&nbsp;Hour&nbsp;<a href="#speedinfo" data-rel="popup" data-transition="pop" title="Learn more">*</a></label>
+			<label for="speed">Advertised Product/Normal Mode Speed SQFT per&nbsp;Hour &nbsp; <a href="#speedinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
 			<input name="speed" id="speed" value="128" type="text" class="number" data-m-dec="0" />
-			<div data-role="popup" id="speedinfo" class="ui-content" data-theme="a">
+			<div data-role="popup" id="speedinfo" class="ui-content" data-theme="a" style="max-width:320px">
 				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 				<p>* Other factors can affect this such as ink density,...</p>
 			</div>
 		</div>
 		<div class="fieldrow">
-			<label for="inkpersqft">Cost of Ink per&nbsp;SQFT&nbsp;<a href="#costinfo" data-rel="popup" data-transition="pop" title="Learn more">**</a></label>
+			<label for="inkpersqft">Cost of Ink per&nbsp;SQFT &nbsp; <a href="#costinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
 			<input name="inkpersqft" id="inkpersqft" value="0.28" type="text" class="money" />
-			<div data-role="popup" id="costinfo" class="ui-content" data-theme="a" style="max-width:300px">
+			<div data-role="popup" id="costinfo" class="ui-content" data-theme="a" style="max-width:320px">
 				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 				<p>** This is the industry average. To calculate, take the price of ink and divide by Average SQFT you get out of one ink cartridge. (industry average of 1 mL ink cartridge = 1 SQFT actual usage but can vary based on ink type, media, profile, print file, saturation level and environmental conditions.</p>
 			</div>
@@ -106,9 +111,9 @@
 				<input name="prollsperwk" id="prollsperwk" value="2" type="text" readonly="readonly" />
 			</div>
 			<div class="ui-field-contain">
-				<label for="sqftperwk">Printed SQFT per&nbsp;Week&nbsp;<a href="#sqftinfo" data-rel="popup" data-transition="pop" title="Learn more">**</a></label>
+				<label for="sqftperwk">Printed SQFT per&nbsp;Week &nbsp; <a href="#sqftinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
 				<input name="sqftperwk" id="sqftperwk" value="1200" type="text" class="number" data-m-dec="0" readonly="readonly" />
-				<div data-role="popup" id="sqftinfo" class="ui-content" data-theme="a" style="max-width:300px">
+				<div data-role="popup" id="sqftinfo" class="ui-content" data-theme="a" style="max-width:320px">
 					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 					<p>*** Assumes that you get 600 SQFT of printable media per roll of 675 SQFT</p>
 				</div>
@@ -135,6 +140,14 @@
 	</div>
 	<div class="ui-body ui-body-a">
 		<h4>RESULTS</h4>
+		<div class="rbtns"><a href="#print" data-role="none" title="print" class="rpop print" onclick="window.print(); return false">print</a> <a href="#save" data-role="none" data-rel="popup" data-transition="pop" title="save" class="rpop save">save</a></div>
+			<div data-role="popup" id="save" class="ui-content" data-theme="a" style="max-width:320px">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				<p>See these same results again, at:</p>
+				<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset saver">
+				<input name="saver" id="saver" value="" type="text" readonly="readonly" placeholder="Save" data-enhanced="true" />
+				</div>
+			</div>
 		<h1><span class="pname"></span><br />Printer vs. Competitor</h1>
 		<div class="plaintext">
 			<div class="ui-field-contain mo bigger col2">
@@ -164,6 +177,8 @@
 		</div>
 		<div class="col2 printerimg"></div>
 		<div class="col1 printerinfos"></div>
+		
+		<h1 class="ui-title printonly"><img src="includes/logo.png" alt="SII Seiko Instruments USA" /><strong>Simple</strong> ROI Calculator</h1>
 		<div class="plaintext stripe">
 			<h5>COMPETITOR PRINTER</h5>
 			<div class="ui-field-contain">
@@ -237,12 +252,13 @@
 				<label for="spmonthlyamort">Monthly Amortization</label>
 				<input name="spmonthlyamort" id="spmonthlyamort" value="" type="text" readonly="readonly" class="money" />
 			</div>
-			<p><br /></p>
+		</div>
+		<div class="plaintext stripe last">
 			<p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 mL ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. The ColorPainter ink per SQFT is calculated on the same premise, but takes into account its higher pigment load. 3For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll.</p>
 			<!--p class="disc jt">Please note: Cost justification is based on consumable savings. Other factors can also have a big impact on increased productivity and lower labor costs.</p-->
-			<p><br /></p>
-			<p><a href="#seiko" data-role="none">start search again</a></p>
+			<p class="again"><a href="#seiko" data-role="none">start search again</a></p>
 		</div>
+
 	</div>
 </div>
 </form>
