@@ -1,10 +1,10 @@
 CACHE MANIFEST
-# v 1.3.1 / 2013-03-11
+# v 1.3.7 / 2013-03-11
 
 CACHE:
 index.html
 includes/jquery.mobile-1.4.1.min.css
-includes/roi.css
+includes/roi.min.css
 includes/print.css
 includes/logo.png
 includes/fonts/montserrat-bold-webfont.eot
@@ -24,16 +24,14 @@ includes/images/icons-png/delete-white.png
 includes/images/icons-svg/delete-white.svg
 includes/jquery-1.10.2.min.js
 includes/jquery.mobile-1.4.1.min.js
-includes/autoNumeric.js
-includes/roi.js
+includes/autoNumeric.min.js
+includes/roi.min.js
 includes/images/printers/h2p74.jpg
 includes/images/printers/h2p104.jpg
 includes/images/printers/h274.jpg
 includes/images/printers/h2104.jpg
 includes/images/printers/m64.jpg
 includes/images/printers/w64.jpg
-apple-touch-icon.png
-apple-touch-icon-76x76.png
 
 NETWORK:
 *
