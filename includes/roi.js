@@ -79,7 +79,7 @@ Jetrix KX5
 */
 var defaultPrinter = 0; // index to choose
 var roiURL = 'http://ninthlink.me/seiko/calc/';
-var roiDebug = true; // true = console.log debug msgs ?
+var roiDebug = false; // true = console.log debug msgs ?
 var roiOpts = {
 	aSign: '$'
 };
