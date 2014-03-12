@@ -89,50 +89,52 @@ var roiSave = '';
 function roi_update() {
 	roi_dbg('## ROI Update :: printer change');
 	
-	// undisable things?
-	var sibs = $('#printer').parents('fieldset').siblings().removeClass('disabled');
-	/*
-	sibs.find('.ui-input-text input').prop('disabled',false).textinput('enable').textinput('refresh');
-	sibs.find('.ui-select select').prop('disabled',false).selectmenu('enable').selectmenu('refresh');
-	sibs.find('.ui-radio input').prop('disabled',false).checkboxradio('enable').checkboxradio('refresh');
-	*/
-	
-	sibs.find('.ui-input-text input').textinput('enable');
-	sibs.find('.ui-select select').selectmenu('enable');
-	sibs.find('.ui-radio input').checkboxradio('enable');
-	
 	var C14 = $('#printer').val();
 	roi_dbg('printer #'+ C14);
 	roi_dbg(printers[C14]);
 	
-	var C15 = printers[C14]['msrp'];
-	roi_dbg('psellprice = '+ C15);
-	$('#psellprice').val(C15).autoNumeric('update');
-	$('#spsellprice').val(C15).autoNumeric('update');
-	
-	var C16 = printers[C14]['speed'];
-	roi_dbg('pspeed = '+ C16);
-	$('#pspeed').val(C16).autoNumeric('update');
-	$('#spspeed').val(C16).autoNumeric('update');
-	
-	var C17 = printers[C14]['ink'];
-	roi_dbg('pinkpersqft = '+ C17);
-	$('#pinkpersqft').val(C17).autoNumeric('update');
-	$('#spinkpersqft').val(C17).autoNumeric('update');
-	
-	// also printer name
-	$('.pname').html( printers[C14]['name'] );
-	$('#sprinter').val( printers[C14]['name'] );
-	// also printer infos
-	$('.printerimg, .printerinfos').empty();
-	$('<img />').attr( 'src', 'includes/images/printers/'+ printers[C14]['img'] +'.jpg' ).appendTo('.printerimg');
-	var bettername = (printers[C14]['name']).replace(' - ', '<span class="printonly"> - </span><br />').replace(' color',' Color Printer');
-	var descp = printers[C14]['desc'];
-	descp = descp.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
-	$('.printerinfos').html( '<h3>'+ bettername +'</h3>'+ descp );
-	
-	// and then
-	roi_recalc();
+	if ( C14 > 0 ) {
+		// undisable things?
+		var sibs = $('#printer').parents('fieldset').siblings().removeClass('disabled');
+		/*
+		sibs.find('.ui-input-text input').prop('disabled',false).textinput('enable').textinput('refresh');
+		sibs.find('.ui-select select').prop('disabled',false).selectmenu('enable').selectmenu('refresh');
+		sibs.find('.ui-radio input').prop('disabled',false).checkboxradio('enable').checkboxradio('refresh');
+		*/
+		
+		sibs.find('.ui-input-text input').textinput('enable');
+		sibs.find('.ui-select select').selectmenu('enable');
+		sibs.find('.ui-radio input').checkboxradio('enable');
+		
+		var C15 = printers[C14]['msrp'];
+		roi_dbg('psellprice = '+ C15);
+		$('#psellprice').val(C15).autoNumeric('update');
+		$('#spsellprice').val(C15).autoNumeric('update');
+		
+		var C16 = printers[C14]['speed'];
+		roi_dbg('pspeed = '+ C16);
+		$('#pspeed').val(C16).autoNumeric('update');
+		$('#spspeed').val(C16).autoNumeric('update');
+		
+		var C17 = printers[C14]['ink'];
+		roi_dbg('pinkpersqft = '+ C17);
+		$('#pinkpersqft').val(C17).autoNumeric('update');
+		$('#spinkpersqft').val(C17).autoNumeric('update');
+		
+		// also printer name
+		$('.pname').html( printers[C14]['name'] );
+		$('#sprinter').val( printers[C14]['name'] );
+		// also printer infos
+		$('.printerimg, .printerinfos').empty();
+		$('<img />').attr( 'src', 'includes/images/printers/'+ printers[C14]['img'] +'.jpg' ).appendTo('.printerimg');
+		var bettername = (printers[C14]['name']).replace(' - ', '<span class="printonly"> - </span><br />').replace(' color',' Color Printer');
+		var descp = printers[C14]['desc'];
+		descp = descp.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
+		$('.printerinfos').html( '<h3>'+ bettername +'</h3>'+ descp );
+		
+		// and then
+		roi_recalc();
+	}
 }
 
 function roi_recalc(e) {
@@ -376,6 +378,8 @@ jQuery(document).one('pagechange', function() {
 		$(this).children('.ui-field-contain:even').addClass('even');
 	});
 	
+	$(document).on("click","#saver",function(a){a.preventDefault();selectText($(this));});
+	
 	// bind for subsequent updates
 	$(document).bind('pagechange', function() {
 		roi_dbg('PPPPPPPP PAGELOAD PPPPPPP');
@@ -399,3 +403,6 @@ function roiBase36toInt(alph) {
 	}
 	return i;
 }
+
+function selectText(t){console.log('**selecttext'); var a=t[0],b,c;"INPUT"===a.tagName?a.select():document.body.createTextRange?(b=document.body.createTextRange(),b.moveToElementText(a),b.select()):window.getSelection&&(c=window.getSelection(),b=document.createRange(),
+b.selectNodeContents(a),c.removeAllRanges(),c.addRange(b))}
