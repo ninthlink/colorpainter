@@ -386,7 +386,7 @@ jQuery(document).one('pagechange', function() {
 		var emto = prompt("Please enter your email address","you@domain.com");
 		if ( emto!= null ) {
 			var res = $('#saver').val();
-			var lo = "mailto:"+ emto +"?subject=Seiko+ROI+Calculator&body=Check+out+these+results:+"+ res;
+			var lo = "mailto:"+ emto +"?subject=Seiko ROI Calculator&body=Check out these results: "+ res;
 			$(this).attr('href',lo);
 		}
 	});
