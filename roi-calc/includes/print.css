@@ -12,11 +12,19 @@ body,
 .printonly {
 	display: block;
 }
+#results .ui-body-a,
+#results h4 {
+	padding: 0;
+	margin: 0;
+}
+.ui-page-theme-a .ui-bar-inherit {
+	margin: 0 0 1em;
+}
 #results .ui-body h1.ui-title.printonly {
 	float: left;
 	line-height: 1;
+	margin: 0 0 1em;
 	width: 100%;
-	margin: 2em 0 1em;
 	page-break-before: always;
 	page-break-inside: avoid;
 }
@@ -29,9 +37,6 @@ body,
 .ui-page-theme-a .ui-bar-inherit {
 	border-top: 5px solid #333;
 	border-bottom: 1px solid #d3d3d3;
-}
-.ui-page-theme-a .ui-bar-inherit {
-	margin: 0 1em;
 }
 .printerinfos .printonly {
 	display: inline;
@@ -50,7 +55,7 @@ body,
 	border-bottom: 1px solid #ccc;
 }
 p.disc {
-	margin: 2.5em 0 0;
+	margin: 2em 0 0;
 }
 .plaintext.stripe.last {
 	border-bottom: none;
