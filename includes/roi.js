@@ -5,7 +5,7 @@ var printers = [
 		ink: 0.22,
 		msrp: 17000,
 		speed: 128,
-		img: 'w64',
+		img: 'w64s',
 		desc: '<ul><li>64" flexible, reliable high-performance low-solvent printer</li><li>Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Available with two neon florescent inks that glow under black light</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
@@ -15,7 +15,7 @@ var printers = [
 		msrp: 42600,
 		speed: 356,
 		img: 'm64',
-		desc: '<ul><li>64" high-speed eco-solvent printer with low odor inks</li><li>Very low cost per square foot to operate</li><li>Superior durability of outdoor and indoor graphics</li><li>SX inks offer a wide color gamut, high vividness and high density great for backlit applications</li><li>Unmatched productivity and quality </li><li>Automatic Print Adjustment</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty (pending March 2014)</li></ul>',
+		desc: '<ul><li>64" high-speed eco-solvent printer with low odor inks</li><li>Very low cost per square foot to operate</li><li>Superior durability of outdoor and indoor graphics</li><li>SX inks offer a wide color gamut, high vividness and high density great for backlit applications</li><li>Unmatched productivity and quality</li><li>Automatic Print Adjustment</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty (pending March 2014)</li></ul>',
 		url: '#'
 	},
 	{
@@ -24,7 +24,7 @@ var printers = [
 		msrp: 50000,
 		speed: 284,
 		img: 'h274',
-		desc: '<ul><li>74" high-performance outdoor and indoor graphics printer</li><li>Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films.</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
+		desc: '<ul><li>74" high-performance outdoor and indoor graphics printer</li><li>Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
 	{
@@ -42,7 +42,7 @@ var printers = [
 		msrp: 69000,
 		speed: 308,
 		img: 'h2104',
-		desc: '<ul><li>104" High-performance outdoor and indoor graphics printer</li><li>Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films.</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
+		desc: '<ul><li>104" High-performance outdoor and indoor graphics printer</li><li>Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
 	{
@@ -60,7 +60,7 @@ var printers = [
 		msrp: 53000,
 		speed: 763,
 		img: 'h2p74',
-		desc: '<ul><li>74" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability </li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
+		desc: '<ul><li>74" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
 		url: '#'
 	},
 	{
@@ -69,13 +69,13 @@ var printers = [
 		msrp: 72000,
 		speed: 856,
 		img: 'h2p104',
-		desc: '<ul><li>104" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability </li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
+		desc: '<ul><li>104" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
 		url: '#'
 	}
 ];
 /*
 Jetrix KX5
-<ul><li>4\' x 8\' UV flatbed printer with roll-feed option and white, primer/varnish options</li><li>High-performance, reliable and easy operations under high-volume conditions</li><li>Quality components engineered for long-term reliability</li><li>InkTec UMS UV inks are half the price of comparable UV inks without sacrificing quality or reliability. That means lower operational and running costs, lower inventory costs and more profit for your business.</li><li>Indoor, outdoor and industrial applications including 1, 2, or 3 layer printing on signs, trophies, awards, packaging, control panels and more</li></ul>
+<ul><li>4\' x 8\' UV flatbed printer with roll-feed option and white, primer/varnish options</li><li>High-performance, reliable and easy operations under high-volume conditions</li><li>Quality components engineered for long-term reliability</li><li>InkTec UMS UV inks are half the price of comparable UV inks without sacrificing quality or reliability. That means lower operational and running costs, lower inventory costs and more profit for your business</li><li>Indoor, outdoor and industrial applications including 1, 2, or 3 layer printing on signs, trophies, awards, packaging, control panels and more</li></ul>
 */
 var defaultPrinter = 0; // index to choose
 var roiURL = 'http://ninthlink.me/seiko/calc/';
@@ -134,84 +134,83 @@ function roi_update() {
 function roi_recalc(e) {
 	//roi_dbg('## ROI Update :: recalc');
 	
-	var C4 = $('#price').autoNumeric('get');
-	var C5 = $('#speed').autoNumeric('get');
-	var C600 = Math.round( $('#inkpersqft').autoNumeric('get') * 100, 2 );
-	var C6 = C600 / 100;
-	var C7 = $('#rollsperwk').val();
-	$('#prollsperwk').val(C7);
-	$('#sprollsperwk').val(C7);
-	$('#srollsperwk').val(C7);
+	var c_price = $('#price').autoNumeric('get');
+	var c_speed = $('#speed').autoNumeric('get');
+	var c_ink00 = Math.round( $('#inkpersqft').autoNumeric('get') * 100, 2 );
+	var c_ink = c_ink00 / 100;
+	var rollsperwk = $('#rollsperwk').val();
+	$('#prollsperwk,#sprollsperwk,#srollsperwk').val(rollsperwk);
 	
-	var C8 = 600 * C7;
-	//roi_dbg('C8 "sqftperwk" = '+ C8);
-	$('#sqftperwk').val(C8).autoNumeric('update');
-	$('#ssqftperwk').val(C8).autoNumeric('update');
+	var sqftperwk = 600 * rollsperwk;
+	//roi_dbg('C8 "sqftperwk" = '+ sqftperwk);
+	$('#sqftperwk,#ssqftperwk').val(sqftperwk).autoNumeric('update');
+	$('#psqftperwk,#spsqftperwk').val(sqftperwk);
 	
-	var C9 = roiRound((C6*C8)*(52/12));
-	//roi_dbg('C9 "inkpermonth" = '+ C9);
-	$('#inkpermonth').val(C9).autoNumeric('update');
-	$('#sinkpermonth').val(C9).autoNumeric('update');
+	var c_inkpermonth = roiRound((c_ink*sqftperwk)*(52/12));
+	//roi_dbg('C9 c_inkpermonth "inkpermonth" = '+ c_inkpermonth);
+	$('#inkpermonth,#sinkpermonth').val(c_inkpermonth).autoNumeric('update');
 	
-	var C10 = $('#amortper-5').prop('checked') ? 5 : 3;
+	var years = $('#amortper-5').prop('checked') ? 5 : 3;
+	//roi_dbg('C21 years "pamortper" = '+ years);
+	$('#pamortper, #samortper, #spamortper').val(years);
 	
-	var C11 = roiRound(C4/(C10*12));
+	var c_monthly = roiRound(c_price/(years*12));
 	//roi_dbg('C11 "monthlyamort" = '+ C11);
-	$('#monthlyamort').val(C11).autoNumeric('update');
-	$('#smonthlyamort').val(C11).autoNumeric('update');
+	$('#monthlyamort,#smonthlyamort').val(c_monthly).autoNumeric('update');
 	
-	var C14 = $('#printer').val();
-	var C15 = $('#psellprice').autoNumeric('get');
-	var C16 = $('#pspeed').autoNumeric('get');
-	var C17 = $('#pinkpersqft').autoNumeric('get');
+	var s_printer = $('#printer').val();
+	var s_price = $('#psellprice').autoNumeric('get');
+	var s_speed = $('#pspeed').autoNumeric('get');
+	var s_ink = printers[s_printer]['ink'];//$('#pinkpersqft').autoNumeric('get');
 	
-	var C19 = C8;
-	//roi_dbg('C17 "psqftperwk" = '+ C19);
-	$('#psqftperwk').val(C19);
-	$('#spsqftperwk').val(C19);
+	var s_inkpermonth = roiRound((s_ink*sqftperwk)*(52/12));
+	//roi_dbg('C20 "pinkpermonth: = '+ s_inkpermonth);
+	$('#pinkpermonth,#spinkpermonth').val(s_inkpermonth).autoNumeric('update');
 	
-	var C20 = roiRound((C17*C19)*(52/12));
-	//roi_dbg('C20 "pinkpermonth: = '+ C20);
-	$('#pinkpermonth').val(C20).autoNumeric('update');
-	$('#spinkpermonth').val(C20).autoNumeric('update');
+	var s_monthly = roiRound(s_price/(years*12));
+	//roi_dbg('C22 "pmonthlyamort" = '+ s_monthly);
+	$('#pmonthlyamort,#spmonthlyamort').val(s_monthly).autoNumeric('update');
 	
-	var C21 = C10;
-	//roi_dbg('C21 "pamortper" = '+ C21);
-	$('#pamortper, #samortper, #spamortper').val(C21);
+	var c_total = c_monthly+c_inkpermonth;
+	//roi_dbg('C25 "cmonthlytotal" = '+ c_total);
+	$('#cmonthlytotal').val(c_total).autoNumeric('update');
 	
-	var C22 = roiRound(C15/(C21*12));
-	//roi_dbg('C22 "pmonthlyamort" = '+ C22);
-	$('#pmonthlyamort').val(C22).autoNumeric('update');
-	$('#spmonthlyamort').val(C22).autoNumeric('update');
+	var s_total = s_monthly+s_inkpermonth;
+	//roi_dbg('C26 "monthlytotal" = '+ s_monthly);
+	$('#monthlytotal').val(s_total).autoNumeric('update');
 	
-	var C25 = C11+C9;
-	//roi_dbg('C25 "cmonthlytotal" = '+ C25);
-	$('#cmonthlytotal').val(C25).autoNumeric('update');
-	
-	var C26 = C22+C20;
-	//roi_dbg('C26 "monthlytotal" = '+ C26);
-	$('#monthlytotal').val(C26).autoNumeric('update');
-	
-	var C27 = roiRound((C9+C11)-(C20+C22));
-	//roi_dbg('C27 "costpermonth" = '+ C27);
-	var cpmzs = '' + ( C27 >= 1000 ? 0 : 2 );
-	$('#costpermonth').val(C27).autoNumeric('update', { mDec: cpmzs });
+	var costpermonth = roiRound( c_total - s_total );
+	//roi_dbg('C27 "costpermonth" = '+ costpermonth);
+	var cpmzs = '' + ( costpermonth >= 1000 ? 0 : 2 );
+	$('#costpermonth').val(costpermonth).autoNumeric('update', { mDec: cpmzs });
 	// & check for "Savings" vs "Loss"
-	$('#costpermonth').parent().siblings('label').find('.save').html( C27 >= 0 ? 'Savings' : 'Loss');
+	$('#costpermonth').parent().siblings('label').find('.save').html( costpermonth >= 0 ? 'Savings' : 'Loss');
 	
-	var C28 = C27*(C21*12);
-	//roi_dbg('C28 "additional" = '+ C28);
-	$('#additional').val(C28).autoNumeric('update');
+	var inkpermonth = roiRound( c_inkpermonth - s_inkpermonth );
+	//roi_dbg('C27 "costpermonth" = '+ costpermonth);
+	var ipmzs = '' + ( inkpermonth >= 1000 ? 0 : 2 );
+	$('#inkcostpermonth').val(inkpermonth).autoNumeric('update', { mDec: ipmzs });
 	// & check for "Savings" vs "Loss"
-	$('#additional').parent().siblings('label').find('.save').html( C28 >= 0 ? 'Profit' : 'Loss');
+	$('#inkcostpermonth').parent().siblings('label').find('.save').html( inkpermonth >= 0 ? 'Savings' : 'Loss');
 	
-	var C29 = roiRound(((C8/C5)-(C19/C16))*52/12);
+	var inktot = inkpermonth * years * 12;
+	$('#inkcost').val(inktot).autoNumeric('update');
+	// & check for "Savings" vs "Loss"
+	$('#inkcost').parent().siblings('label').find('.save').html( inktot >= 0 ? 'Savings' : 'Loss');
+	
+	var profit = costpermonth*(years*12);
+	//roi_dbg('C28 "additional" = '+ profit);
+	$('#profit').val(profit).autoNumeric('update');
+	// & check for "Savings" vs "Loss"
+	$('#profit').parent().siblings('label').find('.save').html( profit >= 0 ? 'Profit' : 'Loss');
+	
+	var C29 = roiRound((( sqftperwk / c_speed ) - ( sqftperwk / s_speed ))*52/12);
 	//roi_dbg('C29 "esthrs" = '+ C29);
 	$('#esthrs').val(C29).autoNumeric('update');
 	// & check for "Savings" vs "Loss"
 	$('#esthrs').parent().siblings('label').find('.save').html( C29 >= 0 ? 'Savings' : 'Loss');
 	
-	roi_save(C10, C14, C4, C5, C600, C7);
+	roi_save(years, s_printer, c_price, c_speed, c_ink00, rollsperwk);
 }
 
 function roi_save(C10, C14, C4, C5, C600, C7) {
@@ -380,6 +379,16 @@ jQuery(document).one('pagechange', function() {
 	$(document).bind('pagechange', function() {
 		//roi_dbg('PPPPPPPP PAGELOAD PPPPPPP');
 		roi_update();
+	});
+	
+	$('.mailto').click(function() {
+		//mailto:you@domain.com?subject=Seiko+ROI+Calculator&body=Check+out+these+results
+		var emto = prompt("Please enter your email address","you@domain.com");
+		if ( emto!= null ) {
+			var res = $('#saver').val();
+			var lo = "mailto:"+ emto +"?subject=Seiko+ROI+Calculator&body=Check+out+these+results:+"+ res;
+			$(this).attr('href',lo);
+		}
 	});
 });
 var roi_unalph = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'a':10,'b':11,'c':12,'d':13,'e':14,'f':15,'g':16,'h':17,'i':18,'j':19,'k':20,'l':21,'m':22,'n':23,'o':24,'p':25,'q':26,'r':27,'s':28,'t':29,'u':30,'v':31,'w':32,'x':33,'y':34,'z':35};
