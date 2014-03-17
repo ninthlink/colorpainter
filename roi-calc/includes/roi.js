@@ -143,8 +143,7 @@ function roi_recalc(e) {
 	
 	var sqftperwk = 600 * rollsperwk;
 	//roi_dbg('C8 "sqftperwk" = '+ sqftperwk);
-	$('#sqftperwk,#ssqftperwk').val(sqftperwk).autoNumeric('update');
-	$('#psqftperwk,#spsqftperwk').val(sqftperwk);
+	$('#sqftperwk,#ssqftperwk,#psqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
 	
 	var c_inkpermonth = roiRound((c_ink*sqftperwk)*(52/12));
 	//roi_dbg('C9 c_inkpermonth "inkpermonth" = '+ c_inkpermonth);
