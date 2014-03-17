@@ -11,7 +11,7 @@ var printers = [
 	},
 	{
 		name: 'ColorPainter M-64s - 7 color',
-		ink: 0.16,
+		ink: 0.18,
 		msrp: 42600,
 		speed: 356,
 		img: 'm64',
