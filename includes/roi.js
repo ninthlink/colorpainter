@@ -4,8 +4,9 @@ var printers = [
 		name: 'ColorPainter W-64s - 6 color',
 		ink: 0.22,
 		msrp: 17000,
-		speed: 128,
+		spd: 128,
 		img: 'w64s',
+		iht: 212,
 		desc: '<ul><li>64" flexible, reliable high-performance low-solvent printer</li><li>Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Available with two neon florescent inks that glow under black light</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
@@ -13,8 +14,9 @@ var printers = [
 		name: 'ColorPainter M-64s - 7 color',
 		ink: 0.18,
 		msrp: 42600,
-		speed: 356,
+		spd: 356,
 		img: 'm64',
+		iht: 225,
 		desc: '<ul><li>64" high-speed eco-solvent printer with low odor inks</li><li>Very low cost per square foot to operate</li><li>Superior durability of outdoor and indoor graphics</li><li>SX inks offer a wide color gamut, high vividness and high density great for backlit applications</li><li>Unmatched productivity and quality</li><li>Automatic Print Adjustment</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty (pending March 2014)</li></ul>',
 		url: '#'
 	},
@@ -22,8 +24,9 @@ var printers = [
 		name: 'ColorPainter H2-74s - 8 color',
 		ink: 0.18,
 		msrp: 50000,
-		speed: 284,
+		spd: 284,
 		img: 'h274',
+		iht: 216,
 		desc: '<ul><li>74" high-performance outdoor and indoor graphics printer</li><li>Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
@@ -31,8 +34,9 @@ var printers = [
 		name: 'ColorPainter H2-74s - 4 color',
 		ink: 0.14,
 		msrp: 50000,
-		speed: 567,
+		spd: 567,
 		img: 'h274',
+		iht: 216,
 		desc: '<ul><li>74" High-performance outdoor and indoor graphics printer</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
@@ -40,8 +44,9 @@ var printers = [
 		name: 'ColorPainter H2-104s - 8 color',
 		ink: 0.18,
 		msrp: 69000,
-		speed: 308,
+		spd: 308,
 		img: 'h2104',
+		iht: 254,
 		desc: '<ul><li>104" High-performance outdoor and indoor graphics printer</li><li>Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
@@ -49,8 +54,9 @@ var printers = [
 		name: 'ColorPainter H2-104s - 4 color',
 		ink: 0.14,
 		msrp: 69000,
-		speed: 856,
+		spd: 856,
 		img: 'h2104',
+		iht: 254,
 		desc: '<ul><li>74" High-performance outdoor and indoor graphics printer</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
 		url: '#'
 	},
@@ -58,8 +64,9 @@ var printers = [
 		name: 'ColorPainter H2P-74s',
 		ink: 0.08,
 		msrp: 53000,
-		speed: 763,
+		spd: 763,
 		img: 'h2p74',
+		iht: 172,
 		desc: '<ul><li>74" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
 		url: '#'
 	},
@@ -67,8 +74,9 @@ var printers = [
 		name: 'ColorPainter H2P-104s',
 		ink: 0.08,
 		msrp: 72000,
-		speed: 856,
+		spd: 856,
 		img: 'h2p104',
+		iht: 152,
 		desc: '<ul><li>104" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
 		url: '#'
 	}
@@ -105,7 +113,7 @@ function roi_update() {
 		$('#psellprice').val(C15).autoNumeric('update');
 		$('#spsellprice').val(C15).autoNumeric('update');
 		
-		var C16 = printers[C14]['speed'];
+		var C16 = printers[C14]['spd'];
 		//roi_dbg('pspeed = '+ C16);
 		$('#pspeed').val(C16).autoNumeric('update');
 		$('#spspeed').val(C16).autoNumeric('update');
@@ -116,15 +124,16 @@ function roi_update() {
 		$('#spinkpersqft').val(C17).autoNumeric('update');
 		
 		// also printer name
-		$('.pname').html( printers[C14]['name'] );
-		$('#sprinter').val( printers[C14]['name'] );
+		var pname = printers[C14]['name'];
+		$('.pname').html( pname );
+		$('#sprinter').val( pname );
 		// also printer infos
 		$('.printerimg, .printerinfos').empty();
-		$('<img />').attr( 'src', 'includes/images/printers/'+ printers[C14]['img'] +'.jpg' ).appendTo('.printerimg');
-		var bettername = (printers[C14]['name']).replace(' - ', '<span class="printonly"> - </span><br />').replace(' color',' Color Printer');
-		var descp = printers[C14]['desc'];
-		descp = descp.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
-		$('.printerinfos').html( '<h3>'+ bettername +'</h3>'+ descp );
+		$('<img />').attr({ alt: pname, src: 'includes/images/printers/'+ printers[C14]['img'] +'.jpg', width: 400, height: printers[C14]['iht'] }).appendTo('.printerimg');
+		var bname = (printers[C14]['name']).replace(' - ', '<span class="printonly"> - </span><br />').replace(' color',' Color Printer');
+		var pd = printers[C14]['desc'];
+		pd = pd.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
+		$('.printerinfos').html( '<h3>'+ bname +'</h3>'+ pd );
 		
 		// and then
 		roi_recalc();
@@ -273,6 +282,9 @@ function roi_load(save) {
 	var C6 = roiBase36toInt(save) / 100;
 	//roi_dbg('C6 = ' + C6);
 	$('#inkpersqft').val(C6).autoNumeric('update');
+	
+	// go to results?
+	$('#competitor a.next').click();
 }
 
 function roi_throttle(e) {
