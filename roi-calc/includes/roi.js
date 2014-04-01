@@ -200,6 +200,7 @@ function roi_recalc(e) {
 	$('#inkcostpermonth').val(inkpermonth).autoNumeric('update', { mDec: ipmzs });
 	// & check for "Savings" vs "Loss"
 	$('#inkcostpermonth').parent().siblings('label').find('.save').html( inkpermonth >= 0 ? 'Savings' : 'Loss');
+	$('#vinkcost').html($('#inkcostpermonth').val());
 	
 	var inktot = inkpermonth * years * 12;
 	$('#inkcost').val(inktot).autoNumeric('update');
@@ -217,6 +218,7 @@ function roi_recalc(e) {
 	$('#esthrs').val(C29).autoNumeric('update');
 	// & check for "Savings" vs "Loss"
 	$('#esthrs').parent().siblings('label').find('.save').html( C29 >= 0 ? 'Savings' : 'Loss');
+	$('#vesthrs').html($('#esthrs').val());
 	
 	roi_save(years, s_printer, c_price, c_speed, c_ink00, rollsperwk);
 }
