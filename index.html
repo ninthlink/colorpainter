@@ -16,7 +16,6 @@
   <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
 
   <link rel="stylesheet" href="includes/jquery.mobile-1.4.1.min.css" type="text/css" media="all">
-  <link rel="stylesheet" href="includes/add2home.min.css" type="text/css" media="all">
   <link rel="stylesheet" href="includes/roi.min.css" type="text/css" media="all">
   <link rel="stylesheet" href="includes/print.css" type="text/css" media="print">
 </head>
@@ -94,7 +93,7 @@
   <div class="ui-body ui-body-a">
 	  <div class="progress p2"></div>
 	  <div class="fieldrow">
-		  <label for="price">MSRP Price of Competitive Printer</label>
+		  <label for="price">Price of Competitive Printer</label>
 		  <input name="price" id="price" value="" type="text" class="money" data-m-dec="0" />
 	  </div>
 	  <div class="fieldrow">
@@ -154,42 +153,45 @@
 	  <h1><span class="pname"></span><br />Printer vs. Competitor</h1>
 	  <div class="plaintext">
 		  <div class="ui-field-contain mo bigger col2">
-			  <label for="inkcostpermonth"><strong>Ink Cost <span class="save">Savings<!-- or Loss--></span></strong></label>
+			  <label for="inkcostpermonth"><strong>Cost <span class="save">Savings<!-- or Loss--></span></strong></label>
 			  <input name="inkcostpermonth" id="inkcostpermonth" value="247.33" type="text" readonly class="money" data-v-min="-999999999.99" />
+			  <div class="val" id="vinkcost"></div>
 			  <small>&nbsp;/mo</small>
 		  </div>
 		  <div class="ui-field-contain mo bigger col1">
 			  <label for="esthrs"><strong>Time <span class="save">Savings</span>*</strong></label>
 			  <input name="esthrs" id="esthrs" value="26" type="number" readonly class="number" data-m-dec="0" data-v-min="-999999999" />
+			  <div class="val" id="vesthrs"></div>
 			  <small>&nbsp;hrs/mo</small>
 		  </div>
 		  <div class="ui-field-contain mainline nomo">
 			  <label for="inkcost"><strong>Ink Cost <span class="save">Savings<!-- or Loss--></span> for Term of Lease</strong></label>
 			  <input name="inkcost" id="inkcost" value="14840" type="text" readonly class="money" data-v-min="-999999999.99" />
 		  </div>
+		  <div class="ui-field-contain mainline hd">Total Hardware &amp; Ink</div>
 		  <div class="ui-field-contain mainline nomo">
-			  <label for="profit"><strong><span class="save">Profit<!-- or Loss--></span> for Term of Lease</strong> (with Seiko Instruments Printer)</label>
+			  <label for="profit"><strong><span class="save">Profit<!-- or Loss--></span> for Term of Lease</strong></label>
 			  <input name="profit" id="profit" value="14840" type="text" readonly class="money" data-v-min="-999999999.99" />
 		  </div>
 		  <div class="ui-field-contain mo mainline">
-			  <label for="cmonthlytotal"><strong>Competitor Printer</strong> (Total cost hardware &amp; ink)</label>
+			  <label for="cmonthlytotal"><strong>Competitive Printer</strong></label>
 			  <input name="cmonthlytotal" id="cmonthlytotal" value="1789.33" type="text" readonly class="money" />
 			  <small>&nbsp;/mo</small>
 		  </div>
 		  <div class="ui-field-contain mo mainline">
-			  <label for="monthlytotal"><strong>Seiko Instruments Printer</strong> (Total cost hardware &amp; ink)</label>
+			  <label for="monthlytotal"><strong>ColorPainter Printer</strong></label>
 			  <input name="monthlytotal" id="monthlytotal" value="1542" type="text" readonly class="money" />
 			  <small>&nbsp;/mo</small>
 		  </div>
 		  <div class="ui-field-contain mo mainline">
-			  <label for="costpermonth"><strong><span class="save">Savings<!-- or Loss--></span> with Seiko Instruments Printer</strong></label>
+			  <label for="costpermonth"><strong><span class="save">Savings<!-- or Loss--></span> with ColorPainter Printer</strong></label>
 			  <input name="costpermonth" id="costpermonth" value="247.33" type="text" readonly class="money" data-v-min="-999999999.99" />
 			  <small>&nbsp;/mo</small>
 		  </div>
 	  </div>
 	  <div class="col2 printerimg"></div>
 	  <div class="col1 printerinfos"></div>
-		
+	  <div class="plaintext stripe last midback"><p class="again"><a href="#seiko" data-role="none">start search again</a></p></div>
 	  <h1 class="ui-title printonly"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" /><strong>Simple</strong> ROI Calculator</h1>
 	  <div class="plaintext stripe">
 		  <h5>COMPETITOR PRINTER</h5>
@@ -266,8 +268,7 @@
 		  </div>
 	  </div>
 	  <div class="plaintext stripe last">
-		  <p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 ml ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. The ColorPainter ink per SQFT is calculated on the same premise using one specific image, and takes into account its higher pigment load. <sup>3</sup>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll. <sup>4</sup>Ask distributor for current lease rate.</p>
-		  <!--p class="disc jt">Please note: Cost justification is based on consumable savings. Other factors can also have a big impact on increased productivity and lower labor costs.</p-->
+		  <p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 ml ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. The ColorPainter ink per SQFT is calculated on the same premise using one specific image, and takes into account its higher pigment load. <sup>3</sup>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll. <sup>4</sup>Calculations do not include a lease rate.</p>
 		  <p class="again"><a href="#seiko" data-role="none">start search again</a></p>
 	  </div>
 
