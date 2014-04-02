@@ -36,7 +36,7 @@ h1.ui-title img{display:block;margin-bottom:0.3em}
 .ui-field-contain>label~[class*=ui-],.ui-field-contain .ui-controlgroup-controls{width:17%}
 .ui-field-contain.mo>label,.ui-field-contain.nomo>label{width:75%}
 .ui-field-contain.nomo>label~[class*=ui-]{width:23%}
-.plaintext .ui-field-contain.hd{font: 0.8em/1 "Montserrat-Bold", sans-serif;padding: 45px 0 4px;text-align: right;text-transform: uppercase}
+.plaintext .ui-field-contain.hd{font: 0.8em/1 "Mts-b", sans-serif;padding: 45px 0 4px;text-align: right;text-transform: uppercase}
 .ui-field-contain.mo small{display:inline-block;font-size:0.9em;line-height:1.5;margin:0.5em 0 0;width:6%}
 .ui-page-theme-a .plaintext .ui-input-text.ui-body-inherit,html .plaintext .ui-input-text.ui-body-inherit,.plaintext .ui-input-text.ui-body-inherit,.plaintext .ui-input-text input{border:none;box-shadow:none;background:none;text-align:right}
 .plaintext .ui-input-text input{padding:0.4em 0}
