@@ -36,7 +36,7 @@ h1.ui-title img{display:block;margin-bottom:0.3em}
 .ui-field-contain>label~[class*=ui-],.ui-field-contain .ui-controlgroup-controls{width:17%}
 .ui-field-contain.mo>label,.ui-field-contain.nomo>label{width:75%}
 .ui-field-contain.nomo>label~[class*=ui-]{width:23%}
-.plaintext .ui-field-contain.hd{font: 0.8em/1 "Mts-b", sans-serif;padding: 45px 0 4px;text-align: right;text-transform: uppercase}
+.plaintext .ui-field-contain.hd{font: 0.8em/1em "Mts-b", sans-serif;padding: 45px 0 4px;text-align: right;text-transform: uppercase}
 .ui-field-contain.mo small{display:inline-block;font-size:0.9em;line-height:1.5;margin:0.5em 0 0;width:6%}
 .ui-page-theme-a .plaintext .ui-input-text.ui-body-inherit,html .plaintext .ui-input-text.ui-body-inherit,.plaintext .ui-input-text.ui-body-inherit,.plaintext .ui-input-text input{border:none;box-shadow:none;background:none;text-align:right}
 .plaintext .ui-input-text input{padding:0.4em 0}
@@ -68,7 +68,7 @@ h3{margin-top:0}
 h4{color:#666;margin-bottom:0}
 .plaintext.stripe h5{font-weight:bold;font-size:12px;margin:0.4em 0}
 .printerimg,.printerinfos{margin-bottom:4em}
-.plaintext .ui-field-contain.bigger>label~[class*=ui-],.printonly{display:none}
+.printonly,.plaintext .ui-field-contain.bigger>label~[class*=ui-]{display:none}
 .ui-mobile .mainline label{font-size:0.95em;margin-top:0.8em}
 .ui-mobile .mainline label strong{font-size:1.25em}
 .plaintext .mainline .ui-input-text input{font-size:1.4em;min-height:2em;padding:0}
