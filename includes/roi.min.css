@@ -42,6 +42,7 @@ h1.ui-title img{display:block;margin-bottom:0.3em}
 .plaintext .ui-input-text input{padding:0.4em 0}
 .progress{background:url(images/progress.png) no-repeat 0 0;display:block;width:418px;height:77px;margin:2.5em 0 3em}
 .progress.p2{background-position:0 -77px}
+.j .progress{background-position:0 -154px}
 .disabled{opacity:0.4}
 .ui-page-theme-a .ui-body-a a.ui-btn.next{background:#2a86ce;border:none;color:#fff;font-size:1.6em;font-weight:400;padding:0.3em;margin:2em 0;text-shadow:none;text-transform:uppercase;width:40%}
 a.ui-btn.disabled{cursor:default}
@@ -59,6 +60,7 @@ label.ui-btn.ui-btn-active.ui-radio-on{background:#286398;text-shadow:none}
 .plaintext.stripe .ui-field-contain.even{background:#e4e4e4}
 .plaintext .ui-field-contain.bigger,.col1,.col2{clear:none;float:left;width:37%;margin-bottom:1.8em}
 .plaintext .ui-field-contain.bigger{border-top:3px solid #565656}
+.plaintext .ui-field-contain.bigger.jetrix {width:100%}
 .plaintext .ui-field-contain.bigger>label{margin:7px 0 5px;text-transform:uppercase;width:100%}
 .col2,.plaintext .ui-field-contain.bigger.col2{width:56%;margin-right:7%}
 .plaintext .ui-field-contain.bigger .val {font-size:3.8em;line-height:1;display:inline-block}
@@ -68,7 +70,9 @@ h3{margin-top:0}
 h4{color:#666;margin-bottom:0}
 .plaintext.stripe h5{font-weight:bold;font-size:12px;margin:0.4em 0}
 .printerimg,.printerinfos{margin-bottom:4em}
-.printonly,.plaintext .ui-field-contain.bigger>label~[class*=ui-]{display:none}
+.printonly,.jetrix,.j .noj,.plaintext .ui-field-contain.bigger>label~[class*=ui-]{display:none}
+.j span.jetrix{display:inline}
+.j div.jetrix{display:block}
 .ui-mobile .mainline label{font-size:0.95em;margin-top:0.8em}
 .ui-mobile .mainline label strong{font-size:1.25em}
 .plaintext .mainline .ui-input-text input{font-size:1.4em;min-height:2em;padding:0}
