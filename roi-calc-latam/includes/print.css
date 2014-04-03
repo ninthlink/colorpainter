@@ -1,0 +1,66 @@
+// clean up printed results page a little
+body,
+.ui-page-theme-a {
+	background: #fff;
+}
+.printerimg,
+.printerinfos br,
+.again,
+.rbtns {
+	display: none;
+}
+.printonly {
+	display: block;
+}
+#results .ui-body-a,
+#results h4 {
+	padding: 0;
+	margin: 0;
+}
+.ui-page-theme-a .ui-bar-inherit {
+	margin: 0 0 1em;
+}
+#results .ui-body h1.ui-title.printonly {
+	float: left;
+	line-height: 1;
+	margin: 0 0 1em;
+	width: 100%;
+	page-break-before: always;
+	page-break-inside: avoid;
+}
+.ui-header h1.ui-title,
+#results .ui-body h1.ui-title.printonly {
+	font-size: 1.9em;
+	padding: 0.2em 0;
+}
+#results .ui-body h1.ui-title.printonly,
+.ui-page-theme-a .ui-bar-inherit {
+	border-top: 5px solid #333;
+	border-bottom: 1px solid #d3d3d3;
+}
+.printerinfos .printonly {
+	display: inline;
+}
+.col1.printerinfos {
+	width: 100%;
+	page-break-after: always;
+}
+.plaintext.stripe .ui-field-contain.even {
+	background: none;
+}
+.plaintext.stripe .ui-field-contain {
+	border-top: 1px solid #ccc;
+}
+.plaintext.stripe {
+	border-bottom: 1px solid #ccc;
+}
+p.disc {
+	margin: 2em 0 0;
+}
+.plaintext.stripe.last {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+#results.j .col1.printerinfos {
+	padding: 3em 0;
+}

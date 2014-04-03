@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('fonts/montserrat-bold-webfont.eot');
+    src: url('fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-bold-webfont.svg#Montserrat-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('fonts/montserrat-regular-webfont.eot');
+    src: url('fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-regular-webfont.svg#Montserrat-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+input,
+textarea,
+select,
+.ui-select .ui-btn ,
+.printerinfos,
+.plaintext.stripe,
+.plaintext.stripe input,
+a.rpop,
+.ui-popup {
+	font-family: Arial, sans-serif;
+}
+body,
+.plaintext input ,
+.ui-btn {
+	font-family: 'Montserrat-Regular', Arial, sans-serif;
+}
+h1.ui-title strong,
+.ui-mobile label strong {
+	font-family: 'Montserrat-Bold', Arial, sans-serif;
+	font-weight: 400;
+}
+/* and then */
+.ui-page-theme-a .ui-bar-inherit {
+	background: #fff;
+	border-top: 5px solid #31669a;
+	border-bottom: 1px solid #d3d3d3;
+}
+body,
+.ui-page-theme-a {
+	background: #eee;
+}
+.ui-body-a {
+	background: none;
+	border: none;
+}
+.ui-body-a.ui-popup {
+	background: #fff;
+	font-size: 13px;
+	line-height: 1.2;
+	text-shadow: none;
+}
+.ui-body-a,
+.ui-header .ui-title {
+	width: 676px;
+	margin: 0 auto;
+}
+h1.ui-title,
+.ui-header h1.ui-title {
+	color: #31669a;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 1;
+	padding: 0.5em 0;
+	text-align: left;
+}
+h1.ui-title strong {
+	color: #333;
+}
+h1.ui-title  img {
+	display: block;
+	margin-bottom: 0.3em;
+}
+.ui-block-c.twocol { width: 75% }
+.ui-page-theme-a label a, html .ui-bar-a label a, html .ui-body-a label a, html body .ui-group-theme-a label a { font-weight: 400; text-decoration: none }
+
+.ui-input-text input.bold { font-weight: 700 }
+
+.ui-field-contain>label {
+	width: 81%;
+}
+.ui-field-contain>label~[class*=ui-],
+.ui-field-contain .ui-controlgroup-controls {
+	width: 17%;
+}
+.ui-field-contain.mo>label,
+.ui-field-contain.nomo>label {
+	width: 75%;
+}
+.ui-field-contain.nomo>label~[class*=ui-] {
+	width: 23%;
+}
+.plaintext .ui-field-contain.hd {
+	font: 0.8em/1 "Montserrat-Bold", sans-serif;
+	padding: 45px 0 4px;
+	text-align: right;
+	text-transform: uppercase;
+}
+.ui-field-contain.mo small {
+	display: inline-block;
+	font-size: 0.9em;
+	line-height: 1.5;
+	margin: 0.5em 0 0;
+	width: 6%;
+}
+.ui-page-theme-a .plaintext .ui-input-text.ui-body-inherit,
+html .plaintext .ui-input-text.ui-body-inherit,
+.plaintext .ui-input-text.ui-body-inherit,
+.plaintext .ui-input-text input {
+	border: none;
+	box-shadow: none;
+	background: none;
+	text-align: right;
+}
+.plaintext .ui-input-text input {
+	padding: 0.4em 0;
+}
+.progress {
+	background: url(images/progress.png) no-repeat 0 0;
+	display: block;
+	width: 418px;
+	height: 77px;
+	margin: 2.5em 0 3em;
+}
+.progress.p2 {
+	background-position: 0 -77px;
+}
+.disabled {
+	opacity: 0.4;
+}
+.ui-page-theme-a .ui-body-a a.ui-btn.next {
+	background: #2a86ce;
+	border: none;
+	color: #fff;
+	font-size: 1.6em;
+	font-weight: 400;
+	padding: 0.3em;
+	margin: 2em 0;
+	text-shadow: none;
+	text-transform: uppercase;
+	width: 40%;
+}
+a.ui-btn.disabled {
+	cursor: default;
+}
+label.ui-btn {
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 1.9;
+	padding: 0 0.7em;
+}
+label.ui-btn.ui-radio-off {
+	color: #dedede;
+	background: #a6a6a6;
+	text-shadow: none;
+}
+label.ui-btn.ui-btn-active.ui-radio-on {
+	background: #286398;
+	text-shadow: none;
+}
+.ui-page-theme-a .ui-select .ui-btn {
+	background: #fff;
+	font-weight: 400;
+	text-align: left;
+}
+.ui-mobile fieldset.fieldrow,
+.ui-mobile div.fieldrow {
+	margin: 0 0 1.5em;
+}
+.plaintext {
+	border-bottom: 1px solid #c8c8c8;
+	float: left;
+	margin: 4em 0;
+	width: 100%;
+}
+#results .plaintext {
+	border-top: none;
+	margin-top: 0;
+}
+.plaintext.stripe {
+	margin-bottom: 2em;
+	border: none;
+}
+.plaintext .ui-field-contain  {
+	border-top: 1px solid #c8c8c8;
+	margin: 0;
+	padding: 0;
+}
+.plaintext.stripe .ui-field-contain {
+	border: none;
+	padding: 0 4px;
+	margin: 0 -4px;
+}
+.plaintext.stripe,
+.ui-mobile .plaintext.stripe label {
+	font-size: 13px;
+	text-shadow: none;
+}
+.plaintext.stripe .ui-field-contain.even {
+	background: #e4e4e4;
+}
+.plaintext .ui-field-contain.bigger,
+.col1,
+.col2 {
+	clear: none;
+	float: left;
+	width: 37%;
+	margin-bottom: 1.8em;
+}
+.plaintext .ui-field-contain.bigger {
+	border-top: 3px solid #565656;
+}
+.plaintext .ui-field-contain.bigger>label {
+	margin: 7px 0 5px;
+	text-transform: uppercase;
+	width: 100%;
+}
+.col2,
+.plaintext .ui-field-contain.bigger.col2 {
+	width: 56%;
+	margin-right: 7%;
+}
+.plaintext .ui-field-contain.bigger .val {
+	font-size: 3.8em;
+	line-height: 1;
+	display: inline-block;
+}
+.plaintext .ui-field-contain.bigger.mo small {
+	font-size: 2em;
+	margin-top: 0;
+}
+#results .ui-body h1 {
+	font-size: 1.9em;
+	line-height: 1.2;
+	margin: 0 0 1.7em;
+}
+h3 {
+	margin-top: 0;
+}
+h4 {
+	color: #666;
+	margin-bottom: 0;
+}
+.plaintext.stripe h5 {
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0.4em 0;
+}
+.printerimg,
+.printerinfos {
+	margin-bottom: 4em;
+}
+.plaintext .ui-field-contain.bigger>label~[class*=ui-],
+.printonly {
+	display: none;
+}
+.ui-mobile .mainline label {
+	font-size: 0.95em;
+	margin-top: 0.8em;
+}
+.ui-mobile .mainline label strong {
+	font-size: 1.25em;
+}
+.plaintext .mainline .ui-input-text input {
+	font-size: 1.4em;
+	min-height: 2em;
+	padding: 0;
+}
+.ui-field-contain.mainline.mo small {
+	margin-top: 1.1em;
+}
+/*
+.ui-field-contain.mainline.mo input,
+.ui-field-contain.mainline.mo small {
+	color: #555;
+}
+*/
+.plaintext.stripe .ui-field-contain>label {
+	width: 57%;
+}
+.plaintext.stripe .ui-field-contain>label~[class*=ui-] {
+	width: 41%;
+}
+p.disc {
+	margin: 2em 0;
+}
+.rbtns {
+	float: left;
+	width: 74px;
+	position: absolute;
+	top: 1.5em;
+	right: 0.4em;
+}
+a.rpop,
+.ui-mobile .ui-page-theme-a label a.rpop {
+	font-size: 13px;
+	font-weight: 700;
+	color: #efefef;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	background: #bbb;
+	border-radius: 9px;
+	text-align: center;
+}
+.rbtns a.rpop {
+	float: left;
+	width: 32px;
+	height: 32px;
+	background: #0085ca url(images/btns.gif) no-repeat 0 0;
+	border-radius: 16px;
+	text-align: left;
+	text-indent: -999em;
+}
+.rbtns a.rpop.save {
+	background-position: -32px 0;
+	margin-left: 10px;
+}
