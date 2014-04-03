@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v 1.4.2 / 2013-04-02
+# v 1.5.0 / 2013-04-03
 
 CACHE:
 index.html
@@ -37,7 +37,6 @@ includes/images/printers/h274.jpg
 includes/images/printers/h2104.jpg
 includes/images/printers/m64.jpg
 includes/images/printers/w64s.jpg
-includes/images/printers/jetrix.jpg
 
 NETWORK:
 *

@@ -26,7 +26,7 @@ body,.ui-page-theme-a{background:#eee}
 .ui-body-a{background:none;border:none}
 .ui-body-a.ui-popup{background:#fff;font-size:13px;line-height:1.2;text-shadow:none}
 .ui-body-a,.ui-header .ui-title{width:676px;margin:0 auto}
-h1.ui-title,.ui-header h1.ui-title{color:#31669a;font-size:3em;font-weight:normal;line-height:1;padding:0.5em 0;text-align:left}
+h1.ui-title,.ui-header h1.ui-title{color:#31669a;font-size:1.6em;font-weight:normal;line-height:1;padding:0.5em 0;text-align:left}
 h1.ui-title strong{color:#333}
 h1.ui-title img{display:block;margin-bottom:0.3em}
 .ui-block-c.twocol{width:75%}
@@ -40,9 +40,8 @@ h1.ui-title img{display:block;margin-bottom:0.3em}
 .ui-field-contain.mo small{display:inline-block;font-size:0.9em;line-height:1.5;margin:0.5em 0 0;width:6%}
 .ui-page-theme-a .plaintext .ui-input-text.ui-body-inherit,html .plaintext .ui-input-text.ui-body-inherit,.plaintext .ui-input-text.ui-body-inherit,.plaintext .ui-input-text input{border:none;box-shadow:none;background:none;text-align:right}
 .plaintext .ui-input-text input{padding:0.4em 0}
-.progress{background:url(images/progress.png) no-repeat 0 0;display:block;width:418px;height:77px;margin:2.5em 0 3em}
-.progress.p2{background-position:0 -77px}
-.j .progress{background-position:0 -154px}
+.progress{background:url(images/progress.png) no-repeat 0 0;display:block;width:446px;height:76px;margin:2.5em 0 3em}
+.progress.p2{background-position:0 -76px}
 .disabled{opacity:0.4}
 .ui-page-theme-a .ui-body-a a.ui-btn.next{background:#2a86ce;border:none;color:#fff;font-size:1.6em;font-weight:400;padding:0.3em;margin:2em 0;text-shadow:none;text-transform:uppercase;width:40%}
 a.ui-btn.disabled{cursor:default}
