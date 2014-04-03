@@ -24,22 +24,22 @@
 <form action="#" method="post">
 <div id="seiko" data-role="page" data-title="Seiko ROI">
   <div data-role="header" class="ui-header ui-bar-inherit">
-	  <h1 role="heading" class="ui-title"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" /><strong>Simple</strong> ROI Calculator</h1>
+	  <h1 role="heading" class="ui-title"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" />Calculadora Sencilla de ROI (retorno  de inversi&oacute;n)</h1>
   </div>
   <div class="ui-body ui-body-a">
 	  <div class="progress p1"></div>
 	  <fieldset class="fieldrow">
-		  <label for="printer">Seiko Instruments <!--USA ColorPainter -->Printer</label>
+		  <label for="printer">Impresora de Seiko Instruments</label>
 		  <select name="printer" id="printer">
-			  <option value="">Please Select</option>
+			  <option value="">Seleccione Por Favor</option>
 		  </select>
 	  </fieldset>
 	  <div class="fieldrow disabled">
-		  <label for="psellprice">MSRP Price of ColorPainter Printer</label>
-		  <input name="psellprice" id="psellprice" value="" type="text" class="money" data-m-dec="0" disabled="disabled">
+		  <label for="psellprice">PVP de la Impresora ColorPainter </label>
+		  <input name="psellprice" id="psellprice" value="" type="text" class="money" disabled="disabled">
 	  </div>
 	  <div class="fieldrow disabled">
-		  <label for="rollsperwk">Number of 54"x50 YD Rolls per Week</label>
+		  <label for="rollsperwk">Cantidad de Rollos de 137 cm  X  127 cm por Semana</label>
 		  <select name="rollsperwk" id="rollsperwk" disabled="disabled">
 			  <option value="1">1</option>
 			  <option value="2" selected="selected">2</option>
@@ -54,23 +54,11 @@
 		  </select>
 	  </div>
 	  <div class="fieldrow disabled">
-		  <label for="pinkpersqft">Cost of Ink<span class="jetrix"> for Jetrix KX5</span> per SQFT</label>
-		  <input name="pinkpersqft" id="pinkpersqft" value="0.16" type="text" class="money" disabled="disabled">
-	  </div>
-	  <div class="fieldrow jetrix disabled">
-		  <label for="jvper">Average cost of Adhesive-back Vinyl per SQFT</label>
-		  <input name="jvper" id="jvper" value="0.25" type="text" class="money" disabled="disabled">
-	  </div>
-	  <div class="fieldrow jetrix disabled">
-		  <label for="jlper">Average cost of laminate per SQFT</label>
-		  <input name="jlper" id="jlper" value="0.22" type="text" class="money" disabled="disabled">
-	  </div>
-	  <div class="fieldrow jetrix disabled">
-		  <label for="jiper">Current Average Ink Cost per SQFT</label>
-		  <input name="jiper" id="jiper" value="0.28" type="text" class="money" disabled="disabled">
+		  <label for="pinkpersqft">Costo de tinta por m<sup>2</sup></label>
+		  <input name="pinkpersqft" id="pinkpersqft" value="1.1" type="text" class="money" disabled="disabled">
 	  </div>
 	  <fieldset class="fieldrow disabled" data-role="controlgroup" data-type="horizontal">
-		  <legend>Lease Period in Years</legend>
+		  <legend>Periodo de Arrendamiento(en a&ntilde;os)</legend>
 		  <label for="amortper-3">3</label>
 		  <input type="radio" name="amortper" id="amortper-3" value="3" disabled="disabled">
 		  <label for="amortper-5">5</label>
@@ -78,237 +66,210 @@
 	  </fieldset>
 	  <div class="plaintext disabled">
 		  <div class="ui-field-contain">
-			  <label for="pspeed">Advertised Production Mode Speed SQFT per Hour</label>
+			  <label for="pspeed">Velocidad de Modo de Producci&oacute;n Anunciada al P&uacute;blico por m<sup>2</sup></label>
 			  <input name="pspeed" id="pspeed" value="356" type="text" readonly class="number" data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="psqftperwk">Printed SQFT per Week</label>
+			  <label for="psqftperwk">m<sup>2</sup> Impresiones por Semana</label>
 			  <input name="psqftperwk" id="psqftperwk" value="1200" type="text" class="number" readonly data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="pinkpermonth">Total Ink Cost per Month</label>
+			  <label for="pinkpermonth">Costo Total de Tinta por Mes</label>
 			  <input name="pinkpermonth" id="pinkpermonth" value="832" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain printonly">
-			  <label for="pmonthlyamort">Monthly Amortization</label>
+			  <label for="pmonthlyamort">Amortizaci&oacute;n Mensual</label>
 			  <input name="pmonthlyamort" id="pmonthlyamort" value="" type="text" readonly class="money">
 		  </div>
 	  </div>
-	  <a href="#competitor" class="ui-btn next disabled">Next</a>
+	  <a href="#competitor" class="ui-btn next disabled">Siguiente</a>
   </div>
 </div>
     
 <div id="competitor" data-role="page" data-title="Seiko ROI">
   <div data-role="header" class="ui-header ui-bar-inherit">
-	  <h1 role="heading" class="ui-title"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" /><strong>Simple</strong> ROI Calculator</h1>
+	  <h1 role="heading" class="ui-title"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" />Calculadora Sencilla de ROI (retorno  de inversi&oacute;n)</h1>
   </div>
   <div class="ui-body ui-body-a">
 	  <div class="progress p2"></div>
 	  <div class="fieldrow">
-		  <label for="price">Price of Competitive Printer</label>
-		  <input name="price" id="price" value="" type="text" class="money" data-m-dec="0">
+		  <label for="price">Precio de la Competencia</label>
+		  <input name="price" id="price" value="" type="text" class="money">
 	  </div>
 	  <div class="fieldrow">
-		  <label for="speed">Advertised Production/Normal Mode Speed SQFT per&nbsp;Hour</label>
+		  <label for="speed">Velocidad de Modo de Producci&oacute;n/Normal Anunciada al P&uacute;blico m<sup>2</sup> por hora</label>
 		  <input name="speed" id="speed" value="100" type="text" class="number" data-m-dec="0">
 	  </div>
 	  <div class="fieldrow">
-		  <label for="inkpersqft">Cost of Ink per&nbsp;SQFT &nbsp; <a href="#costinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
-		  <input name="inkpersqft" id="inkpersqft" value="0.28" type="text" class="money">
+		  <label for="inkpersqft">Precio de Tinta por&nbsp;m<sup>2</sup> &nbsp; <a href="#costinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
+		  <input name="inkpersqft" id="inkpersqft" value="1.28" type="text" class="money">
 		  <div data-role="popup" id="costinfo" class="ui-content" data-theme="a" style="max-width:320px">
 			  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-			  <p>** This is the industry average. To calculate, take the price of ink and divide by Average SQFT you get out of one ink cartridge. (industry average of 1 mL ink cartridge = 1 SQFT actual usage but can vary based on ink type, media, profile, print file, saturation level and environmental conditions.</p>
+			  <p>** Este es el promedio en la industria. Se calcula tomando el precio de la tinta y dividiendo por m<sup>2</sup> que es lo que en promedio se obtiene de un cartucho de tinta. (el promedio en la industria es de 10.76 ml de tinta  = 1 m<sup>2</sup> de la utilizaci&oacute;n real, pero puede variar dependiendo del tipo de tinta, tipos de sustratos, perfil utilizado, archivos de impresi&oacute;n, el nivel de saturaci&oacute;n y condiciones ambientales).</p>
 		  </div>
 	  </div>
 	  <div class="plaintext">
 		  <div class="ui-field-contain">
-			  <label for="prollsperwk">Number of 54"x50 YD Rolls per Week</label>
+			  <label for="prollsperwk">Cantidad de Rollos de 137 cm  X  127 cm por Semana</label>
 			  <input name="prollsperwk" id="prollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sqftperwk">Printed SQFT per&nbsp;Week &nbsp; <a href="#sqftinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
+			  <label for="sqftperwk">m<sup>2</sup>  Impresos por&nbsp;Semana &nbsp; <a href="#sqftinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
 			  <input name="sqftperwk" id="sqftperwk" value="1200" type="text" class="number" data-m-dec="0" readonly />
 			  <div data-role="popup" id="sqftinfo" class="ui-content" data-theme="a" style="max-width:320px">
 				  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-				  <p>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll.</p>
+				  <p>Para este ejemplo, se estima que va a imprimir 183 m<sup>2</sup>  del rollo de sustrato de 206 m<sup>2</sup></p>
 			  </div>
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="inkpermonth">Total Ink Cost per Month</label>
+			  <label for="inkpermonth">Costo Total de Tinta por Mes</label>
 			  <input name="inkpermonth" id="inkpermonth" value="1456" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="pamortper">Lease Period Years</label>
+			  <label for="pamortper">Periodo de Arrendamiento (en a&ntilde;os)</label>
 			  <input name="pamortper" id="pamortper" value="5" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain printonly">
-			  <label for="monthlyamort">Monthly Amortization</label>
+			  <label for="monthlyamort">Amortizaci&oacute;n Mensual</label>
 			  <input name="monthlyamort" id="monthlyamort" value="333.33" type="text" readonly class="money">
 		  </div>
 	  </div>
-	  <a href="#results" class="ui-btn next">Next</a>
+	  <a href="#results" class="ui-btn next">Siguiente</a>
   </div>
 </div>
 <div id="results" data-role="page" data-title="Seiko ROI">
   <div data-role="header" class="ui-header ui-bar-inherit">
-	  <h1 role="heading" class="ui-title"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" /><strong>Simple</strong> ROI Calculator</h1>
+	  <h1 role="heading" class="ui-title"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" />Calculadora Sencilla de ROI (retorno  de inversi&oacute;n)</h1>
   </div>
   <div class="ui-body ui-body-a">
-	  <h4>RESULTS</h4>
-	  <div class="rbtns"><a href="#print" data-role="none" title="print" class="rpop print" onclick="window.print(); return false">print</a> <a href="#save" data-role="none" data-rel="popup" data-transition="pop" title="save" class="rpop save">save</a></div>
+	  <h4>RESULTADOS</h4>
+	  <div class="rbtns"><a href="#print" data-role="none" title="Imprimir" class="rpop print" onclick="window.print(); return false">Imprimir</a> <a href="#save" data-role="none" data-rel="popup" data-transition="pop" title="Guardar" class="rpop save">Guardar</a></div>
 		  <div data-role="popup" id="save" class="ui-content" data-theme="a" style="max-width:320px">
 			  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 			  <p><strong>See these same results again, at:</strong></p>
 			  <input name="saver" id="saver" value="" type="text" readonly placeholder="Save" data-wrapper-class="saver">
         <a href="#mailto" class="ui-btn mailto">Email this link</a>
 		  </div>
-	  <h1><span class="pname"></span><br />Printer vs. Competitor</h1>
+	  <h1><span class="pname"></span><br />ColorPainter vs. Competencia</h1>
 	  <div class="plaintext">
-		  <div class="ui-field-contain mo bigger jetrix">
-			  <label for="sjprofit"><strong>Additional <span class="save">Profit<!-- or Loss--></span></strong></label>
-			  <input name="sjprofit" id="sjprofit" value="2320" type="text" readonly class="money" data-v-min="-999999999.99">
-			  <div class="val" id="vjprofit"></div>
-			  <small>&nbsp;/mo</small>
-		  </div>
 		  <div class="ui-field-contain mo bigger col2">
-			  <label for="inkcostpermonth"><strong><span class="jetrix">Consumables </span>Cost <span class="save">Savings<!-- or Loss--></span></strong></label>
+			  <label for="inkcostpermonth"><strong>AHORROS EN TINTA</strong></label>
 			  <input name="inkcostpermonth" id="inkcostpermonth" value="247.33" type="text" readonly class="money" data-v-min="-999999999.99">
 			  <div class="val" id="vinkcost"></div>
-			  <small>&nbsp;/mo</small>
+			  <small>&nbsp;/mes</small>
 		  </div>
 		  <div class="ui-field-contain mo bigger col1">
-			  <label for="esthrs"><strong>Time <span class="save">Savings</span>*</strong></label>
+			  <label for="esthrs"><strong>AHORROS EN TIEMPO*</strong></label>
 			  <input name="esthrs" id="esthrs" value="26" type="number" readonly class="number" data-m-dec="0" data-v-min="-999999999">
 			  <div class="val" id="vesthrs"></div>
-			  <small>&nbsp;hrs/mo</small>
+			  <small>&nbsp;h/mes</small>
 		  </div>
-		  <div class="ui-field-contain mainline nomo noj">
-			  <label for="inkcost"><strong>Ink Cost <span class="save">Savings<!-- or Loss--></span> for Term of Lease</strong></label>
+		  <div class="ui-field-contain mainline nomo">
+			  <label for="inkcost"><strong>AHORROS de costos de Tinta por la Vigencia del Arrendamiento</strong></label>
 			  <input name="inkcost" id="inkcost" value="14840" type="text" readonly class="money" data-v-min="-999999999.99">
 		  </div>
-		  <div class="ui-field-contain mainline mo jetrix">
-			  <label for="inkcostperwk"><strong>Consumables Cost <span class="save">Savings<!-- or Loss--></span></strong></label>
-			  <input name="inkcostperwk" id="inkcostperwk" value="1170" type="text" readonly class="money" data-v-min="-999999999.99">
-			  <small>&nbsp;/wk</small>
-		  </div>
-		  <div class="ui-field-contain mainline hd">Total Hardware &amp; Ink</div>
+		  <div class="ui-field-contain mainline hd">Costo Total del equipo y la tinta</div>
 		  <div class="ui-field-contain mainline nomo">
-			  <label for="profit"><strong><span class="save">Profit<!-- or Loss--></span> for Term of Lease</strong></label>
+			  <label for="profit"><strong>Ganancias Durante la Duraci&oacute;n del alquiler</strong></label>
 			  <input name="profit" id="profit" value="14840" type="text" readonly class="money" data-v-min="-999999999.99">
 		  </div>
 		  <div class="ui-field-contain mo mainline">
-			  <label for="cmonthlytotal"><strong>Competitive Printer</strong></label>
+			  <label for="cmonthlytotal"><strong>Impresora de la Competencia</strong></label>
 			  <input name="cmonthlytotal" id="cmonthlytotal" value="1789.33" type="text" readonly class="money">
-			  <small>&nbsp;/mo</small>
+			  <small>&nbsp;/mes</small>
 		  </div>
 		  <div class="ui-field-contain mo mainline">
-			  <label for="monthlytotal"><strong>ColorPainter Printer</strong></label>
+			  <label for="monthlytotal"><strong>Impresora de Seiko Instruments</strong></label>
 			  <input name="monthlytotal" id="monthlytotal" value="1542" type="text" readonly class="money">
-			  <small>&nbsp;/mo</small>
+			  <small>&nbsp;/mes</small>
 		  </div>
 		  <div class="ui-field-contain mo mainline">
-			  <label for="costpermonth"><strong><span class="save">Savings<!-- or Loss--></span> with ColorPainter Printer</strong></label>
+			  <label for="costpermonth"><strong>Ahorros con la Impresora de Seiko Instruments</strong></label>
 			  <input name="costpermonth" id="costpermonth" value="247.33" type="text" readonly class="money" data-v-min="-999999999.99">
-			  <small>&nbsp;/mo</small>
+			  <small>&nbsp;/mes</small>
 		  </div>
 	  </div>
 	  <div class="col2 printerimg"></div>
 	  <div class="col1 printerinfos"></div>
-	  <div class="plaintext stripe last midback"><p class="again"><a href="#seiko" data-role="none">start search again</a></p></div>
-	  <h1 class="ui-title printonly"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" /><strong>Simple</strong> ROI Calculator</h1>
+	  <div class="plaintext stripe last midback"><p class="again"><a href="#seiko" data-role="none">Comenzar B&uacute;squeda de Nuevo</a></p></div>
+	  <h1 class="ui-title printonly"><img src="includes/logo.png" alt="SII Seiko Instruments USA" width="271" height="26" />Calculadora Sencilla de ROI (retorno  de inversi&oacute;n)</h1>
 	  <div class="plaintext stripe">
-		  <h5>COMPETITOR PRINTER</h5>
+		  <h5>Impresora de la Competencia</h5>
 		  <div class="ui-field-contain">
-			  <label for="sprice">Price of Competitive Printer</label>
+			  <label for="sprice">Precio de la Competencia</label>
 			  <input name="sprice" id="sprice" value="20000" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sspeed">Advertised Product/Normal Mode Speed SQFT per&nbsp;Hour</label>
+			  <label for="sspeed">Velocidad de Modo de Producci&oacute;n/Normal Anunciada al P&uacute;blico m<sup>2</sup> por hora</label>
 			  <input name="sspeed" id="sspeed" value="128" type="text" class="number" readonly data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sinkpersqft">Cost of Ink per&nbsp;SQFT</label>
+			  <label for="sinkpersqft">Precio de Tinta por m<sup>2</sup></label>
 			  <input name="sinkpersqft" id="inkpersqft" value="0.28" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sprollsperwk">Number of 54"x50 YD Rolls per Week</label>
+			  <label for="sprollsperwk">Cantidad de Rollos de 137 cm  X  127 cm por Semana</label>
 			  <input name="sprollsperwk" id="sprollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="ssqftperwk">Printed SQFT per&nbsp;Week</label>
+			  <label for="ssqftperwk">m<sup>2</sup> Impresiones por Semana</label>
 			  <input name="ssqftperwk" id="ssqftperwk" value="1200" type="text" class="number" readonly data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sinkpermonth">Total Ink Cost per Month</label>
+			  <label for="sinkpermonth">Costo Total de Tinta por Mes</label>
 			  <input name="sinkpermonth" id="sinkpermonth" value="1456" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spamortper">Amortization Period Years</label>
+			  <label for="spamortper">Periodo de Arrendamiento (en a&ntilde;os)</label>
 			  <input name="spamortper" id="spamortper" value="5" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="smonthlyamort">Monthly Amortization</label>
+			  <label for="smonthlyamort">Amortizaci&oacute;n Mensual</label>
 			  <input name="smonthlyamort" id="smonthlyamort" value="333.33" type="text" readonly class="money">
 		  </div>
 	  </div>
 	  <div class="plaintext stripe cp">
-		  <h5>COLORPAINTER PRINTER</h5>
+		  <h5>Impresora de Seiko Instruments</h5>
 		  <div class="ui-field-contain">
-			  <label for="sprinter">Seiko Instruments USA Printer</label>
+			  <label for="sprinter">Impresora de Seiko Instruments</label>
 			  <input name="sprinter" id="sprinter" value="" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spsellprice">MSRP Price of ColorPainter Printer</label>
+			  <label for="spsellprice">PVP de la Impresora ColorPainter</label>
 			  <input name="spsellprice" id="spsellprice" value="" type="text" class="money" data-m-dec="0" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="srollsperwk">Number of 54"x50 YD Rolls per Week</label>
+			  <label for="srollsperwk">Cantidad de Rollos de 137 cm  X  127 cm por Semana</label>
 			  <input name="srollsperwk" id="srollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spinkpersqft">Cost of Ink<span class="jetrix"> for Jetrix KX5</span> per SQFT</label>
+			  <label for="spinkpersqft">Costo de tinta por m<sup>2</sup></label>
 			  <input name="spinkpersqft" id="spinkpersqft" value="0.16" type="text" class="money" readonly />
 		  </div>
-		  <div class="ui-field-contain noj">
-			  <label for="samortper">Amortization Period Years</label>
+		  <div class="ui-field-contain">
+			  <label for="samortper">Periodo de Arrendamiento (en a&ntilde;os)</label>
 			  <input name="samortper" id="samortper" value="5" type="text" readonly />
 		  </div>
-		  <div class="ui-field-contain noj">
-			  <label for="spspeed">Advertised Production Mode Speed SQFT per Hour</label>
+		  <div class="ui-field-contain">
+			  <label for="spspeed">Velocidad de Modo de Producci&oacute;n Anunciada al P&uacute;blico por m<sup>2</sup></label>
 			  <input name="spspeed" id="spspeed" value="356" type="text" readonly class="number" data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spsqftperwk">Printed SQFT per Week</label>
+			  <label for="spsqftperwk">m<sup>2</sup> Impresiones por Semana</label>
 			  <input name="spsqftperwk" id="spsqftperwk" value="1200" type="text" class="number" readonly data-m-dec="0">
 		  </div>
-		  <div class="ui-field-contain noj">
-			  <label for="spinkpermonth">Total Ink Cost per Month</label>
+		  <div class="ui-field-contain">
+			  <label for="spinkpermonth">Costo Total de Tinta por Mes</label>
 			  <input name="spinkpermonth" id="spinkpermonth" value="832" type="text" readonly class="money">
 		  </div>
-		  <div class="ui-field-contain noj">
-			  <label for="spmonthlyamort">Monthly Amortization</label>
+		  <div class="ui-field-contain">
+			  <label for="spmonthlyamort">Amortizaci&oacute;n Mensual</label>
 			  <input name="spmonthlyamort" id="spmonthlyamort" value="" type="text" readonly class="money">
-		  </div>
-		  <div class="ui-field-contain jetrix">
-			  <label for="sjvper">Average cost of Adhesive-back Vinyl per SQFT</label>
-			  <input name="sjvper" id="sjvper" value="0.25" type="text" class="money" readonly />
-		  </div>
-		  <div class="ui-field-contain jetrix">
-			  <label for="sjlper">Average cost of laminate Per SQFT</label>
-			  <input name="sjlper" id="sjlper" value="0.22" type="text" class="money" readonly />
-		  </div>
-		  <div class="ui-field-contain jetrix">
-			  <label for="sjiper">Current Average Ink Cost Per SQFT</label>
-			  <input name="sjiper" id="sjiper" value="0.28" type="text" class="money" readonly />
-		  </div>
-		  <div class="ui-field-contain jetrix">
-			  <label for="sjmlease">Monthly Hardware Cost for 48-Month Lease Term</label>
-			  <input name="sjmlease" id="sjmlease" value="2750" type="text" class="money" readonly />
 		  </div>		  
 	  </div>
 	  <div class="plaintext stripe last">
-		  <p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 ml ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. The ColorPainter ink per SQFT is calculated on the same premise using one specific image, and takes into account its higher pigment load. <sup>3</sup>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll. <sup>4</sup>Calculations do not include a lease rate.</p>
-		  <p class="again"><a href="#seiko" data-role="none">start search again</a></p>
+		  <p class="disc cp">Nota: <sup>1</sup>La velocidad por m<sup>2</sup> puede variar en base a varios factores, incluyendo el archivo, densidad de tinta, imagen, sustrato, perfil, Ripp, etc. <sup>2</sup> Si el costo de tinta de la competencia por m<sup>2</sup> no se sabe, entonces el promedio de la industria de .29 se utiliza basado en un promedio de 1 ml de tinta = 1 m<sup>2</sup> de utilizaci&oacute;n actual. Esto puede variar basado en el tipo de tinta, sustrato, perfil, archivo de impresi&oacute;n, nivel de saturaci&oacute;n, y condiciones  ambientales. La tinta ColorPainter por  m<sup>2</sup> se c&aacute;lculo de la misma manera usando una imagen especifica, y toma en cuenta su mayor carga de pigmento. <sup>3</sup> Para este ejemplo, se estima que va a imprimir 183 m<sup>2</sup>  del rollo de sustrato de 206 m<sup>2</sup> <sup>4</sup> Pregunte a su distribuidor autorizado por la tasa de arrendamiento actual.</p>
+		  <p class="again"><a href="#seiko" data-role="none">Comenzar B&uacute;squeda de Nuevo</a></p>
 	  </div>
 
   </div>

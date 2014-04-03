@@ -1,9 +1,9 @@
 var siip = [
-	{ name: 'Please Select' },
+	{ name: 'Seleccione Por Favor' },
 	{
-		name: 'ColorPainter W-64s - 6 color',
-		ink: 0.22,
-		msrp: 17000,
+		name: 'ColorPainter W-64s - 4 color GX ink',
+		ink: 1.1,
+		msrp: 17999,
 		spd: 128,
 		img: 'w64s',
 		iht: 212,
@@ -11,9 +11,9 @@ var siip = [
 		url: '#'
 	},
 	{
-		name: 'ColorPainter M-64s - 7 color',
-		ink: 0.18,
-		msrp: 42600,
+		name: 'ColorPainter M-64s LCIS - 6 color Wx ink',
+		ink: 1.8,
+		msrp: 45040,
 		spd: 356,
 		img: 'm64',
 		iht: 225,
@@ -22,8 +22,8 @@ var siip = [
 	},
 	{
 		name: 'ColorPainter H2-74s - 8 color',
-		ink: 0.18,
-		msrp: 50000,
+		ink: 3.14,
+		msrp: 59999.95,
 		spd: 284,
 		img: 'h274',
 		iht: 216,
@@ -32,8 +32,8 @@ var siip = [
 	},
 	{
 		name: 'ColorPainter H2-74s - 4 color',
-		ink: 0.14,
-		msrp: 50000,
+		ink: 1.85,
+		msrp: 59999.95,
 		spd: 567,
 		img: 'h274',
 		iht: 216,
@@ -42,8 +42,8 @@ var siip = [
 	},
 	{
 		name: 'ColorPainter H2-104s - 8 color',
-		ink: 0.18,
-		msrp: 69000,
+		ink: 3.14,
+		msrp: 79999.95,
 		spd: 308,
 		img: 'h2104',
 		iht: 254,
@@ -52,8 +52,8 @@ var siip = [
 	},
 	{
 		name: 'ColorPainter H2-104s - 4 color',
-		ink: 0.14,
-		msrp: 69000,
+		ink: 1.85,
+		msrp: 79999.95,
 		spd: 856,
 		img: 'h2104',
 		iht: 254,
@@ -62,8 +62,8 @@ var siip = [
 	},
 	{
 		name: 'ColorPainter H2P-74s',
-		ink: 0.08,
-		msrp: 53000,
+		ink: 1.9,
+		msrp: 66999.95,
 		spd: 763,
 		img: 'h2p74',
 		iht: 172,
@@ -72,34 +72,23 @@ var siip = [
 	},
 	{
 		name: 'ColorPainter H2P-104s',
-		ink: 0.08,
-		msrp: 72000,
+		ink: 1.9,
+		msrp: 86999.95,
 		spd: 856,
 		img: 'h2p104',
 		iht: 152,
 		desc: '<ul><li>104" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
 		url: '#'
-	},
-	{
-		name: 'Jetrix KX5',
-		ink: 0.10,
-		msrp: 132000,
-		spd: 1,
-		img: 'jetrix',
-		iht: 348,
-		desc: '<ul><li>4\' x 8\' UV flatbed printer with roll-feed option and white, primer/varnish options</li><li>High-performance, reliable and easy operations under high-volume conditions</li><li>Quality components engineered for long-term reliability</li><li>InkTec UMS UV inks are half the price of comparable UV inks without sacrificing quality or reliability. That means lower operational and running costs, lower inventory costs and more profit for your business</li><li>Indoor, outdoor and industrial applications including 1, 2, or 3 layer printing on signs, trophies, awards, packaging, control panels and more</li></ul>',
-		url: '#'
 	}
 ];
 var siid = 0; // index to choose
-var siib = 'http://ninthlink.me/seiko/calc/';
+var siib = 'http://ninthlink.me/seiko/lacalc/';
 //var roiDebug = true; // = console.log debug msgs ?
 var siio = {
 	aSign: '$'
 };
 var siit;
 var siis = '';
-var siij = false;
 
 function siiU() {
 	//roiDbg('## ROI Update :: printer change');
@@ -139,32 +128,9 @@ function siiU() {
 		pd = pd.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
 		$('.printerinfos').html( '<h3>'+ bname +'</h3>'+ pd );
 		
-		// and then : check jetrix?
-		siij = ( pname == 'Jetrix KX5' );
-		siiJ( pname );
+		// and then
 		siiC();
 	}
-}
-/*
- * show/hide some fields for Jetrix or not-Jetrix...
- */
-function siiJ(n) {
-	$('#seiko a').attr('href', ( siij ? '#results' : '#competitor' ) );
-	if ( siij ) {
-		// show Jetrix stuff, and hide some others
-		$('#seiko').addClass('j').find('.ui-controlgroup, .plaintext').hide();
-		$('#results').addClass('j').find('.bigger.col1, h1.printonly + div').hide();
-		$('#vinkcost').hide().parent().removeClass('bigger col2').addClass('mainline');
-		$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(0)').parent().children(':gt(5)').hide();
-	} else {
-		// hide Jetrix stuff
-		$('#seiko').removeClass('j').find('.ui-controlgroup, .plaintext').show();
-		$('#results').removeClass('j').find('.bigger.col1, h1.printonly + div').show();
-		$('#vinkcost').show().parent().addClass('bigger col2').removeClass('mainline');
-		$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(5)').nextAll().show();
-	}
-	$("#results .stripe.cp h5").html((siij ? 'JETRIX' : 'COLORPAINTER') + ' PRINTER');
-	$('#spsellprice').parents('.ui-field-contain').children('label').html( siij ? 'Cost of '+ n : 'MSRP Price of ColorPainter Printer' );
 }
 /*
  * recalculate all values based on those provided
@@ -182,111 +148,76 @@ function siiC(e) {
 	var	rollsperwk = $('#rollsperwk').val();
 	$('#prollsperwk,#sprollsperwk,#srollsperwk').val(rollsperwk);
 	
-	var sqftperwk = 600 * rollsperwk;
+	var sqftperwk = 183 * rollsperwk;
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
 	$('#sqftperwk,#ssqftperwk,#psqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
 	
-	if ( siij ) {
-		years = 5; // arbitrary hardcoding to make the SAVE function happy
-		
-		var jv = siiR( $('#jvper').autoNumeric('get') );
-		$('#sjvper').val(jv).autoNumeric('update');
-		
-		var jl = siiR( $('#jlper').autoNumeric('get') );
-		$('#sjlper').val(jl).autoNumeric('update');
-		
-		var ji = siiR( $('#jiper').autoNumeric('get') );
-		$('#sjiper').val(ji).autoNumeric('update');
-		
-		// for roiSave'ing...
-		c_price = jv * 100;
-		c_speed = jl * 100;
-		c_ink00 = ji * 100;
-		
-		var inkwk = ( jv + jl + ji - s_ink ) * sqftperwk;
-		var ipmzs = '' + ( inkwk >= 10000 ? 0 : 2 );
-		$('#inkcostperwk').val(inkwk).autoNumeric('update', { mDec: ipmzs });
-		
-		var inkpermonth = siiR(inkwk * 52 / 12);
-		ipmzs = '' + ( inkpermonth >= 10000 ? 0 : 2 );
-		$('#inkcostpermonth').val(inkpermonth).autoNumeric('update', { mDec: ipmzs });
-		
-		var hpermonth = siiR( s_price / 48 );
-		$('#sjmlease').val(hpermonth).autoNumeric('update');
-		
-		var sprofits = inkpermonth - hpermonth;
-		//var spmzs = '' + ( sprofits >= 1000 ? 0 : 2 );
-		$('#sjprofit').val(sprofits).autoNumeric('update', { mDec: 2 });
-		// & check for "Savings" vs "Loss"
-		$('#sjprofit').parent().siblings('label').find('.save').html( sprofits >= 0 ? 'Profit' : 'Loss');
-		$('#vjprofit').html($('#sjprofit').val());
-	} else {
-		c_price = $('#price').autoNumeric('get');
-		c_speed = $('#speed').autoNumeric('get');
-		c_ink00 = Math.round( $('#inkpersqft').autoNumeric('get') * 100, 2 );
-		var c_ink = c_ink00 / 100;
-		
-		var c_inkpermonth = siiR((c_ink*sqftperwk)*(52/12));
-		//roiDbg('C9 c_inkpermonth "inkpermonth" = '+ c_inkpermonth);
-		$('#inkpermonth,#sinkpermonth').val(c_inkpermonth).autoNumeric('update');
-		
-		years = $('#amortper-5').prop('checked') ? 5 : 3;
-		//roiDbg('C21 years "pamortper" = '+ years);
-		$('#pamortper, #samortper, #spamortper').val(years);
-		
-		var c_monthly = siiR(c_price/(years*12));
-		//roiDbg('C11 "monthlyamort" = '+ C11);
-		$('#monthlyamort,#smonthlyamort').val(c_monthly).autoNumeric('update');
-		
-		var s_inkpermonth = siiR((s_ink*sqftperwk)*(52/12));
-		//roiDbg('C20 "pinkpermonth: = '+ s_inkpermonth);
-		$('#pinkpermonth,#spinkpermonth').val(s_inkpermonth).autoNumeric('update');
-		
-		var s_monthly = siiR(s_price/(years*12));
-		//roiDbg('C22 "pmonthlyamort" = '+ s_monthly);
-		$('#pmonthlyamort,#spmonthlyamort').val(s_monthly).autoNumeric('update');
-		
-		var c_total = c_monthly+c_inkpermonth;
-		//roiDbg('C25 "cmonthlytotal" = '+ c_total);
-		$('#cmonthlytotal').val(c_total).autoNumeric('update');
-		
-		var s_total = s_monthly+s_inkpermonth;
-		//roiDbg('C26 "monthlytotal" = '+ s_monthly);
-		$('#monthlytotal').val(s_total).autoNumeric('update');
-		
-		var costpermonth = siiR( c_total - s_total );
-		//roiDbg('C27 "costpermonth" = '+ costpermonth);
-		var cpmzs = '' + ( costpermonth >= 1000 ? 0 : 2 );
-		$('#costpermonth').val(costpermonth).autoNumeric('update', { mDec: cpmzs });
-		// & check for "Savings" vs "Loss"
-		$('#costpermonth').parent().siblings('label').find('.save').html( costpermonth >= 0 ? 'Savings' : 'Loss');
-		
-		var inkpermonth = siiR( c_inkpermonth - s_inkpermonth );
-		//roiDbg('C27 "costpermonth" = '+ costpermonth);
-		var ipmzs = '' + ( inkpermonth >= 1000 ? 0 : 2 );
-		$('#inkcostpermonth').val(inkpermonth).autoNumeric('update', { mDec: ipmzs });
-		// & check for "Savings" vs "Loss"
-		$('#inkcostpermonth').parent().siblings('label').find('.save').html( inkpermonth >= 0 ? 'Savings' : 'Loss');
-		$('#vinkcost').html($('#inkcostpermonth').val());
-		
-		var inktot = inkpermonth * years * 12;
-		$('#inkcost').val(inktot).autoNumeric('update');
-		// & check for "Savings" vs "Loss"
-		$('#inkcost').parent().siblings('label').find('.save').html( inktot >= 0 ? 'Savings' : 'Loss');
-		
-		var profit = costpermonth*(years*12);
-		//roiDbg('C28 "additional" = '+ profit);
-		$('#profit').val(profit).autoNumeric('update');
-		// & check for "Savings" vs "Loss"
-		$('#profit').parent().siblings('label').find('.save').html( profit >= 0 ? 'Profit' : 'Loss');
-		
-		var C29 = siiR((( sqftperwk / c_speed ) - ( sqftperwk / s_speed ))*52/12);
-		//roiDbg('C29 "esthrs" = '+ C29);
-		$('#esthrs').val(C29).autoNumeric('update');
-		// & check for "Savings" vs "Loss"
-		$('#esthrs').parent().siblings('label').find('.save').html( C29 >= 0 ? 'Savings' : 'Loss');
-		$('#vesthrs').html($('#esthrs').val());
-	}
+	c_price = $('#price').autoNumeric('get');
+	c_speed = $('#speed').autoNumeric('get');
+	c_ink00 = Math.round( $('#inkpersqft').autoNumeric('get') * 100, 2 );
+	var c_ink = c_ink00 / 100;
+	
+	var c_inkpermonth = siiR((c_ink*sqftperwk)*(52/12));
+	//roiDbg('C9 c_inkpermonth "inkpermonth" = '+ c_inkpermonth);
+	$('#inkpermonth,#sinkpermonth').val(c_inkpermonth).autoNumeric('update');
+	
+	years = $('#amortper-5').prop('checked') ? 5 : 3;
+	//roiDbg('C21 years "pamortper" = '+ years);
+	$('#pamortper, #samortper, #spamortper').val(years);
+	
+	var c_monthly = siiR(c_price/(years*12));
+	//roiDbg('C11 "monthlyamort" = '+ C11);
+	$('#monthlyamort,#smonthlyamort').val(c_monthly).autoNumeric('update');
+	
+	var s_inkpermonth = siiR((s_ink*sqftperwk)*(52/12));
+	//roiDbg('C20 "pinkpermonth: = '+ s_inkpermonth);
+	$('#pinkpermonth,#spinkpermonth').val(s_inkpermonth).autoNumeric('update');
+	
+	var s_monthly = siiR(s_price/(years*12));
+	//roiDbg('C22 "pmonthlyamort" = '+ s_monthly);
+	$('#pmonthlyamort,#spmonthlyamort').val(s_monthly).autoNumeric('update');
+	
+	var c_total = c_monthly+c_inkpermonth;
+	//roiDbg('C25 "cmonthlytotal" = '+ c_total);
+	$('#cmonthlytotal').val(c_total).autoNumeric('update');
+	
+	var s_total = s_monthly+s_inkpermonth;
+	//roiDbg('C26 "monthlytotal" = '+ s_monthly);
+	$('#monthlytotal').val(s_total).autoNumeric('update');
+	
+	var costpermonth = siiR( c_total - s_total );
+	//roiDbg('C27 "costpermonth" = '+ costpermonth);
+	var cpmzs = '' + ( costpermonth >= 1000 ? 0 : 2 );
+	$('#costpermonth').val(costpermonth).autoNumeric('update', { mDec: cpmzs });
+	// & check for "Savings" vs "Loss"
+	//$('#costpermonth').parent().siblings('label').find('.save').html( costpermonth >= 0 ? 'Savings' : 'Loss');
+	
+	var inkpermonth = siiR( c_inkpermonth - s_inkpermonth );
+	//roiDbg('C27 "costpermonth" = '+ costpermonth);
+	var ipmzs = '' + ( inkpermonth >= 1000 ? 0 : 2 );
+	$('#inkcostpermonth').val(inkpermonth).autoNumeric('update', { mDec: ipmzs });
+	// & check for "Savings" vs "Loss"
+	//$('#inkcostpermonth').parent().siblings('label').find('.save').html( inkpermonth >= 0 ? 'Savings' : 'Loss');
+	$('#vinkcost').html($('#inkcostpermonth').val());
+	
+	var inktot = inkpermonth * years * 12;
+	$('#inkcost').val(inktot).autoNumeric('update');
+	// & check for "Savings" vs "Loss"
+	//$('#inkcost').parent().siblings('label').find('.save').html( inktot >= 0 ? 'Savings' : 'Loss');
+	
+	var profit = costpermonth*(years*12);
+	//roiDbg('C28 "additional" = '+ profit);
+	$('#profit').val(profit).autoNumeric('update');
+	// & check for "Savings" vs "Loss"
+	//$('#profit').parent().siblings('label').find('.save').html( profit >= 0 ? 'Profit' : 'Loss');
+	
+	var C29 = siiR((( sqftperwk / c_speed ) - ( sqftperwk / s_speed ))*52/12);
+	//roiDbg('C29 "esthrs" = '+ C29);
+	$('#esthrs').val(C29).autoNumeric('update');
+	// & check for "Savings" vs "Loss"
+	//$('#esthrs').parent().siblings('label').find('.save').html( C29 >= 0 ? 'Savings' : 'Loss');
+	$('#vesthrs').html($('#esthrs').val());
+	
 	siiS(years, s_printer, c_price, c_speed, c_ink00, rollsperwk);
 }
 /*
@@ -354,16 +285,9 @@ function siiL() {
 	var C6 = siiB2I(save) / 100;
 	//roiDbg('C6 = ' + C6);
 	
-	if ( C14 == 9 ) {
-		siij = true;
-		$('#jvper').val(C4 / 100).autoNumeric('update');
-		$('#jlper').val(C5 / 100).autoNumeric('update');
-		$('#jiper').val(C6).autoNumeric('update');
-	} else {
-		$('#price').val(C4).autoNumeric('update');
-		$('#speed').val(C5).autoNumeric('update');
-		$('#inkpersqft').val(C6).autoNumeric('update');
-	}
+	$('#price').val(C4).autoNumeric('update');
+	$('#speed').val(C5).autoNumeric('update');
+	$('#inkpersqft').val(C6).autoNumeric('update');
 	// go to results?
 	$('#competitor a.next').click();
 }
