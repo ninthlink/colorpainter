@@ -61,3 +61,6 @@ p.disc {
 	border-bottom: none;
 	margin-bottom: 0;
 }
+#results.j .col1.printerinfos {
+	padding: 3em 0;
+}
