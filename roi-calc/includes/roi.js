@@ -129,7 +129,12 @@ function siiU() {
 		
 		// also printer name
 		var pname = siip[C14]['name'];
-		$('.pname').html( pname );
+		$('.pname').html( function(i, h) {
+			var o = pname;
+			if ( $(this).hasClass('dashd') ) o += ' - ';
+			if ( $(this).parent().is('h1') && ( pname == 'Jetrix KX5' ) ) o += ' Flatbed';
+			return o;
+		} );
 		$('#sprinter').val( pname );
 		// also printer infos
 		$('.printerimg, .printerinfos').empty();
@@ -164,7 +169,7 @@ function siiJ(n) {
 		$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(5)').nextAll().show();
 	}
 	$("#results .stripe.cp h5").html((siij ? 'JETRIX' : 'COLORPAINTER') + ' PRINTER');
-	$('#spsellprice').parents('.ui-field-contain').children('label').html( siij ? 'Cost of '+ n : 'MSRP Price of ColorPainter Printer' );
+	//$('#spsellprice').parents('.ui-field-contain').children('label').html( siij ? 'Cost of '+ n : 'MSRP Price of ColorPainter Printer' );
 }
 /*
  * recalculate all values based on those provided
@@ -427,9 +432,13 @@ jQuery(document).one('pagechange', function() {
 	
 	$('#printer').each(function() {
 		$(this).html(function() {
-			var h = '';
+			var h = '', n = '';
 			for( i in siip ) {
-				h += '<option value="'+ i + (i == siid ? '" selected="selected' : '') +'">'+ siip[i]['name'] +'</option>';
+				n = siip[i]['name'];
+				if ( n == 'Jetrix KX5' ) {
+					n += ' Flatbed';
+				}
+				h += '<option value="'+ i + (i == siid ? '" selected="selected' : '') +'">'+ n +'</option>';
 			}
 			return h;
 		}).bind('change', function() {
