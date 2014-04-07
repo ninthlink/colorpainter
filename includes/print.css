@@ -1,4 +1,4 @@
-// clean up printed results page a little
+/* clean up printed results page a little */
 body,
 .ui-page-theme-a {
 	background: #fff;
@@ -62,5 +62,5 @@ p.disc {
 	margin-bottom: 0;
 }
 #results.j .col1.printerinfos {
-	padding: 3em 0;
+	padding: 4em 0 6em;
 }

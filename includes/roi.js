@@ -7,8 +7,7 @@ var siip = [
 		spd: 128,
 		img: 'w64s',
 		iht: 212,
-		desc: '<ul><li>64" flexible, reliable high-performance low-solvent printer</li><li>Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Available with two neon florescent inks that glow under black light</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '64" flexible, reliable high-performance low-solvent printer. Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers. Industrial piezo print heads offer high resolution, high speeds and reliability. Available with two neon florescent inks that glow under black light. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter M-64s - 7 color',
@@ -17,8 +16,7 @@ var siip = [
 		spd: 356,
 		img: 'm64',
 		iht: 225,
-		desc: '<ul><li>64" high-speed eco-solvent printer with low odor inks</li><li>Very low cost per square foot to operate</li><li>Superior durability of outdoor and indoor graphics</li><li>SX inks offer a wide color gamut, high vividness and high density great for backlit applications</li><li>Unmatched productivity and quality</li><li>Automatic Print Adjustment</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty (pending March 2014)</li></ul>',
-		url: '#'
+		desc: '64" high-speed eco-solvent printer with low odor inks. Very low cost per square foot to operate. Superior durability of outdoor and indoor graphics. SX inks offer a wide color gamut, high vividness and high density great for backlit applications. Unmatched productivity and quality. Automatic Print Adjustment. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-74s - 8 color',
@@ -27,8 +25,7 @@ var siip = [
 		spd: 284,
 		img: 'h274',
 		iht: 216,
-		desc: '<ul><li>74" high-performance outdoor and indoor graphics printer</li><li>Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '74" high-performance outdoor and indoor graphics printer. Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-74s - 4 color',
@@ -37,8 +34,7 @@ var siip = [
 		spd: 567,
 		img: 'h274',
 		iht: 216,
-		desc: '<ul><li>74" High-performance outdoor and indoor graphics printer</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-104s - 8 color',
@@ -47,8 +43,7 @@ var siip = [
 		spd: 308,
 		img: 'h2104',
 		iht: 254,
-		desc: '<ul><li>104" High-performance outdoor and indoor graphics printer</li><li>Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '104" High-performance outdoor and indoor graphics printer. Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-104s - 4 color',
@@ -57,8 +52,7 @@ var siip = [
 		spd: 856,
 		img: 'h2104',
 		iht: 254,
-		desc: '<ul><li>74" High-performance outdoor and indoor graphics printer</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2P-74s',
@@ -67,8 +61,7 @@ var siip = [
 		spd: 763,
 		img: 'h2p74',
 		iht: 172,
-		desc: '<ul><li>74" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
-		url: '#'
+		desc: '74" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
 	},
 	{
 		name: 'ColorPainter H2P-104s',
@@ -77,8 +70,7 @@ var siip = [
 		spd: 856,
 		img: 'h2p104',
 		iht: 152,
-		desc: '<ul><li>104" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
-		url: '#'
+		desc: '104" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
 	},
 	{
 		name: 'Jetrix KX5',
@@ -87,8 +79,7 @@ var siip = [
 		spd: 1,
 		img: 'jetrix',
 		iht: 348,
-		desc: '<ul><li>4\' x 8\' UV flatbed printer with roll-feed option and white, primer/varnish options</li><li>High-performance, reliable and easy operations under high-volume conditions</li><li>Quality components engineered for long-term reliability</li><li>InkTec UMS UV inks are half the price of comparable UV inks without sacrificing quality or reliability. That means lower operational and running costs, lower inventory costs and more profit for your business</li><li>Indoor, outdoor and industrial applications including 1, 2, or 3 layer printing on signs, trophies, awards, packaging, control panels and more</li></ul>',
-		url: '#'
+		desc: '4\' x 8\' UV flatbed printer with roll-feed option and white, primer/varnish options. High-performance, reliable and easy operations under high-volume conditions. Quality components engineered for long-term reliability. InkTec UMS UV inks are half the price of comparable UV inks without sacrificing quality or reliability. That means lower operational and running costs, lower inventory costs and more profit for your business. Indoor, outdoor and industrial applications including 1, 2, or 3 layer printing on signs, trophies, awards, packaging, control panels and more.'
 	}
 ];
 var siid = 0; // index to choose
@@ -140,9 +131,9 @@ function siiU() {
 		$('.printerimg, .printerinfos').empty();
 		$('<img />').attr({ alt: pname, src: 'includes/images/printers/'+ siip[C14]['img'] +'.jpg', width: 400, height: siip[C14]['iht'] }).appendTo('.printerimg');
 		var bname = (siip[C14]['name']).replace(' - ', '<span class="printonly"> - </span><br />').replace(' color',' Color Printer');
-		var pd = siip[C14]['desc'];
-		pd = pd.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
-		$('.printerinfos').html( '<h3>'+ bname +'</h3>'+ pd );
+		//var pd = siip[C14]['desc'];
+		//pd = pd.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
+		$('.printerinfos').html( '<h3>'+ bname +'</h3><p>'+ siip[C14]['desc'] + '</p>' );
 		
 		// and then : check jetrix?
 		siij = ( pname == 'Jetrix KX5' );
@@ -158,15 +149,17 @@ function siiJ(n) {
 	if ( siij ) {
 		// show Jetrix stuff, and hide some others
 		$('#seiko').addClass('j').find('.ui-controlgroup, .plaintext').hide();
-		$('#results').addClass('j').find('.bigger.col1, h1.printonly + div').hide();
-		$('#vinkcost').hide().parent().removeClass('bigger col2').addClass('mainline');
-		$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(0)').parent().children(':gt(5)').hide();
+		$('#results').addClass('j').find('h1.printonly + div').hide();
+		$('#results .bigger.col2').removeClass('col2').addClass('jetrix');
+		//$('#vinkcost').hide().parent().removeClass('bigger col2').addClass('mainline');
+		//$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(0)').parent().children(':gt(5)').hide();
 	} else {
 		// hide Jetrix stuff
 		$('#seiko').removeClass('j').find('.ui-controlgroup, .plaintext').show();
-		$('#results').removeClass('j').find('.bigger.col1, h1.printonly + div').show();
-		$('#vinkcost').show().parent().addClass('bigger col2').removeClass('mainline');
-		$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(5)').nextAll().show();
+		$('#results').removeClass('j').find('h1.printonly + div').show();
+		$('#results .bigger.jetrix').removeClass('jetrix').addClass('col2');
+		//$('#vinkcost').show().parent().addClass('bigger col2').removeClass('mainline');
+		//$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(5)').nextAll().show();
 	}
 	$("#results .stripe.cp h5").html((siij ? 'JETRIX' : 'COLORPAINTER') + ' PRINTER');
 	//$('#spsellprice').parents('.ui-field-contain').children('label').html( siij ? 'Cost of '+ n : 'MSRP Price of ColorPainter Printer' );
@@ -209,22 +202,24 @@ function siiC(e) {
 		c_ink00 = ji * 100;
 		
 		var inkwk = ( jv + jl + ji - s_ink ) * sqftperwk;
-		var ipmzs = '' + ( inkwk >= 10000 ? 0 : 2 );
-		$('#inkcostperwk').val(inkwk).autoNumeric('update', { mDec: ipmzs });
+		//var ipmzs = '' + ( inkwk >= 10000 ? 0 : 2 );
+		//$('#inkcostperwk').val(inkwk).autoNumeric('update', { mDec: ipmzs });
 		
 		var inkpermonth = siiR(inkwk * 52 / 12);
-		ipmzs = '' + ( inkpermonth >= 10000 ? 0 : 2 );
-		$('#inkcostpermonth').val(inkpermonth).autoNumeric('update', { mDec: ipmzs });
+		//ipmzs = '' + ( inkpermonth >= 10000 ? 0 : 2 );
+		$('#inkcostpermonth,#sjcmonth').val(inkpermonth).autoNumeric('update');//, { mDec: ipmzs });
+		$('#inkcostpermonth').parent().siblings('label').find('.save').html( inkpermonth >= 0 ? 'Savings' : 'Loss');
+		$('#vinkcost').html($('#inkcostpermonth').val());
 		
 		var hpermonth = siiR( s_price / 48 );
-		$('#sjmlease').val(hpermonth).autoNumeric('update');
+		$('#jmlease,#sjmlease').val(hpermonth).autoNumeric('update');
 		
 		var sprofits = inkpermonth - hpermonth;
 		//var spmzs = '' + ( sprofits >= 1000 ? 0 : 2 );
-		$('#sjprofit').val(sprofits).autoNumeric('update', { mDec: 2 });
+		$('#japrofit,#sjaprofit').val(sprofits).autoNumeric('update');
 		// & check for "Savings" vs "Loss"
-		$('#sjprofit').parent().siblings('label').find('.save').html( sprofits >= 0 ? 'Profit' : 'Loss');
-		$('#vjprofit').html($('#sjprofit').val());
+		$('#japrofit,#sjaprofit').parent().siblings('label').find('.save').html( sprofits >= 0 ? 'Profit' : 'Loss');
+		//$('#vjprofit').html($('#sjprofit').val());
 	} else {
 		c_price = $('#price').autoNumeric('get');
 		c_speed = $('#speed').autoNumeric('get');
