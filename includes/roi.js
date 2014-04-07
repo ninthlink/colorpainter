@@ -1,5 +1,5 @@
 var siip = [
-	{ name: 'Seleccione Por Favor' },
+	{ name: 'Selecciones Modelo Por Favor' },
 	{
 		name: 'ColorPainter W-64s - 4 color GX ink',
 		ink: 1.1,
@@ -7,8 +7,7 @@ var siip = [
 		spd: 128,
 		img: 'w64s',
 		iht: 212,
-		desc: '<ul><li>64" flexible, reliable high-performance low-solvent printer</li><li>Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Available with two neon florescent inks that glow under black light</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '64" flexible, reliable high-performance low-solvent printer. Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers. Industrial piezo print heads offer high resolution, high speeds and reliability. Available with two neon florescent inks that glow under black light. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter M-64s LCIS - 6 color Wx ink',
@@ -17,8 +16,7 @@ var siip = [
 		spd: 356,
 		img: 'm64',
 		iht: 225,
-		desc: '<ul><li>64" high-speed eco-solvent printer with low odor inks</li><li>Very low cost per square foot to operate</li><li>Superior durability of outdoor and indoor graphics</li><li>SX inks offer a wide color gamut, high vividness and high density great for backlit applications</li><li>Unmatched productivity and quality</li><li>Automatic Print Adjustment</li><li>ONYX RIP Center included</li><li>3M&trade; MCS&trade; Warranty (pending March 2014)</li></ul>',
-		url: '#'
+		desc: '64" high-speed eco-solvent printer with low odor inks. Very low cost per square foot to operate. Superior durability of outdoor and indoor graphics. SX inks offer a wide color gamut, high vividness and high density great for backlit applications. Unmatched productivity and quality. Automatic Print Adjustment. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-74s - 8 color',
@@ -27,8 +25,7 @@ var siip = [
 		spd: 284,
 		img: 'h274',
 		iht: 216,
-		desc: '<ul><li>74" high-performance outdoor and indoor graphics printer</li><li>Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '74" high-performance outdoor and indoor graphics printer. Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-74s - 4 color',
@@ -37,8 +34,7 @@ var siip = [
 		spd: 567,
 		img: 'h274',
 		iht: 216,
-		desc: '<ul><li>74" High-performance outdoor and indoor graphics printer</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-104s - 8 color',
@@ -47,8 +43,7 @@ var siip = [
 		spd: 308,
 		img: 'h2104',
 		iht: 254,
-		desc: '<ul><li>104" High-performance outdoor and indoor graphics printer</li><li>Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface</li><li>Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Resolution up to 900x900 dpi</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '104" High-performance outdoor and indoor graphics printer. Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-104s - 4 color',
@@ -57,8 +52,7 @@ var siip = [
 		spd: 856,
 		img: 'h2104',
 		iht: 254,
-		desc: '<ul><li>74" High-performance outdoor and indoor graphics printer</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments</li><li>Low running costs</li><li>3M&trade; MCS&trade; Warranty</li></ul>',
-		url: '#'
+		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2P-74s',
@@ -67,8 +61,7 @@ var siip = [
 		spd: 763,
 		img: 'h2p74',
 		iht: 172,
-		desc: '<ul><li>74" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
-		url: '#'
+		desc: '74" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
 	},
 	{
 		name: 'ColorPainter H2P-104s',
@@ -77,8 +70,7 @@ var siip = [
 		spd: 856,
 		img: 'h2p104',
 		iht: 152,
-		desc: '<ul><li>104" high-speed 4 color printer with large-capacity ink system</li><li>Contains eight large-capacity ink reservoirs with six liters of ink per color</li><li>Designed for high-production shops where low running costs are important</li><li>Industrial piezo print heads offer high resolution, high speeds and reliability</li><li>Good fit for fleet graphics, banners, signs, fine art canvas and flex faces</li></ul>',
-		url: '#'
+		desc: '104" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
 	}
 ];
 var siid = 0; // index to choose
@@ -124,9 +116,9 @@ function siiU() {
 		$('.printerimg, .printerinfos').empty();
 		$('<img />').attr({ alt: pname, src: 'includes/images/printers/'+ siip[C14]['img'] +'.jpg', width: 400, height: siip[C14]['iht'] }).appendTo('.printerimg');
 		var bname = (siip[C14]['name']).replace(' - ', '<span class="printonly"> - </span><br />').replace(' color',' Color Printer');
-		var pd = siip[C14]['desc'];
-		pd = pd.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
-		$('.printerinfos').html( '<h3>'+ bname +'</h3>'+ pd );
+		//var pd = siip[C14]['desc'];
+		//pd = pd.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
+		$('.printerinfos').html( '<h3>'+ bname +'</h3><p>'+ siip[C14]['desc'] +'</p>' );
 		
 		// and then
 		siiC();
@@ -148,7 +140,7 @@ function siiC(e) {
 	var	rollsperwk = $('#rollsperwk').val();
 	$('#prollsperwk,#sprollsperwk,#srollsperwk').val(rollsperwk);
 	
-	var sqftperwk = 183 * rollsperwk;
+	var sqftperwk = 76 * rollsperwk;
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
 	$('#sqftperwk,#ssqftperwk,#psqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
 	
