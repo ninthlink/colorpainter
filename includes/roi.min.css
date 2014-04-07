@@ -77,8 +77,8 @@ h4{color:#666;margin-bottom:0}
 .ui-mobile .mainline label strong{font-size:1.25em}
 .plaintext .mainline .ui-input-text input{font-size:1.4em;min-height:2em;padding:0}
 .ui-field-contain.mainline.mo small{margin-top:1.1em}
-.plaintext.stripe .ui-field-contain>label{width:57%}
-.plaintext.stripe .ui-field-contain>label~[class*=ui-]{width:41%}
+.plaintext.stripe .ui-field-contain>label{width:64%;margin-right:0}
+.plaintext.stripe .ui-field-contain>label~[class*=ui-]{width:36%}
 p.disc{margin:2em 0}
 .rbtns{float:left;width:74px;position:absolute;top:1.5em;right:0.4em}
 a.rpop,.ui-mobile .ui-page-theme-a label a.rpop{font-size:13px;font-weight:700;color:#efefef;display:inline-block;width:18px;height:18px;line-height:18px;background:#bbb;border-radius:9px;text-align:center}

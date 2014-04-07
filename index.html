@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
+<head>
   <title>Seiko ROI</title>
 
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
   <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
+  <meta name="MobileOptimized" content="700">
   <meta name="apple-mobile-web-app-title" content="Seiko ROI">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -29,17 +30,17 @@
   <div class="ui-body ui-body-a">
 	  <div class="progress p1"></div>
 	  <fieldset class="fieldrow">
-		  <label for="printer">Seiko Instruments <!--USA ColorPainter -->Printer</label>
+		  <label for="printer">Seiko Instruments' <!--USA ColorPainter -->Printer</label>
 		  <select name="printer" id="printer">
 			  <option value="">Please Select</option>
 		  </select>
 	  </fieldset>
 	  <div class="fieldrow disabled">
-		  <label for="psellprice">MSRP Price of ColorPainter Printer</label>
+		  <label for="psellprice">MSRP Price of Seiko Instruments Printer</label>
 		  <input name="psellprice" id="psellprice" value="" type="text" class="money" data-m-dec="0" disabled="disabled">
 	  </div>
 	  <div class="fieldrow disabled">
-		  <label for="rollsperwk">Number of 54"x50 YD Rolls per Week</label>
+		  <label for="rollsperwk">Number of 54"x50 YD Rolls per Week <span class="jetrix">You Print and Stick to Something</span></label>
 		  <select name="rollsperwk" id="rollsperwk" disabled="disabled">
 			  <option value="1">1</option>
 			  <option value="2" selected="selected">2</option>
@@ -54,20 +55,20 @@
 		  </select>
 	  </div>
 	  <div class="fieldrow disabled">
-		  <label for="pinkpersqft">Cost of Ink<span class="jetrix"> for Jetrix KX5</span> per SQFT</label>
+		  <label for="pinkpersqft"><span class="pname dashd"></span>ink cost per SQFT</label>
 		  <input name="pinkpersqft" id="pinkpersqft" value="0.16" type="text" class="money" disabled="disabled">
 	  </div>
 	  <div class="fieldrow jetrix disabled">
-		  <label for="jvper">Average cost of Adhesive-back Vinyl per SQFT</label>
+		  <label for="jiper">Current Printer - Average Ink Cost per SQFT</label>
+		  <input name="jiper" id="jiper" value="0.28" type="text" class="money" disabled="disabled">
+	  </div>
+	  <div class="fieldrow jetrix disabled">
+		  <label for="jvper">Average Cost of Adhesive-back Vinyl per SQFT</label>
 		  <input name="jvper" id="jvper" value="0.25" type="text" class="money" disabled="disabled">
 	  </div>
 	  <div class="fieldrow jetrix disabled">
-		  <label for="jlper">Average cost of laminate per SQFT</label>
+		  <label for="jlper">Average Cost of Laminate per SQFT</label>
 		  <input name="jlper" id="jlper" value="0.22" type="text" class="money" disabled="disabled">
-	  </div>
-	  <div class="fieldrow jetrix disabled">
-		  <label for="jiper">Current Average Ink Cost per SQFT</label>
-		  <input name="jiper" id="jiper" value="0.28" type="text" class="money" disabled="disabled">
 	  </div>
 	  <fieldset class="fieldrow disabled" data-role="controlgroup" data-type="horizontal">
 		  <legend>Lease Period in Years</legend>
@@ -162,7 +163,7 @@
 			  <input name="saver" id="saver" value="" type="text" readonly placeholder="Save" data-wrapper-class="saver">
         <a href="#mailto" class="ui-btn mailto">Email this link</a>
 		  </div>
-	  <h1><span class="pname"></span><br />Printer vs. Competitor</h1>
+	  <h1><span class="pname"></span><br />Printer vs. <span class="noj">Competitor</span><span class="jetrix">Roll-to-roll Printer</span></h1>
 	  <div class="plaintext">
 		  <div class="ui-field-contain mo bigger jetrix">
 			  <label for="sjprofit"><strong>Additional <span class="save">Profit<!-- or Loss--></span></strong></label>
@@ -258,15 +259,15 @@
 			  <input name="sprinter" id="sprinter" value="" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spsellprice">MSRP Price of ColorPainter Printer</label>
+			  <label for="spsellprice">MSRP Price of Seiko Instruments Printer</label>
 			  <input name="spsellprice" id="spsellprice" value="" type="text" class="money" data-m-dec="0" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="srollsperwk">Number of 54"x50 YD Rolls per Week</label>
+			  <label for="srollsperwk">Number of 54"x50 YD Rolls per Week <span class="jetrix">You Print and Stick to Something</span></label>
 			  <input name="srollsperwk" id="srollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spinkpersqft">Cost of Ink<span class="jetrix"> for Jetrix KX5</span> per SQFT</label>
+			  <label for="spinkpersqft"><span class="pname dashd"></span>ink cost per SQFT</label>
 			  <input name="spinkpersqft" id="spinkpersqft" value="0.16" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain noj">
@@ -290,11 +291,11 @@
 			  <input name="spmonthlyamort" id="spmonthlyamort" value="" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain jetrix">
-			  <label for="sjvper">Average cost of Adhesive-back Vinyl per SQFT</label>
+			  <label for="sjvper">Average Cost of Adhesive-back Vinyl per SQFT</label>
 			  <input name="sjvper" id="sjvper" value="0.25" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain jetrix">
-			  <label for="sjlper">Average cost of laminate Per SQFT</label>
+			  <label for="sjlper">Average Cost of Laminate Per SQFT</label>
 			  <input name="sjlper" id="sjlper" value="0.22" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain jetrix">
