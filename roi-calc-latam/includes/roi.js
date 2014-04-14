@@ -145,9 +145,12 @@ function siiC(e) {
 	$('#sqftperwk,#ssqftperwk,#psqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
 	
 	c_price = $('#price').autoNumeric('get');
+	$('#sprice').val(c_price).autoNumeric('update');
 	c_speed = $('#speed').autoNumeric('get');
+	$('#sspeed').val(c_speed).autoNumeric('update');
 	c_ink00 = Math.round( $('#inkpersqft').autoNumeric('get') * 100, 2 );
 	var c_ink = c_ink00 / 100;
+	$('#sinkpersqft').val(c_ink).autoNumeric('update');
 	
 	var c_inkpermonth = siiR((c_ink*sqftperwk)*(52/12));
 	//roiDbg('C9 c_inkpermonth "inkpermonth" = '+ c_inkpermonth);
