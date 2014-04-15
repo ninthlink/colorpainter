@@ -449,9 +449,7 @@ jQuery(document).one('pagechange', function() {
 			}
 			return h;
 		}).bind('change', function() {
-			if ( $(this).val() > 0 ) {
-				siiU();
-			}
+			siiU();
 		});
 		if ( siid > 0 ) {
 			try{
