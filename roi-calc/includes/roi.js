@@ -139,6 +139,15 @@ function siiU() {
 		siij = ( pname == 'Jetrix KX5' );
 		siiJ( pname );
 		siiC();
+	} else {
+		var sibs = $('#printer').parents('fieldset').siblings().addClass('disabled');
+		sibs.find('.ui-input-text input').textinput('disable');
+		sibs.find('.ui-select select').selectmenu('disable');
+		sibs.find('.ui-radio input').checkboxradio('disable');
+		// + some default values
+		$('#price').val('');
+		$('#speed').val(100);
+		$('#inkpersqft').val(0.28).autoNumeric('update');
 	}
 }
 /*
