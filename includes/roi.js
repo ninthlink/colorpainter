@@ -108,7 +108,7 @@ function siiU() {
 		
 		var C15 = siip[C14]['msrp'];
 		//roiDbg('psellprice = '+ C15);
-		$('#psellprice,#spsellprice').val(C15).autoNumeric('update');
+		$('#psellprice').val(C15).autoNumeric('update');
 		
 		var C16 = siip[C14]['spd'];
 		//roiDbg('pspeed = '+ C16);
@@ -116,7 +116,7 @@ function siiU() {
 		
 		var C17 = siip[C14]['ink'];
 		//roiDbg('pinkpersqft = '+ C17);
-		$('#pinkpersqft,#spinkpersqft').val(C17).autoNumeric('update');
+		$('#pinkpersqft').val(C17).autoNumeric('update');
 		
 		// also printer name
 		var pname = siip[C14]['name'];
@@ -185,9 +185,13 @@ function siiC(e) {
 	
 	var s_printer = $('#printer').val();	
 	//roiDbg('printer # '+ s_printer);
-	var s_price = $('#psellprice').autoNumeric('get');
+	var s_price = $('#psellprice').autoNumeric('get');	
+	$('#spsellprice').val(s_price).autoNumeric('update');
+	
 	var s_speed = $('#pspeed').autoNumeric('get');
+	
 	var s_ink = siiR( $('#pinkpersqft').autoNumeric('get') ); //hax
+	$('#spinkpersqft').val(s_ink).autoNumeric('update');
 	
 	var	rollsperwk = $('#rollsperwk').val();
 	$('#prollsperwk,#sprollsperwk,#srollsperwk').val(rollsperwk);
@@ -409,7 +413,7 @@ jQuery(document).one('pagechange', function() {
 	$('input.number').attr('type','text').autoNumeric('init');
 	
 	// bind the update
-	$('#price, #inkpersqft, #rollsperwk, #speed').bind('change', siiC);
+	$('#price, #inkpersqft, #rollsperwk, #speed, #psellprice, #pinkpersqft').bind('change', siiC);
 	$('input[type="radio"]').bind({
 		'change': function() {
 			if ( $(this).prop('checked') ) $(this).trigger('roiChecked');
