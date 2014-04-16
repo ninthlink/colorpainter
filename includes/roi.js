@@ -137,10 +137,10 @@ function siiU() {
 		
 		// and then : check jetrix?
 		siij = ( pname == 'Jetrix KX5' );
-		siiJ( pname );
+		siiJ();
 		siiC();
 	} else {
-		var sibs = $('#printer').parents('fieldset').siblings().addClass('disabled');
+		var sibs = $('#printer').parents('fieldset').siblings(':not(.progress)').addClass('disabled');
 		sibs.find('.ui-input-text input').textinput('disable');
 		sibs.find('.ui-select select').selectmenu('disable');
 		sibs.find('.ui-radio input').checkboxradio('disable');
@@ -148,12 +148,15 @@ function siiU() {
 		$('#price').val('');
 		$('#speed').val(100);
 		$('#inkpersqft').val(0.28).autoNumeric('update');
+		$('.pname').html('');
+		siij = false;
+		siiJ();
 	}
 }
 /*
  * show/hide some fields for Jetrix or not-Jetrix...
  */
-function siiJ(n) {
+function siiJ() {
 	$('#seiko a').attr('href', ( siij ? '#results' : '#competitor' ) );
 	if ( siij ) {
 		// show Jetrix stuff, and hide some others
@@ -488,13 +491,16 @@ jQuery(document).one('pagechange', function() {
 			$(this).attr('href',lo);
 		}
 	});
-	/* reload
+	// reload
 	$('.again a').click(function() {
-		location.hash = '';
-		location.reload();
-		return false;
+		var psel = $('#printer');
+		psel.val(0).trigger('change');
+		try {
+			psel.selectmenu('refresh');
+		} catch(e) {
+			//
+		}
 	});
-	*/
 });
 var roiAlph = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'a':10,'b':11,'c':12,'d':13,'e':14,'f':15,'g':16,'h':17,'i':18,'j':19,'k':20,'l':21,'m':22,'n':23,'o':24,'p':25,'q':26,'r':27,'s':28,'t':29,'u':30,'v':31,'w':32,'x':33,'y':34,'z':35};
 function siiB(e) {
