@@ -122,6 +122,16 @@ function siiU() {
 		
 		// and then
 		siiC();
+	} else {
+		var sibs = $('#printer').parents('fieldset').siblings(':not(.progress)').addClass('disabled');
+		sibs.find('.ui-input-text input').textinput('disable');
+		sibs.find('.ui-select select').selectmenu('disable');
+		sibs.find('.ui-radio input').checkboxradio('disable');
+		// + some default values
+		$('#price').val('');
+		$('#speed').val(10);
+		$('#inkpersqft').val(1.28).autoNumeric('update');
+		$('.pname').html('');
 	}
 }
 /*
@@ -395,9 +405,13 @@ jQuery(document).one('pagechange', function() {
 	});
 	// reload
 	$('.again a').click(function() {
-		location.hash = '';
-		location.reload();
-		return false;
+		var psel = $('#printer');
+		psel.val(0).trigger('change');
+		try {
+			psel.selectmenu('refresh');
+		} catch(e) {
+			//
+		}
 	});
 });
 var roiAlph = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'a':10,'b':11,'c':12,'d':13,'e':14,'f':15,'g':16,'h':17,'i':18,'j':19,'k':20,'l':21,'m':22,'n':23,'o':24,'p':25,'q':26,'r':27,'s':28,'t':29,'u':30,'v':31,'w':32,'x':33,'y':34,'z':35};
