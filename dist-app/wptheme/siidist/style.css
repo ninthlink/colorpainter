@@ -127,16 +127,44 @@ a img {
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
+/*
+( 66 Museo 300 : Fast + Precise + Reliable )
+
+H1 48/54 Museo 300 / 700 : "High performance..." headline on CP overview page
+
+H2 40 Museo 500 : section titles "Key Product Benefits" / ...
+
+H3 32/42 Museo ( 300 / 700 ) : big home text / headline on M64 "The next generation...."
+
+<blockquote> 26/36 Museo 700 : testimonial quote
+
+H4 22 OpenSans Bold : Speed / Ink / Technology
+- 24 OpenSans Bold : ( button )
+- 21 OpenSans Extrabold : [ Digital Printers ]
+
+?? 17/26 Arial : bigger body copy (WhySeiko) ??
+
+H5 16/22 OpenSans (Bold / Extrabold / Italic) : left menu, "TAKE A GUIDE" / "SALES"... / "- Mark Land.."
++ text-transform: uppercase
+
+( 14/21 Arial : left Hello / "Learn More" / homepage copy?? )
+
+H6 12 OpenSans Extrabold : left LOGOUT / M64 table labels & WATCH btn
+ */
 body,
 button,
 input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-size: 1.7rem;
 	line-height: 1.5;
+}
+body.home {
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -552,7 +580,7 @@ a:active {
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 .byline,
 .updated {
@@ -565,7 +593,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
 }
 .page-links {
 	clear: both;
@@ -675,3 +703,36 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {}
+
+/*
+Theme Name: siidist
+Layout: Sidebar-Content
+*/
+.site-content {
+	background: #efefef;
+}
+.content-area {
+	float: right;
+	margin: 0 0 0 -18%;
+	width: 100%;
+}
+.site-main {
+	margin: 0 0 0 18%;
+	background: #fff;
+}
+.site-content .site-header {
+	float: left;
+	overflow: hidden;
+	width: 18%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+.site-main .wpb_row {
+	margin: 0;
+}
+.vc_responsive .site-main .wpb_row .vc_span12 {
+	padding-left: 0;
+	padding-right: 0;
+}
