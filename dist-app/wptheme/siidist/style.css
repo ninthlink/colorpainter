@@ -127,30 +127,81 @@ a img {
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
+/* Museo : A font by Jos Buivenga (exljbris) -> http://www.exljbris.com */
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/museo-300-webfont.eot');
+    src: url('fonts/museo-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-300-webfont.woff') format('woff'),
+         url('fonts/museo-300-webfont.ttf') format('truetype'),
+         url('fonts/museo-300-webfont.svg#museo300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/museo-500-webfont.eot');
+    src: url('fonts/museo-500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-500-webfont.woff') format('woff'),
+         url('fonts/museo-500-webfont.ttf') format('truetype'),
+         url('fonts/museo-500-webfont.svg#museo500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/museo-700-webfont.eot');
+    src: url('fonts/museo-700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-700-webfont.woff') format('woff'),
+         url('fonts/museo-700-webfont.ttf') format('truetype'),
+         url('fonts/museo-700-webfont.svg#museo700') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
 /*
-( 66 Museo 300 : Fast + Precise + Reliable )
-
-H1 48/54 Museo 300 / 700 : "High performance..." headline on CP overview page
-
-H2 40 Museo 500 : section titles "Key Product Benefits" / ...
-
-H3 32/42 Museo ( 300 / 700 ) : big home text / headline on M64 "The next generation...."
-
-<blockquote> 26/36 Museo 700 : testimonial quote
-
-H4 22 OpenSans Bold : Speed / Ink / Technology
-- 24 OpenSans Bold : ( button )
-- 21 OpenSans Extrabold : [ Digital Printers ]
-
-?? 17/26 Arial : bigger body copy (WhySeiko) ??
-
-H5 16/22 OpenSans (Bold / Extrabold / Italic) : left menu, "TAKE A GUIDE" / "SALES"... / "- Mark Land.."
-+ text-transform: uppercase
-
-( 14/21 Arial : left Hello / "Learn More" / homepage copy?? )
-
-H6 12 OpenSans Extrabold : left LOGOUT / M64 table labels & WATCH btn
- */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-regular-webfont.eot');
+    src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-regular-webfont.woff') format('woff'),
+         url('fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-italic-webfont.eot');
+    src: url('fonts/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-italic-webfont.woff') format('woff'),
+         url('fonts/opensans-italic-webfont.ttf') format('truetype'),
+         url('fonts/opensans-italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-bold-webfont.eot');
+    src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-bold-webfont.woff') format('woff'),
+         url('fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-extrabold-webfont.eot');
+    src: url('fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-extrabold-webfont.woff') format('woff'),
+         url('fonts/opensans-extrabold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+*/
 body,
 button,
 input,
@@ -166,8 +217,70 @@ body.home {
 	font-size: 14px;
 	font-size: 1.4rem;
 }
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
+h1,
+h2,
+h3,
+blockquote {
+	font-family: 'Museo', Georgia, serif;
+}
+h4,
+h5,
+h6 {
+	font-family: 'OpenSans', Tahoma, sans-serif;
+}
+/* H1 48/54 Museo 300 / 700 : "High performance..." headline on CP overview page */
+h1 {
+	font-size: 48px;
+	font-size: 4.8rem;
+	font-weight: 300;
+	line-height: 1.125;
+	margin: 1.5em 0;
+}
+/* H2 40 Museo 500 : section titles "Key Product Benefits" / ... */
+h2 {
+	font-size: 40px;
+	font-size: 4rem;
+	font-weight: 500;
+	margin: 1em 0;
+}
+/* H3 32/42 Museo ( 300 / 700 ) : big home text / headline on M64 "The next generation...." */
+h3 {
+	font-size: 32px;
+	font-size: 3.2rem;
+	font-weight: 300;
+	line-height: 1.3125;
+	margin: 1em 0;
+}
+h1 strong,
+h3 strong {
+	font-weight: 700;
+}
+/* H4 22 OpenSans Bold : Speed / Ink / Technology */
+h4 {
+	font-size: 22px;
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin: 1em 0;
+}
+/* H5 16/22 OpenSans (Bold / Extrabold / Italic) : left menu, "TAKE A GUIDE" / "SALES"... / "- Mark Land.." */
+h5 {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.375;
+	text-transform: uppercase;
+	margin: 1em 0;
+}
+h5 em {
+	font-weight: 400;
+	font-style: italic;
+}
+/* H6 12 OpenSans Extrabold : left LOGOUT / M64 table labels & WATCH btn */
+h6 {
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin: 1em 0;
 }
 p {
 	margin-bottom: 1.5em;
@@ -178,6 +291,7 @@ b, strong {
 dfn, cite, em, i {
 	font-style: italic;
 }
+/* <blockquote> 26/36 Museo 700 : testimonial quote */ 
 blockquote {
 	margin: 0 1.5em;
 }
