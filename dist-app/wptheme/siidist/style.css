@@ -83,6 +83,7 @@ html {
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
+/*
 article,
 aside,
 details,
@@ -95,6 +96,7 @@ nav,
 section {
 	display: block;
 }
+*/
 ol, ul {
 	list-style: none;
 }
@@ -624,6 +626,41 @@ a:active {
 /*--------------------------------------------------------------
 7.0 Alignments
 --------------------------------------------------------------*/
+.rap {
+	border-top: 6px solid #31669a;
+	float: left;
+	width: 100%;
+	overflow-x: hidden;
+}
+.site-content {
+	background: #efefef;
+}
+.content-area {
+	float: right;
+	margin: 0 0 0 -18%;
+	position: relative;
+	width: 100%;
+}
+.site-main {
+	margin: 0 0 0 18%;
+	background: #fff;
+}
+.site-content .site-header {
+	float: left;
+	overflow: hidden;
+	width: 18%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+.site-main .wpb_row {
+	margin: 0;
+}
+.vc_responsive .site-main .wpb_row .vc_span12 {
+	padding-left: 0;
+	padding-right: 0;
+}
 .alignleft {
 	display: inline;
 	float: left;
@@ -639,7 +676,15 @@ a:active {
 	display: block;
 	margin: 0 auto;
 }
-
+.textcenter {
+	text-align: center;
+}
+.fullw img {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: auto;
+}
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
@@ -817,36 +862,3 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {}
-
-/*
-Theme Name: siidist
-Layout: Sidebar-Content
-*/
-.site-content {
-	background: #efefef;
-}
-.content-area {
-	float: right;
-	margin: 0 0 0 -18%;
-	width: 100%;
-}
-.site-main {
-	margin: 0 0 0 18%;
-	background: #fff;
-}
-.site-content .site-header {
-	float: left;
-	overflow: hidden;
-	width: 18%;
-}
-.site-footer {
-	clear: both;
-	width: 100%;
-}
-.site-main .wpb_row {
-	margin: 0;
-}
-.vc_responsive .site-main .wpb_row .vc_span12 {
-	padding-left: 0;
-	padding-right: 0;
-}
