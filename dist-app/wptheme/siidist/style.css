@@ -65,6 +65,9 @@ html {
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
+.rap {
+min-height: 100%;
+}
 *,
 *:before,
 *:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -219,7 +222,8 @@ blockquote {
 }
 h4,
 h5,
-h6 {
+h6,
+.main-navigation a {
 	font-family: 'OpenSans', Tahoma, sans-serif;
 }
 /* H1 48/54 Museo 300 / 700 : "High performance..." headline on CP overview page */
@@ -257,7 +261,8 @@ h4 {
 	margin: 1em 0;
 }
 /* H5 16/22 OpenSans (Bold / Extrabold / Italic) : left menu, "TAKE A GUIDE" / "SALES"... / "- Mark Land.." */
-h5 {
+h5,
+.main-navigation a {
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: 700;
@@ -379,6 +384,53 @@ th {
 	font-weight: bold;
 }
 
+a.logo {
+	display: block;
+	margin: 27px auto 0;
+	width: 184px;
+	max-width: 76%;
+}
+a.logo img {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+div.shg {
+	background: url(images/logo-seiko.png) no-repeat 50% 50%;
+	border-top: 1px solid #e1e1e1;
+	display: block;
+	width: 100%;
+	height: 110px;
+	text-indent: -999em;
+}
+ul.soc {
+	display: block;
+	list-style: none;
+	margin: 35px 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	height: 20px;
+}
+ul.soc a {
+	background: url(images/soc.png) no-repeat 50% 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -999em;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -10px;
+}
+ul.soc .fb a {
+	background-position: 0 0;
+	margin-left: -36px;
+}
+ul.soc .tw a {
+	background-position: 100% 0;
+	margin-left: 16px;
+}
 /*--------------------------------------------------------------
 4.0 Forms
 --------------------------------------------------------------*/
@@ -482,16 +534,18 @@ textarea {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
+h3 strong,
 a {
-	color: royalblue;
-}
-a:visited {
-	color: purple;
+	color: #428bca;
+	text-decoration: none;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	text-decoration: underline;
+}
+.site-main a {
+	font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -504,17 +558,26 @@ a:active {
 	width: 100%;
 }
 .main-navigation ul {
+	border-bottom: 1px solid #e1e1e1;
+	float: left;
 	list-style: none;
-	margin: 0;
-	padding-left: 0;
+	margin: 43px 0 0;
+	padding: 0;
+	width: 100%;
 }
 .main-navigation li {
+	border-top: 1px solid #e1e1e1;
 	float: left;
 	position: relative;
+	width: 100%;
 }
 .main-navigation a {
+	background: url(images/navarro.png) no-repeat 100% 50%; 
+	color: #333;
 	display: block;
-	text-decoration: none;
+	margin: 0;
+	padding: 18px 41px 18px 28px;
+	text-transform: none;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -599,15 +662,37 @@ a:active {
 	margin: 0 0 0 -18%;
 	position: relative;
 	width: 100%;
+	z-index: 1;
 }
 .site-main {
 	margin: 0 0 0 18%;
 	background: #fff;
 }
-.site-content .site-header {
+.site-header {
+	border-top: 6px solid #31669a;
 	float: left;
 	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
 	width: 18%;
+	height: 100%;
+	z-index: 3;
+}
+body.admin-bar .site-header {
+	top: 32px;
+}
+.left-end {
+	float: left;
+	text-align: center;
+	width: 18%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+.left-end h6 a {
+	color: #333;
+	text-transform: uppercase;
 }
 .site-footer {
 	clear: both;
