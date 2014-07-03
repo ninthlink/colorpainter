@@ -22,50 +22,11 @@ if ( ! function_exists( 'siidist_setup' ) ) :
  */
 function siidist_setup() {
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on siidist, use a find and replace
-	 * to change 'siidist' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'siidist', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	//add_theme_support( 'post-thumbnails' );
-
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'siidist' ),
 	) );
-	
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link'
-	) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'siidist_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // siidist_setup
 add_action( 'after_setup_theme', 'siidist_setup' );
@@ -97,6 +58,7 @@ function siidist_scripts() {
 	wp_deregister_style( 'js_composer_front' );
 	wp_deregister_style( 'ultimate-animate' );
 	wp_deregister_style( 'ultimate-style' );
+	wp_dequeue_style( 'bsf-Defaults' );
 	
 	wp_enqueue_script( 'siidist-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	/*
@@ -110,26 +72,19 @@ function siidist_scripts() {
 add_action( 'wp_enqueue_scripts', 'siidist_scripts' );
 
 /**
- * Implement the Custom Header feature.
+ * Remove the version number of WP + some other meta tags
  */
-//require get_template_directory() . '/inc/custom-header.php';
+$unactions = array( 'rel_canonical', 'rsd_link', 'wlwmanifest_link', 'wp_generator', 'wp_shortlink_wp_head' );
+$unacts = count( $unactions );
+while ( $unacts-- ) {
+	remove_action( 'wp_head', $unactions[$unacts] );
+}
+remove_action( 'wp_head', 'feed_links_extra', 3 );
 
 /**
- * Custom template tags for this theme.
+ * Obscure login screen error messages, via http://www.wpfunction.me/
  */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
+function siidist_wpfme_login_obscure() {
+	return '<strong>Sorry!</strong> Think you have gone wrong somewhere?';
+}
+add_filter( 'login_errors', 'siidist_wpfme_login_obscure' );
