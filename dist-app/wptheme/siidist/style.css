@@ -292,7 +292,11 @@ dfn, cite, em, i {
 }
 /* <blockquote> 26/36 Museo 700 : testimonial quote */ 
 blockquote {
-	margin: 0 1.5em;
+	font-size: 26px;
+	font-size: 2.6rem;
+	font-weight: 700;
+	line-height: 1.385;
+	margin: 0 0 1.5em;
 }
 address {
 	margin: 0 0 1.5em;
@@ -552,7 +556,7 @@ a:active {
 	text-decoration: underline;
 }
 .site-main a {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /*--------------------------------------------------------------
@@ -711,7 +715,7 @@ body.admin-bar .site-header {
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.75;
-	margin: 41px;
+	margin: 34px 41px;
 }
 .site-info,
 .site-info a {
@@ -3577,4 +3581,16 @@ body .wpb_gallery_slides ul li,
     transform: scale(1);
     opacity: 1;
   }
+}
+/* and then */
+.site-main a.vc_btn.vc_btn_grey.vc_btn_lg.vc_btn_rounded.pdf {
+	background: url(images/downloadpdf.png) no-repeat 100% 50%;
+	border: 2px solid #e7e7e7;
+	border-radius: 39px;
+	color: #31669a !important;
+	padding: 0 255px 0 37px;
+	text-align: center;
+	font-size: 24px;
+	font-size: 2.4rem;
+	line-height: 3.25;
 }
