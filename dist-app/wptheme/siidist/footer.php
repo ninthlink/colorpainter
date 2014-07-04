@@ -11,9 +11,8 @@
 
 			<div class="site-footer">
 				<div class="site-info">
-					<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'siidist' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'siidist' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( __( 'Theme: %1$s by %2$s.', 'siidist' ), 'siidist', '<a href="http://www.ninthlink.com" rel="designer">Ninthlink, Inc.</a>' ); ?>
+					<div class="shg">Seiko Holdings Group</div><a href="#">Privacy Policy</a><span class="sep"> | </span><a href="#">Terms of Use</a><br />
+					Copyright &copy; Seiko I Infotech Inc., 2014 All Rights Reserved
 				</div>
 			</div>
 	
