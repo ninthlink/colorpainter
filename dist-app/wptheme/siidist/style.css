@@ -232,7 +232,7 @@ h1 {
 	font-size: 4.8rem;
 	font-weight: 300;
 	line-height: 1.125;
-	margin: 1.5em 0;
+	margin: 0.5em 0;
 }
 /* H2 40 Museo 500 : section titles "Key Product Benefits" / ... */
 h2 {
@@ -240,6 +240,11 @@ h2 {
 	font-size: 4rem;
 	font-weight: 500;
 	margin: 1em 0;
+}
+.section h2 {
+	border-top: 3px solid #c4c4c4;
+	padding: 0.4em 0 0;
+	margin-bottom: 0.5em;
 }
 /* H3 32/42 Museo ( 300 / 700 ) : big home text / headline on M64 "The next generation...." */
 h3 {
@@ -722,9 +727,11 @@ body.admin-bar .site-header {
 	color: #fff;
 	font-weight: normal;
 }
+/*
 .site-main .wpb_row {
 	margin: 0;
 }
+*/
 .vc_responsive .site-main .wpb_row .vc_span12 {
 	padding-left: 0;
 	padding-right: 0;
@@ -2272,15 +2279,13 @@ div .vc_box_shadow_border_circle {
 .wpb_text_column *:last-child,
 #content .wpb_text_column p:last-child,
 #content .wpb_text_column *:last-child,
-.wpb_toggle_content p:last-child {
-  margin-bottom: 0;
-}
+.wpb_toggle_content p:last-child,
 .wpb_row,
 .wpb_content_element,
 ul.wpb_thumbnails-fluid > li,
 .last_toggle_el_margin,
 .wpb_button {
-  margin-bottom: 35px;
+  margin-bottom: 0;
 }
 /*
 .fb_like,

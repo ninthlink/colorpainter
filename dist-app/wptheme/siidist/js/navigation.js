@@ -32,3 +32,10 @@
 			container.className += ' toggled';
 	};
 } )();
+
+/**
+ * and then?
+ */
+jQuery(function($) {
+	$('p:empty').remove();
+});

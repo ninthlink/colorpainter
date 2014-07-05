@@ -60,7 +60,7 @@ function siidist_scripts() {
 	wp_deregister_style( 'ultimate-style' );
 	wp_dequeue_style( 'bsf-Defaults' );
 	
-	wp_enqueue_script( 'siidist-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'siidist-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20140705', true );
 	/*
 	wp_enqueue_script( 'siidist-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	
