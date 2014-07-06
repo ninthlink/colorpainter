@@ -392,7 +392,6 @@ table {
 th {
 	font-weight: bold;
 }
-
 a.logo {
 	display: block;
 	margin: 27px auto 0;
@@ -571,7 +570,7 @@ a:active {
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
+	width: 240px;
 }
 .main-navigation ul {
 	border-bottom: 1px solid #e1e1e1;
@@ -579,7 +578,9 @@ a:active {
 	list-style: none;
 	margin: 43px 0 0;
 	padding: 0;
+	position: relative;
 	width: 100%;
+	z-index: 4;
 }
 .main-navigation li {
 	border-top: 1px solid #e1e1e1;
@@ -627,40 +628,6 @@ a:active {
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
-/* Small menu */
-.menu-toggle {
-	display: none;
-}
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-}
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 /*--------------------------------------------------------------
 7.0 Alignments & Content
 --------------------------------------------------------------*/
@@ -670,29 +637,30 @@ a:active {
 	width: 100%;
 	overflow-x: hidden;
 }
-.site-content {
+.site-content,
+.main-navigation ul {
 	background: #efefef;
 }
 .content-area {
 	float: right;
-	margin: 0 0 0 -18%;
+	margin: 0;
 	position: relative;
 	width: 100%;
 	z-index: 1;
 }
 .site-main {
-	margin: 0 0 0 18%;
+	margin: 0;
 	background: #fff;
 }
 .site-header {
+	background: #fff;
 	border-top: 6px solid #31669a;
 	float: left;
-	overflow: hidden;
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 18%;
-	height: 100%;
+	width: 100%;
+	height: 66px;
 	z-index: 3;
 }
 body.admin-bar .site-header {
@@ -701,10 +669,11 @@ body.admin-bar .site-header {
 .left-end {
 	float: left;
 	text-align: center;
-	width: 18%;
+	width: 240px;
 	position: fixed;
 	left: 0;
 	bottom: 0;
+	z-index: 3;
 }
 .left-end h6 a {
 	color: #333;
@@ -727,11 +696,103 @@ body.admin-bar .site-header {
 	color: #fff;
 	font-weight: normal;
 }
-/*
-.site-main .wpb_row {
-	margin: 0;
+button.menu-toggle {
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	padding: none;
+	float: left;
+	width: 34px;
+	height: 27px;
+	background: url(images/menu.png) no-repeat 0 0;
+	background-size: contain;
+	text-indent: -999em;
+	cursor: pointer;
+	position: absolute;
+	top: 16px;
+	left: 15px;
 }
-*/
+button.menu-toggle:focus,
+button.menu-toggle:hover {
+	border: none;
+	box-shadow: none;
+}
+/* responsive response */
+@media screen and (max-width: 991px) {
+	.content-area,
+	.site-header,
+	.left-end	{
+		left: 0;
+		-webkit-transition: left 200ms;
+		-moz-transition: left 200ms;
+		transition: left 200ms;
+	}
+	.left-end {
+		left: -240px;
+	}
+	.toggled .left-end {
+		left: 0;
+	}
+	.toggled .content-area,
+	.toggled .site-header {
+		left: 240px;
+	}
+	.main-navigation ul {
+		left: -240px;
+		margin-top: -6px;
+		border-top: 6px solid #31669a;
+	}
+	a.logo {
+		display: block;
+		margin: 0;
+		width: 115px;
+		height: 37px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		margin-left: -57px;
+		background: url(images/logo-sii_m.png) no-repeat 0 0;
+		background-size: contain;
+	}
+	a.logo img {
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	.site-header {
+		background: none;
+		overflow: hidden;
+		width: 240px;
+		height: 100%;
+	}
+	.main-navigation {
+		width: 100%;
+	}
+	a.logo {
+		display: block;
+		margin: 27px auto 0;
+		width: 184px;
+		max-width: 76%;
+	}
+	a.logo img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+	.content-area {
+		margin-left: -18%;
+	}
+	.site-main {
+		margin-left: 18%;
+	}
+	.site-header,
+	.left-end {
+		width: 18%;
+	}
+	.menu-toggle {
+		display: none;
+	}
+}
 .vc_responsive .site-main .wpb_row .vc_span12 {
 	padding-left: 0;
 	padding-right: 0;
@@ -1316,6 +1377,7 @@ fieldset[disabled] .vc_btn {
   background-color: #5472d2;
   color: #ffffff !important;
   -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
 .vc_btn_blue:hover {
@@ -3598,4 +3660,10 @@ body .wpb_gallery_slides ul li,
 	font-size: 24px;
 	font-size: 2.4rem;
 	line-height: 3.25;
+}
+*:focus {
+	outline: none;
+}
+*::-moz-focus-inner {
+	border: none;
 }

@@ -4,8 +4,9 @@
  * Handles toggling the navigation menu for small screens.
  */
 ( function() {
-	var container, button, menu;
+	var body, container, button, menu, openmenu;
 
+	body = document.getElementsByTagName( 'body' )[0];
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container )
 		return;
@@ -24,12 +25,16 @@
 
 	if ( -1 === menu.className.indexOf( 'nav-menu' ) )
 		menu.className += ' nav-menu';
-
+	
+	openmenu = false;
+	
 	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) )
-			container.className = container.className.replace( ' toggled', '' );
+		if ( openmenu )
+			body.className = body.className.replace( ' toggled', '' );
 		else
-			container.className += ' toggled';
+			body.className += ' toggled';
+		
+		openmenu = !openmenu;
 	};
 } )();
 
