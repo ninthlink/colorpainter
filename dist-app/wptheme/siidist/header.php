@@ -20,7 +20,7 @@
 <div class="rap">
 	<div class="site-content">
 		<div class="site-header">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo-sii.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/sii.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
 			<div class="site-navigation" id="site-navigation">
 			<div class="main-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'siidist' ); ?></button>

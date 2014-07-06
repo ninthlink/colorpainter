@@ -404,7 +404,7 @@ a.logo img {
 	float: left;
 }
 .shg {
-	background: url(images/logo-seiko.png) no-repeat 50% 50%;
+	background: url(images/shg.png) no-repeat 50% 50%;
 	border-top: 1px solid #e1e1e1;
 	display: block;
 	width: 100%;
@@ -412,7 +412,7 @@ a.logo img {
 	text-indent: -999em;
 }
 .site-footer .shg {
-	background-image: url(images/logo-seiko-ftr.png);
+	background-image: url(images/shg_f.png);
 	border-top: none;
 	width: 147px;
 	height: 47px;
@@ -754,7 +754,7 @@ button.menu-toggle:hover {
 		top: 10px;
 		left: 50%;
 		margin-left: -57px;
-		background: url(images/logo-sii_m.png) no-repeat 0 0;
+		background: url(images/sii_m.png) no-repeat 0 0;
 		background-size: contain;
 	}
 	a.logo img {
