@@ -727,6 +727,9 @@ button.menu-toggle:hover {
 		-moz-transition: left 200ms;
 		transition: left 200ms;
 	}
+	.content-area {
+		padding-top: 60px;
+	}
 	.left-end {
 		left: -240px;
 	}
