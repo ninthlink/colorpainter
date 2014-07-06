@@ -2,7 +2,7 @@
  * navigation.js
  *
  * Handles toggling the navigation menu for small screens.
- */
+ *
 ( function() {
 	var body, container, button, menu, openmenu;
 
@@ -37,10 +37,25 @@
 		openmenu = !openmenu;
 	};
 } )();
-
+*/
 /**
  * and then?
  */
 jQuery(function($) {
+	var body = $('body'), container = $('#site-navigation'), button = container.find('button'), menu = container.find('ul'), cplink = menu.find('li.cp > a');
+	button.click(function() {
+		body.toggleClass('toggled');
+	});
+	var cpopen = false;
+	// #needswork
+	cplink.click(function() {
+		if ( cpopen ) {
+			body.removeClass('toggled cp');
+		} else {
+			body.addClass('toggled cp');
+		}
+		cpopen = !cpopen;
+		return false;
+	});
 	$('p:empty').remove();
 });
