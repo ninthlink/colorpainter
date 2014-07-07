@@ -6,12 +6,23 @@
  *
  * @package siidist
  */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+?><!doctype html>
+<html>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '' ); ?></title>
+<title><?php if ( wp_title( '', false ) ) { wp_title( '' ); } else { echo get_bloginfo( 'name' ); } ?></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="768">
+<meta name="apple-mobile-web-app-title" content="Seiko Dist">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-touch-fullscreen" content="yes">
+
+<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-152x152.png">
 
 <?php wp_head(); ?>
 </head>

@@ -33,6 +33,7 @@ function siidist_setup() {
 		remove_action( 'wp_head', $unactions[$unacts] );
 	}
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
+	add_action( 'wp_footer', 'siidist_wp_footer_cleanup' );
 }
 endif; // siidist_setup
 add_action( 'after_setup_theme', 'siidist_setup' );
@@ -62,6 +63,10 @@ function siidist_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'siidist_scripts' );
 
+/**
+ * Hook to wp_footer action
+ * because there are some scripts that just won't go away otherwise
+ */
 function siidist_wp_footer_cleanup() {
 	$ults = array( 'appear', 'custom', 'row-bg' );
 	$ultcount = count( $ults);
@@ -69,7 +74,6 @@ function siidist_wp_footer_cleanup() {
 		wp_dequeue_script( 'ultimate-'. $ults[$ultcount] );
 	}
 }
-add_action( 'wp_footer', 'siidist_wp_footer_cleanup' );
 
 /**
  * Obscure login screen error messages, via http://www.wpfunction.me/
