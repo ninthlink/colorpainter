@@ -42,17 +42,36 @@
 						'c' => 7,
 						's' => array(
 							'ink' => 'Low-Odor Eco-Solvent Ink',
-							'size' => '64&quot;',
+							'size' => '64&rdquo;',
 							'speed' => '66.5 smph',
 						),
 						'i' => 23,
 					),
 					array(
 						'n' => 'H2P-104s /<br />H2P-74s',
+						'c' => 4,
+						's' => array(
+							'size' => '104&rdquo;, 64&rdquo;',
+							'speed' => '79.5 smph',
+						),
+						'i' => 23,
+					),
+					array(
+						'n' => 'H2P-104s /<br />H2-74s',
 						'c' => 8,
 						's' => array(
-							'size' => '104&quot;, 64&quot;',
-							'speed' => '79.5 smph',
+							'size' => '104&rdquo;, 64&rdquo;',
+							'speed' => '100 smph',
+						),
+						'i' => 23,
+					),
+					array(
+						'n' => 'W-64s / W-54s',
+						'c' => 8,
+						's' => array(
+							'ink' => 'Neon Ink Available',
+							'size' => '104&rdquo;, 64&rdquo;',
+							'speed' => '100 smph',
 						),
 						'i' => 23,
 					),

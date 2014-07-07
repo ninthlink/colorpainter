@@ -214,17 +214,20 @@ body.home {
 	font-size: 14px;
 	font-size: 1.4rem;
 }
-h1,
-h2,
-h3,
-blockquote {
-	font-family: 'Museo', Georgia, serif;
-}
 h4,
 h5,
 h6,
-.main-navigation a {
+.main-navigation a,
+.cpmenu a,
+.cpmenu .ibox {
 	font-family: 'OpenSans', Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+blockquote,
+.cpmenu h4 {
+	font-family: 'Museo', Georgia, serif;
 }
 /* H1 48/54 Museo 300 / 700 : "High performance..." headline on CP overview page */
 h1 {
@@ -728,6 +731,8 @@ ul.cpmenu {
 	top: 66px;
 	left: 240px;
 	width: 240px;
+	height: 100%;
+	overflow-y: auto;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -741,47 +746,48 @@ ul.cpmenu li {
 	border-bottom: 1px solid #efefef;
 	list-style: none;
 	text-align: center;
-	padding: 0 0 32px;
+	padding: 0 0 20px;
 }
 ul.cpmenu li.cp0 {
 	border-bottom: 6px solid #31669a;
 	border-top: 6px solid #31669a;
+	padding: 0 0 32px;
 }
-ul.cpmenu li .img {
+.cpmenu .img {
 	background: url(images/nav-printers.jpg) no-repeat 0 0;
 	display: block;
 	margin: 0 auto;
 	width: 143px;
 	height: 78px;
 }
-ul.cpmenu li.cp0 .img {
+.cpmenu .cp0 .img {
 	background: url(images/colorpainter.png) no-repeat 0 0;
 	background-size: contain;
 	height: 35px;
 	margin: 28px auto 19px;
 }
-ul.cpmenu li.cp1 .img {
+.cpmenu .cp1 .img {
 	width: 151px;
 	height: 77px;
 }
-ul.cpmenu li.cp2 .img {
+.cpmenu .cp2 .img {
 	background-position: 50% -77px;
 	width: 142px;
 	height: 56px;
 }
-ul.cpmenu li.cp3 .img {
+.cpmenu .cp3 .img {
 	background-position: 50% -133px;
 	width: 146px;
 	height: 59px;
 }
-ul.cpmenu li.cp4 .img {
+.cpmenu .cp4 .img {
 	background-position: 50% -192px;
 	width: 146px;
 	height: 79px;
 }
-ul.cpmenu li h4 {
+.cpmenu h4 {
 	line-height: 1.25;
-	margin: 10px 0 0;
+	margin: 17px 0 7px;
 }
 ul.cpmenu li ul.inks {
 	display: block;
@@ -827,12 +833,24 @@ ul.cpmenu li ul.inks li.i6 {
 ul.cpmenu li ul.inks li.i7 {
 	background: #ccc;
 }
-ul.cpmenu li .ibox {
+.cpmenu em.ibox {
+	border: 1px solid #ccc;
+	color: #333;
 	display: inline-block;
-	padding: 0 5px;
 	font-size: 12px;
 	font-size: 1.2rem;
-	border: 1px solid #efefef;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	margin: 0 0 5px;
+	padding: 2px 10px;
+}
+.cpmenu p {
+	margin: 11px 0;
+}
+.cpmenu li a.vc_btn_xs.vc_btn_rounded {
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 /* responsive response */
 @media screen and (max-width: 991px) {
@@ -1476,10 +1494,13 @@ fieldset[disabled] .vc_btn {
   box-shadow: none;
 }
 .vc_btn_xs {
-  padding: 0.5em 0.8em;
+  padding: 0.6em 2.5em;
   font-size: 80%;
   line-height: 1em;
   border-radius: 5px;
+}
+.vc_btn_xs.vc_btn_rounded {
+	border-radius: 12px;
 }
 .vc_btn_sm {
   padding: 0.8em 1.2em;
@@ -1509,37 +1530,39 @@ fieldset[disabled] .vc_btn {
   border: 2px solid;
 }
 .vc_btn_blue {
-  background-color: #5472d2;
+  background-color: #31669a;
   color: #ffffff !important;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 100ms;
+  -moz-transition: all 100ms;
+  transition: all 100ms;
 }
-.vc_btn_blue:hover {
-  background-color: #3c5ecc;
-  color: #f7f7f7 !important;
+.vc_btn_blue:hover,
+.vc_btn_blue:focus {
+  background-color: #3d7fbf;
 }
 .vc_btn_blue.vc_btn_outlined,
 .vc_btn_blue.vc_btn_square_outlined {
   color: #5472d2 !important;
 }
 .vc_btn_blue.vc_btn_outlined:hover,
-.vc_btn_blue.vc_btn_square_outlined:hover {
+.vc_btn_blue.vc_btn_square_outlined:hover,
+.vc_btn_blue.vc_btn_outlined:focus,
+.vc_btn_blue.vc_btn_square_outlined:focus {
   border-color: #3c5ecc;
 }
 .vc_btn_blue.vc_btn_3d {
-  -webkit-box-shadow: 0 5px 0 #3253bc;
-  box-shadow: 0 5px 0 #3253bc;
+  -webkit-box-shadow: 0 5px 0 #31669a;
+  box-shadow: 0 5px 0 #31669a;
   margin-bottom: 5px;
 }
 .vc_btn_blue.vc_btn_3d.vc_btn_xs {
-  -webkit-box-shadow: 0 3px 0 #3253bc;
-  box-shadow: 0 3px 0 #3253bc;
+  -webkit-box-shadow: 0 3px 0 #31669a;
+  box-shadow: 0 3px 0 #31669a;
   margin-bottom: 3px;
 }
 .vc_btn_blue.vc_btn_3d.vc_btn_sm {
-  -webkit-box-shadow: 0 4px 0 #3253bc;
-  box-shadow: 0 4px 0 #3253bc;
+  -webkit-box-shadow: 0 4px 0 #31669a;
+  box-shadow: 0 4px 0 #31669a;
   margin-bottom: 4px;
 }
 .vc_btn_turquoise {
