@@ -634,6 +634,7 @@ body.toggled.cp .main-navigation li.cp a {
 .site-header {
 	background: #fff;
 	border-top: 6px solid #31669a;
+	border-bottom: 1px solid #efefef;
 	float: left;
 	position: fixed;
 	left: 0;
@@ -886,6 +887,7 @@ ul.cpmenu li ul.inks li.i7 {
 	}
 	.site-header {
 		background: none;
+		border-bottom: none;
 		width: 240px;
 		height: 100%;
 	}
