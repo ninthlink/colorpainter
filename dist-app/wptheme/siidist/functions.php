@@ -42,7 +42,7 @@ add_action( 'after_setup_theme', 'siidist_setup' );
  * Enqueue scripts and styles.
  */
 function siidist_scripts() {
-	wp_enqueue_style( 'siidist-style', get_stylesheet_uri(), array(), '20140706' );
+	wp_enqueue_style( 'siidist-style', get_stylesheet_uri(), array(), '20140707' );
 	
 	wp_deregister_style( 'js_composer_front' );
 	wp_deregister_style( 'ultimate-animate' );

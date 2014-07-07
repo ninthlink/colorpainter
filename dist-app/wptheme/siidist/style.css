@@ -3,18 +3,10 @@ Theme Name: siidist
 Theme URI: http://underscores.me/
 Author: Ninthlink, Inc.
 Author URI: http://www.ninthlink.com
-Description: siidist -based WP theme for Seiko Distributor App
-Version: 1.0-wpcom
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: siidist
-Domain Path: /languages/
-Tags:
+Description: _s -based WP theme for Seiko Distributor App
+Version: 1.0
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
- siidist is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+siidist started from Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -32,10 +24,9 @@ and Blueprint http://www.blueprintcss.org/
 5.0 - Navigation
 	5.1 - Links
 	5.2 - Menus
-6.0 - Accessibility
-7.0 - Alignments & Content
-8.0 - Clearings
-
+6.0 - Alignments & Content
+7.0 - Clearings
+8.0 - js_composer_front.css
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -76,26 +67,12 @@ min-height: 100%;
 	box-sizing:         border-box;
 }
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #fff;
 }
-/*
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
-	display: block;
-}
-*/
 ol, ul {
 	list-style: none;
 }
-table { /* tables still need 'cellspacing="0"' in the markup */
+table {
 	border-collapse: separate;
 	border-spacing: 0;
 }
@@ -120,7 +97,6 @@ a:active {
 a img {
 	border: 0;
 }
-
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
@@ -351,7 +327,6 @@ small {
 big {
 	font-size: 125%;
 }
-
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -545,7 +520,6 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
 }
-
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
@@ -565,7 +539,6 @@ a:active {
 .site-main a {
 	font-weight: 700;
 }
-
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
@@ -635,7 +608,7 @@ body.toggled.cp .main-navigation li.cp a {
 .main-navigation .current-menu-item a {
 }
 /*--------------------------------------------------------------
-7.0 Alignments & Content
+6.0 Alignments & Content
 --------------------------------------------------------------*/
 .rap {
 	border-top: 6px solid #31669a;
@@ -977,7 +950,7 @@ ul.cpmenu li ul.inks li.i7 {
 	height: auto;
 }
 /*--------------------------------------------------------------
-8.0 Clearings
+7.0 Clearings?
 --------------------------------------------------------------*/
 .clear:before,
 .clear:after,
@@ -994,7 +967,6 @@ ul.cpmenu li ul.inks li.i7 {
 	content: '';
 	display: table;
 }
-
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -1004,7 +976,7 @@ ul.cpmenu li ul.inks li.i7 {
 	clear: both;
 }
 /*--------------------------------------------------------------
-9.0 js_composer_front.css
+8.0 js_composer_front.css
 --------------------------------------------------------------*/
 /** js_composer_front.css **/
 .vc_clearfix {
