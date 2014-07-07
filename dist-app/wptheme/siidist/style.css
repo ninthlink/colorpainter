@@ -722,6 +722,7 @@ button.menu-toggle:hover {
 }
 ul.cpmenu {
 	background: #fff;
+	border-right: 1px solid #efefef;
 	display: none;
 	position: fixed;
 	top: 66px;
