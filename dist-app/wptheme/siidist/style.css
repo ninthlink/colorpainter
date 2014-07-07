@@ -703,14 +703,15 @@ ul.cpmenu {
 	background: #fff;
 	border-right: 1px solid #efefef;
 	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
 	position: fixed;
 	top: 66px;
 	left: 240px;
 	width: 240px;
 	height: 100%;
-	margin: 0;
-	padding: 0;
-	list-style: none;
 }
 .toggled.cp ul.cpmenu {
 	display: block;
