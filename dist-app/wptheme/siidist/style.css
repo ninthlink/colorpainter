@@ -749,12 +749,17 @@ ul.m li.p0 {
 	margin: 0 auto;
 	width: 143px;
 	height: 78px;
+	text-indent: -999em;
 }
 .m .p0 .img {
 	background: url(images/colorpainter.png) no-repeat 0 0;
 	background-size: contain;
 	height: 35px;
 	margin: 28px auto 19px;
+}
+.m.j .p0 .img {
+	background: none; /* for now */
+	text-indent: 0;
 }
 .m .p1 .img {
 	width: 151px;
