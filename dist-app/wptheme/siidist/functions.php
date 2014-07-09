@@ -33,7 +33,15 @@ function siidist_setup() {
 		remove_action( 'wp_head', $unactions[$unacts] );
 	}
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
+	
 	add_action( 'wp_footer', 'siidist_wp_footer_cleanup' );
+	
+	add_filter( 'login_errors', 'siidist_wpfme_login_obscure' );
+	add_filter( 'previous_post_rel_link', 'siidist_noprevnext' );
+	add_filter( 'next_post_rel_link', 'siidist_noprevnext' );
+	add_filter( 'nav_menu_css_class', 'siidist_nav_class' );
+	add_filter( 'nav_menu_item_id', 'siidist_nav_id' );
+	add_filter( 'body_class', 'siidist_body_class', 99 );
 }
 endif; // siidist_setup
 add_action( 'after_setup_theme', 'siidist_setup' );
@@ -81,7 +89,6 @@ function siidist_wp_footer_cleanup() {
 function siidist_wpfme_login_obscure() {
 	return '<strong>Sorry!</strong> Think you have gone wrong somewhere?';
 }
-add_filter( 'login_errors', 'siidist_wpfme_login_obscure' );
 
 /**
  * Clean up rel meta prev/next link
@@ -89,5 +96,31 @@ add_filter( 'login_errors', 'siidist_wpfme_login_obscure' );
 function siidist_noprevnext() {
 	return '';
 }
-add_filter( 'previous_post_rel_link', 'siidist_noprevnext' );
-add_filter( 'next_post_rel_link', 'siidist_noprevnext' );
+
+/**
+ * hook to nav_menu_css_class to wipe it out
+ */
+function siidist_nav_class( $classes ) {
+	return array();
+}
+
+/**
+ * hook to nav_menu_item_id to wipe that out
+ */
+function siidist_nav_id( $id ) {
+	return '';
+}
+
+/**
+ * hook to body_class to clean that up a smidge
+ */
+function siidist_body_class( $classes ) {
+	$whitelist = array( 'home', 'admin-bar', 'vc_responsive' );
+	$c = count( $classes );
+	while( $c-- ) {
+		if ( in_array( $classes[$c], $whitelist ) == false ) {
+			unset( $classes[$c] );
+		}
+	}
+	return $classes;
+}
