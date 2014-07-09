@@ -56,7 +56,7 @@
 							'size' => '64&rdquo;',
 							'speed' => '66.5 smph',
 						),
-						'i' => 23,
+						'i' => 80,
 					),
 					array(
 						'n' => 'H2P-104s /<br />H2P-74s',
