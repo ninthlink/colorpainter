@@ -39,6 +39,7 @@
 			</div>
 				
 			<ul class="cpmenu">
+				<li class="back"><a href="#">Back</a></li>
 				<?php
 				// reverse order
 				$printers = array(

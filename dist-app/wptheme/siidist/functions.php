@@ -52,7 +52,7 @@ function siidist_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'jquery-migrate' );
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.0', true );
-	wp_enqueue_script( 'siidist-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20140705', true );
+	wp_enqueue_script( 'siidist', get_template_directory_uri() . '/js/dist.js', array('jquery'), '20140709', true );
 	/*
 	wp_enqueue_script( 'siidist-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	

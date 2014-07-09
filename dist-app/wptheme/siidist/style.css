@@ -709,7 +709,7 @@ ul.cpmenu {
 	padding: 0;
 	overflow: auto;
 	position: fixed;
-	top: 66px;
+	top: 0;
 	left: 240px;
 	width: 240px;
 	height: 100%;
@@ -724,6 +724,9 @@ ul.cpmenu li {
 	list-style: none;
 	text-align: center;
 	padding: 0 0 20px;
+}
+ul.cpmenu li.back {
+	display: none;
 }
 ul.cpmenu li.cp0 {
 	border-bottom: 6px solid #31669a;
@@ -851,10 +854,20 @@ ul.cpmenu li ul.inks li.i7 {
 	.toggled .site-header {
 		left: 240px;
 	}
+	.toggled.cp .content-area,
+	.toggled.cp .site-header {
+		left: 480px;
+		-webkit-transition: none;
+		-moz-transition: none;
+		transition: none;
+	}
 	.main-navigation ul {
 		left: -240px;
 		margin-top: -6px;
 		border-top: 6px solid #31669a;
+	}
+	.toggled.cp .main-navigation ul {
+		left: -480px;
 	}
 	a.logo {
 		display: block;
@@ -871,19 +884,11 @@ ul.cpmenu li ul.inks li.i7 {
 	a.logo img {
 		display: none;
 	}
-	.toggled.cp .site-main {
-		position: relative;
-		left: 240px;
-	}
 }
 @media (min-width: 992px) {	
 	ul.cpmenu {
-		top: 0;
 		width: 18%;
 		left: 18%;
-	}
-	body.admin-bar ul.cpmenu {
-		top: 32px;
 	}
 	.site-header {
 		background: none;
@@ -920,6 +925,35 @@ ul.cpmenu li ul.inks li.i7 {
 	}
 	.toggled.cp .content-area {
 		left: 18%;
+	}
+}
+@media screen and (max-width: 530px) {
+	ul.cpmenu {
+		left: 0;
+	}
+	ul.cpmenu li.back {
+		display: block;
+		padding: 0;
+		text-align: left;
+		border-top: 6px solid #31669a;
+		border-bottom: 1px solid #e1e1e1;
+	}
+	ul.cpmenu li.back a {
+		background: #efefef url(images/navarror.png) no-repeat 0 50%;
+		color: #333;
+		display: block;
+		padding: 19px 41px;
+	}
+	ul.cpmenu li.cp0 {
+		border-top: none;
+	}
+	.toggled.cp .content-area,
+	.toggled.cp .site-header {
+		left: 240px;
+	}
+	.toggled.cp .main-navigation ul,
+	.toggled.cp .left-end {
+		display: none;
 	}
 }
 .vc_responsive .site-main .wpb_row .vc_span12 {
