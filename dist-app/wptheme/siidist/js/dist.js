@@ -60,4 +60,13 @@ jQuery(function($) {
 		body.removeClass('jd');
 		return false;
 	});
+	
+	/* tooltip height fixes */
+	
+	$('.imapper-content-wrapper').each(function(i) {
+		var th = 65 + $(this).find('p.imapper-content-header').height() + $(this).find('.imapper-content-text').height();
+		console.log('pin #'+ i + ' : '+ th);
+		$(this).add($(this).children('.imapper-content')).height(th);
+	});
+	/**/
 });
