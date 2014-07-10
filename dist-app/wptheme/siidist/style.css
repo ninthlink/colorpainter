@@ -653,9 +653,6 @@ body.tog.jd .nav li.j a {
 	height: 66px;
 	z-index: 3;
 }
-body.admin-bar .site-header {
-	top: 32px;
-}
 .left-end {
 	float: left;
 	text-align: center;
@@ -849,6 +846,24 @@ ul.m li ul.inks li.i7 {
 	letter-spacing: 1px;
 }
 /* responsive response */
+/* admin-bar spacing... */
+@media screen and (max-width: 600px) {
+	body.admin-bar .content-area {
+		padding-top: 14px;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 782px) {
+	body.admin-bar .site-header,
+	ul.m {
+		top: 46px;
+	}
+}
+@media screen and (min-width: 783px) {
+	body.admin-bar .site-header,
+	ul.m {
+		top: 32px;
+	}
+}
 @media screen and (max-width: 991px) {
 	.content-area,
 	.site-header,
