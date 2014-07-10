@@ -62,11 +62,24 @@ jQuery(function($) {
 	});
 	
 	/* tooltip height fixes */
-	
 	$('.imapper-content-wrapper').each(function(i) {
 		var th = 65 + $(this).find('p.imapper-content-header').height() + $(this).find('.imapper-content-text').height();
-		console.log('pin #'+ i + ' : '+ th);
 		$(this).add($(this).children('.imapper-content')).height(th);
 	});
-	/**/
+	
+	/* section quicklinks */
+	$('.section h2').each(function(i) {
+		if ( $(this).parents('.section').hasClass('hh') ) {
+			$(this).hide();
+		}
+		var ht = $(this).text(), hta = ht;
+		var lastspace = ht.lastIndexOf(' ');
+		if ( lastspace > 0 ) {
+			hta = ht.substr(lastspace + 1);
+		}
+		hta = hta.replace(/\s+/g, '-').toLowerCase();
+		//console.log(i + ' : ' + ht + ' == ' + hta);
+		$(this).prepend('<a id="'+ hta +'"></a>');
+		// also floating nav waypoints?
+	});
 });
