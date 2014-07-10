@@ -1042,6 +1042,9 @@ ul.m li ul.inks li.i7 {
 	}
 }
 /* printer image tooltip thing */
+.imagemapper-wrapper {
+	margin: 0 auto;
+}
 p.imapper-content-header {
 	color: #333;
 	font-size: 15px;
