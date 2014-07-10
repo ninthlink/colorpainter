@@ -3,12 +3,13 @@
  * sidebar : printermenus
  */
 	$datas = array(
+		/* JETRIX */
 		array(
 			array(
 				'n' => false,
 				'c' => 0,
 				's' => false,
-				'i' => 23,
+				'i' => 25,
 			),
 			array(
 				'n' => 'KX5',
@@ -29,6 +30,7 @@
 				'i' => 23,
 			),
 		),
+		/* COLORPAINTER */
 		array(
 			array(
 				'n' => false,

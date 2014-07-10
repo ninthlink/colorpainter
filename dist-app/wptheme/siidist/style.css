@@ -1007,6 +1007,23 @@ ul.m li ul.inks li.i7 {
 	max-width: none;
 	height: auto;
 }
+.diff3 p {
+	padding: 0 1em 1.5em !important;
+}
+.wpb_row.diff3 .wpb_row .wpb_column.vc_span3 {
+	margin: 0 4% 4%;
+}
+@media (min-width: 768px) {
+	.wpb_row.diff3 .wpb_row .wpb_column.vc_span3.c1 {
+		margin: 0 2% 0 6%;
+	}
+	.wpb_row.diff3 .wpb_row .wpb_column.vc_span3.c2 {
+		margin: 0 4%;
+	}
+	.wpb_row.diff3 .wpb_row .wpb_column.vc_span3.c3 {
+		margin: 0 6% 0 2%;
+	}
+}
 /*--------------------------------------------------------------
 7.0 Clearings?
 --------------------------------------------------------------*/
