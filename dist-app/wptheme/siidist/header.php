@@ -38,8 +38,10 @@
 			</div>
 			<?php get_sidebar('printermenus'); ?>
 			<div class="left-end">
+				<?php /*
 				<div class="hello">Hello, Distributor</div>
 				<h6><a href="#">LOGOUT</a></h6>
+				*/ ?>
 				<ul class="soc">
 					<li class="fb"><a href="#">Facebook</a></li>
 					<li class="tw"><a href="#">Twitter</a></li>
