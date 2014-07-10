@@ -18,7 +18,7 @@
 					'size' => '64&rdquo;',
 					'speed' => '66.5 smph',
 				),
-				'i' => 80,
+				'i' => 147,
 			),
 			array(
 				'n' => 'KX3',
@@ -27,7 +27,7 @@
 					'size' => '104&rdquo;, 64&rdquo;',
 					'speed' => '79.5 smph',
 				),
-				'i' => 23,
+				'i' => 149,
 			),
 		),
 		/* COLORPAINTER */
@@ -55,7 +55,7 @@
 					'size' => '104&rdquo;, 64&rdquo;',
 					'speed' => '79.5 smph',
 				),
-				'i' => 23,
+				'i' => 151,
 			),
 			array(
 				'n' => 'H2-104s /<br />H2-74s',
@@ -64,7 +64,7 @@
 					'size' => '104&rdquo;, 64&rdquo;',
 					'speed' => '100 smph',
 				),
-				'i' => 23,
+				'i' => 140,
 			),
 			array(
 				'n' => 'W-64s / W-54s',
@@ -74,7 +74,7 @@
 					'size' => '104&rdquo;, 64&rdquo;',
 					'speed' => '100 smph',
 				),
-				'i' => 23,
+				'i' => 144,
 			),
 		),
 	);
