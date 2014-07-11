@@ -9,7 +9,7 @@
 ?>
 				<div class="site-footer">
 					<div class="site-info">
-						<div class="shg">Seiko Holdings Group</div><a href="#">Privacy Policy</a><span class="sep"> | </span><a href="#">Terms of Use</a><br />
+						<div class="shg">Seiko Holdings Group</div><a href="http://www.sii.co.jp/jp/siteinfo/privacy/" target="_blank">Privacy Policy</a><span class="sep"> | </span><a href="http://www.sii.co.jp/en/siteinfo/terms/" target="_blank">Terms of Use</a><br />
 						Copyright &copy; Seiko I Infotech Inc., 2014 All Rights Reserved
 					</div>
 				</div>
