@@ -1099,6 +1099,9 @@ p.imapper-content-header {
 .specs img.alignleft {
 	margin-right: 10px;
 }
+.specs a.vc_btn_xs {
+	padding: 0.6em 1.5em;
+}
 /*--------------------------------------------------------------
 7.0 Clearings?
 --------------------------------------------------------------*/
