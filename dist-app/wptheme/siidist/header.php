@@ -43,9 +43,9 @@
 				<h6><a href="#">LOGOUT</a></h6>
 				*/ ?>
 				<ul class="soc">
-					<li class="fb"><a href="#">Facebook</a></li>
-					<li class="tw"><a href="#">Twitter</a></li>
-					<li class="yt"><a href="#">YouTube</a></li>
+					<li class="fb"><a href="https://www.facebook.com/SeikoInstrumentsUSA" target="_blank">Facebook</a></li>
+					<li class="tw"><a href="https://twitter.com/SEIKO_I_JP" target="_blank">Twitter</a></li>
+					<li class="yt"><a href="https://www.youtube.com/channel/UCipI9rHoGpgXtcx_cGhMK0g" target="_blank">YouTube</a></li>
 				</ul>
 				<div class="shg">Seiko Holdings Group</div>
 			</div>
