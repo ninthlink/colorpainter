@@ -2552,11 +2552,11 @@ div .vc_box_shadow_border_circle {
 }
 .vc_box_outline.vc_box_border_grey,
 .vc_box_outline_circle.vc_box_border_grey {
-  border-color: #ebebeb;
+  border-color: #c0c0c0;
 }
 .vc_box_border.vc_box_border_grey,
 .vc_box_border_circle.vc_box_border_grey {
-  background-color: #ebebeb;
+  background-color: #c0c0c0;
 }
 .vc_box_outline.vc_box_border_orange,
 .vc_box_outline_circle.vc_box_border_orange {
