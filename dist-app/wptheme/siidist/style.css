@@ -755,19 +755,32 @@ ul.m li.p0 {
 	background-size: contain;
 	height: 35px;
 	margin: 28px auto 19px;
+	max-width: 90%;
 }
 .m.j .p0 .img {
-	background: none; /* for now */
-	text-indent: 0;
+	background-image: url(images/jetrix.png);
+	width: 201px;
 }
 .m .p1 .img {
 	width: 151px;
 	height: 77px;
 }
+.m.j .p1 .img {
+	background-position: 50% -271px;
+	width: 151px;
+	height: 70px;
+	margin-bottom: 8px;
+}
 .m .p2 .img {
 	background-position: 50% -77px;
 	width: 142px;
 	height: 56px;
+}
+.m.j .p2 .img {
+	background-position: 50% -341px;
+	width: 151px;
+	height: 120px;
+	margin-bottom: 8px;
 }
 .m .p3 .img {
 	background-position: 50% -133px;

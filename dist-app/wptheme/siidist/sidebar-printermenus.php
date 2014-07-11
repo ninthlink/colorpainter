@@ -89,11 +89,7 @@
 			$h4 = $printers[$pcount]['n'];
 			if ( $h4 ) $pitem .= '<h4>'. $h4 .'</h4>'. "\n";
 			
-			$pitem .= '<span class="img">';
-			if ( ( $i == 0 ) && ( $pcount == 0 ) ) {
-				$pitem .= '{ Jetrix logo here }';
-			}
-			$pitem .= '</span>'. "\n";
+			$pitem .= '<span class="img"></span>'. "\n";
 			
 			$inks = $printers[$pcount]['c'];
 			if ( $inks > 0 ) {
