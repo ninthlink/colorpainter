@@ -59,7 +59,7 @@
 			),
 			array(
 				'n' => 'H2-104s /<br />H2-74s',
-				'c' => 8,
+				'c' => 4,
 				's' => array(
 					'size' => '104&rdquo;, 64&rdquo;',
 					'speed' => '100 smph',
