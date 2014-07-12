@@ -67,19 +67,73 @@ jQuery(function($) {
 		$(this).add($(this).children('.imapper-content')).height(th);
 	});
 	
-	/* section quicklinks */
-	$('.section h2').each(function(i) {
-		if ( $(this).parents('.section').hasClass('hh') ) {
-			$(this).hide();
+	/* section quicklinks? */
+	var sitemain = $('.site-main');
+	//sitemain.find('.wpb_row:first').addClass('section').prepend('<a id="top"></a>');
+	var wpul = $('<ul />').addClass('w');
+	wpul.appendTo(sitemain);
+	//wpul.prepend('<li class="active"><a href="#top" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">Overview</a></li>');
+	var sections = [];
+	$('.section').each(function(i) {
+		console.log('section '+ i);
+		var thismarker = false;
+		var thisid = '';
+		$(this).find('h2').each(function() {
+			var ht = $(this).text(), hta = ht;
+			var lastspace = ht.lastIndexOf(' ');
+			if ( lastspace > 0 ) {
+				hta = ht.substr(lastspace + 1);
+			}
+			thisid = hta.replace(/\s+/g, '-').toLowerCase();
+			hta = 's-' + thisid;
+			//console.log(i + ' : ' + ht + ' == ' + hta);
+			$(this).prepend('<a id="'+ hta +'"></a>');
+			// also floating nav waypoints?
+			thismarker = $('<li />');
+			thismarker.append('<a href="#'+ hta +'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">'+ ht +'</a>');
+			thismarker.appendTo(wpul);
+		});
+		if ( thismarker != false ) {
+			$(this).waypoint(function(direction) {
+				if ( direction === 'down' ) {
+					thismarker.addClass('active').siblings().removeClass('active');
+				} else {
+					thismarker.removeClass('active').prev().addClass('active');
+				}
+			}, {
+				offset: 50
+			});
+			sections.push($(this));
+			
+			thismarker.children().click(function(event) {
+				event.preventDefault();
+				console.log('dot click : '+ thisid);
+				if ( i==0 ) {
+					thisid = 'top';
+				}
+				window.location.hash = thisid;
+			});
 		}
-		var ht = $(this).text(), hta = ht;
-		var lastspace = ht.lastIndexOf(' ');
-		if ( lastspace > 0 ) {
-			hta = ht.substr(lastspace + 1);
-		}
-		hta = hta.replace(/\s+/g, '-').toLowerCase();
-		//console.log(i + ' : ' + ht + ' == ' + hta);
-		$(this).prepend('<a id="'+ hta +'"></a>');
-		// also floating nav waypoints?
 	});
+	// smoothe scroll #needswork
+	if ( sections.length > 0 ) {
+		$(window).bind('hashchange', function() {
+			var whash = '' + window.location.hash, totop = false, tid = '.site-main', tar = false;
+			if ( whash == '#top' ) {
+				totop = true;
+			} else {
+				tid = '#s-'+ whash.substr(1);
+			}
+			tar = $(tid);
+			if ( tar.size() > 0 ) {
+				var scrollto = 0;
+				if ( totop == false ) {
+					scrollto = tar.offset();
+					scrollto = scrollto.top - 60;
+				}
+				//console.log('hashchange : scroll to ' + scrollto + ' ' + tid);
+				$('html,body').animate({ 'scrollTop': scrollto }, 300);
+			}
+		}).trigger('hashchange');
+	}
 });

@@ -198,7 +198,8 @@ h6,
 .m a,
 .m .ibox,
 p.imapper-content-header,
-.specs strong {
+.specs strong,
+ul.w a {
 	font-family: 'OpenSans', Tahoma, sans-serif;
 }
 h1,
@@ -227,6 +228,9 @@ h2 {
 	border-top: 3px solid #c4c4c4;
 	padding: 0.4em 0 0;
 	margin-bottom: 0.5em;
+}
+.section.hh h2 {
+	display: none;
 }
 /* H3 32/42 Museo ( 300 / 700 ) : big home text / headline on M64 "The next generation...." */
 h3 {
@@ -1114,6 +1118,54 @@ p.imapper-content-header {
 }
 .specs a.vc_btn_xs {
 	padding: 0.6em 1.5em;
+}
+/* floating right waypoints nav */
+ul.w {
+	background: #efefef;
+	border: 1px solid #eaeaea;
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 11px 0;
+	width: 48px;
+	position: fixed;
+	right: 0;
+	top: 30%;
+	z-index: 90;
+}
+ul.w li {
+	background: url(images/dots.png) no-repeat 100% 0;
+	display: block;
+	position: relative;
+	font-size: 12px;
+	line-height: 1.6;
+	height: 20px;
+	z-index: 91;
+}
+ul.w li:hover {
+	z-index: 92;
+}
+ul.w li.active {
+	background-position: 100% -20px;
+}
+ul.w a.vc_btn_xs {
+	background-image: url(images/dots.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: -2px;
+	white-space: nowrap;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 2;
+	text-transform: uppercase;
+	padding: 0 30px 0 20px;
+	z-index: 92;
+}
+ul.w li:hover a.vc_btn_xs {
+	display: block;
 }
 /*--------------------------------------------------------------
 7.0 Clearings?
