@@ -75,22 +75,23 @@ jQuery(function($) {
 	//wpul.prepend('<li class="active"><a href="#top" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">Overview</a></li>');
 	var sections = [];
 	$('.section').each(function(i) {
-		console.log('section '+ i);
+		//console.log('section '+ i);
 		var thismarker = false;
 		var thisid = '';
+		var thissection = $(this);
 		$(this).find('h2').each(function() {
-			var ht = $(this).text(), hta = ht;
+			var ht = $(this).text();
+			thisid = ht;
 			var lastspace = ht.lastIndexOf(' ');
 			if ( lastspace > 0 ) {
-				hta = ht.substr(lastspace + 1);
+				thisid = ht.substr(lastspace + 1);
 			}
-			thisid = hta.replace(/\s+/g, '-').toLowerCase();
-			hta = 's-' + thisid;
-			//console.log(i + ' : ' + ht + ' == ' + hta);
-			$(this).prepend('<a id="'+ hta +'"></a>');
+			thisid = thisid.replace(/\s+/g, '-').toLowerCase();
+			//console.log(i + ' : ' + ht + ' == ' + thisid);
+			thissection.attr('id', thisid);
 			// also floating nav waypoints?
 			thismarker = $('<li />');
-			thismarker.append('<a href="#'+ hta +'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">'+ ht +'</a>');
+			thismarker.append('<a href="#'+ thisid +'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">'+ ht +'</a>');
 			thismarker.appendTo(wpul);
 		});
 		if ( thismarker != false ) {
@@ -104,7 +105,7 @@ jQuery(function($) {
 				offset: 50
 			});
 			sections.push($(this));
-			
+			/*
 			thismarker.children().click(function(event) {
 				event.preventDefault();
 				console.log('dot click : '+ thisid);
@@ -113,9 +114,11 @@ jQuery(function($) {
 				}
 				window.location.hash = thisid;
 			});
+			*/
 		}
 	});
 	// smoothe scroll #needswork
+	/*
 	if ( sections.length > 0 ) {
 		$(window).bind('hashchange', function() {
 			var whash = '' + window.location.hash, totop = false, tid = '.site-main', tar = false;
@@ -136,4 +139,5 @@ jQuery(function($) {
 			}
 		}).trigger('hashchange');
 	}
+	*/
 });
