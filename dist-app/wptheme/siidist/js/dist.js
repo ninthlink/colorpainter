@@ -74,22 +74,28 @@ jQuery(function($) {
 	wpul.appendTo(sitemain);
 	//wpul.prepend('<li class="active"><a href="#top" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">Overview</a></li>');
 	var sections = [];
+	// first
+	$('.site-main .wpb_row:first').each(function() {
+		if ( $(this).hasClass('section') == false ) {
+			$(this).addClass('section hh').prepend('<h2>Overview</h2>');
+		}
+	});
 	$('.section').each(function(i) {
-		//console.log('section '+ i);
 		var thismarker = false;
 		var thisid = '';
 		var thissection = $(this);
-		$(this).find('h2').each(function() {
+		$(this).find('h2:first').each(function() {
 			var ht = $(this).text();
-			thisid = ht;
-			var lastspace = ht.lastIndexOf(' ');
-			if ( lastspace > 0 ) {
-				thisid = ht.substr(lastspace + 1);
+			if ( i > 0 ) {
+				thisid = ht;
+				var lastspace = ht.lastIndexOf(' ');
+				if ( lastspace > 0 ) {
+					thisid = ht.substr(lastspace + 1);
+				}
+				thisid = thisid.replace(/\s+/g, '-').toLowerCase();
+				thissection.attr('id', thisid);
 			}
-			thisid = thisid.replace(/\s+/g, '-').toLowerCase();
-			//console.log(i + ' : ' + ht + ' == ' + thisid);
-			thissection.attr('id', thisid);
-			// also floating nav waypoints?
+			// also floating nav waypoints
 			thismarker = $('<li />');
 			thismarker.append('<a href="#'+ thisid +'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">'+ ht +'</a>');
 			thismarker.appendTo(wpul);
@@ -104,40 +110,20 @@ jQuery(function($) {
 			}, {
 				offset: 50
 			});
-			sections.push($(this));
-			/*
-			thismarker.children().click(function(event) {
+			sections.push(thissection);
+			thismarker.children('a').click(function(event) {
 				event.preventDefault();
-				console.log('dot click : '+ thisid);
-				if ( i==0 ) {
-					thisid = 'top';
+				var scrollto = 0;
+				if ( i > 0 ) {
+					scrollto = thissection.offset();
+					scrollto = Math.floor(scrollto.top);
 				}
-				window.location.hash = thisid;
+				//alert('hello? '+ cht + ' ' + bht + ' > ' + scrollto);
+				var thisa = $(this);
+				$('html,body').animate({'scrollTop': scrollto}, 300, function() {
+					window.location.hash = thisid;
+				});
 			});
-			*/
 		}
 	});
-	// smoothe scroll #needswork
-	/*
-	if ( sections.length > 0 ) {
-		$(window).bind('hashchange', function() {
-			var whash = '' + window.location.hash, totop = false, tid = '.site-main', tar = false;
-			if ( whash == '#top' ) {
-				totop = true;
-			} else {
-				tid = '#s-'+ whash.substr(1);
-			}
-			tar = $(tid);
-			if ( tar.size() > 0 ) {
-				var scrollto = 0;
-				if ( totop == false ) {
-					scrollto = tar.offset();
-					scrollto = scrollto.top - 60;
-				}
-				//console.log('hashchange : scroll to ' + scrollto + ' ' + tid);
-				$('html,body').animate({ 'scrollTop': scrollto }, 300);
-			}
-		}).trigger('hashchange');
-	}
-	*/
 });

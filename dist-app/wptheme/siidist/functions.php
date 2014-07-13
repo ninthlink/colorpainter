@@ -60,6 +60,8 @@ function siidist_scripts() {
 	//wp_dequeue_script( 'jQuery-customScroll-imapper' );
 	//wp_deregister_script( 'jquery' );
 	//wp_deregister_script( 'jquery-migrate' );
+	wp_dequeue_script( 'rollover-imapper' );
+	wp_dequeue_script( 'jquery-prettyPhoto-imapper' );
 	//wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.0', true );
 	wp_enqueue_script( 'jquery.waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array('jquery'), '2.0.5', true );
 	wp_enqueue_script( 'siidist', get_template_directory_uri() . '/js/dist.js', array('jquery', 'jquery.waypoints'), '20140712', true );
@@ -78,10 +80,10 @@ add_action( 'wp_enqueue_scripts', 'siidist_scripts' );
  * because there are some scripts that just won't go away otherwise
  */
 function siidist_wp_footer_cleanup() {
-	$ults = array( 'appear', 'custom', 'row-bg' );
+	$ults = array( 'ultimate-appear', 'ultimate-custom', 'ultimate-row-bg' );
 	$ultcount = count( $ults);
 	while ( $ultcount-- ) {
-		wp_dequeue_script( 'ultimate-'. $ults[$ultcount] );
+		wp_dequeue_script( $ults[$ultcount] );
 	}
 }
 
