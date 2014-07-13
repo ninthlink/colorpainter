@@ -1172,15 +1172,16 @@ ul.w a.vc_btn_xs.vc_btn_blue {
 /*ul.w li:focus a.vc_btn_xs,
 ul.w li:hover a.vc_btn_xs,
 */
-ul.w a.vc_btn_xs:hover {
-	background: #428bca url(images/dots.png) no-repeat 100% 100%;
-	text-indent: 0;
-	padding: 0 30px 0 20px;
-	width: auto;
-	height: 24px;
-	top: -2px;
+@media screen and (min-width: 1040px) {
+	ul.w a.vc_btn_xs:hover {
+		background: #428bca url(images/dots.png) no-repeat 100% 100%;
+		text-indent: 0;
+		padding: 0 30px 0 20px;
+		width: auto;
+		height: 24px;
+		top: -2px;
+	}
 }
-
 /*--------------------------------------------------------------
 7.0 Clearings?
 --------------------------------------------------------------*/

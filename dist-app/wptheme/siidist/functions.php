@@ -56,7 +56,9 @@ function siidist_scripts() {
 	wp_deregister_style( 'ultimate-animate' );
 	wp_deregister_style( 'ultimate-style' );
 	wp_dequeue_style( 'bsf-Defaults' );
-	//wp_dequeue_style( 'customScroll-css-imapper' );
+	wp_dequeue_style( 'customScroll-css-imapper' );
+	wp_dequeue_style( 'prettyPhoto-css-imapper' );
+	wp_dequeue_style( 'font-awesome-css' );
 	//wp_dequeue_script( 'jQuery-customScroll-imapper' );
 	//wp_deregister_script( 'jquery' );
 	//wp_deregister_script( 'jquery-migrate' );
