@@ -47,34 +47,33 @@ endif; // siidist_setup
 add_action( 'after_setup_theme', 'siidist_setup' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue a couple scripts and styles,
+ * but mostly deregister / dequeue other scripts & styles from plugins...
  */
 function siidist_scripts() {
-	wp_enqueue_style( 'siidist-style', get_stylesheet_uri(), array(), '20140711' );
+	wp_enqueue_style( 'siidist', get_stylesheet_uri(), array(), '20140711' );
 	
-	wp_deregister_style( 'js_composer_front' );
-	wp_deregister_style( 'ultimate-animate' );
-	wp_deregister_style( 'ultimate-style' );
-	wp_dequeue_style( 'bsf-Defaults' );
-	wp_dequeue_style( 'customScroll-css-imapper' );
-	wp_dequeue_style( 'prettyPhoto-css-imapper' );
-	wp_dequeue_style( 'font-awesome-css' );
-	//wp_dequeue_script( 'jQuery-customScroll-imapper' );
-	//wp_deregister_script( 'jquery' );
-	//wp_deregister_script( 'jquery-migrate' );
-	wp_dequeue_script( 'jQuery-ui' );
-	wp_dequeue_script( 'rollover-imapper' );
-	wp_dequeue_script( 'jquery-prettyPhoto-imapper' );
+	$d = array( 'ultimate-style', 'ultimate-animate', 'js_composer_front' );
+	$c = count( $d );
+	while ( $c-- ) {
+		wp_deregister_style( $d[$c] );
+	}
+	
+	$d = array( 'image-mapper-css', 'swatchbook-css', 'font-awesome-css', 'prettyPhoto-css-imapper', 'customScroll-css-imapper', 'bsf-Defaults' );
+	$c = count( $d );
+	while ( $c-- ) {
+		wp_dequeue_style( $d[$c] );
+	}
+	
+	$d = array( 'swatchbook-js', 'modernizr-79639-js', 'jquery-prettyPhoto-imapper', 'jQuery-mousew-imapper', 'rollover-imapper', 'jQuery-ui' );
+	$c = count( $d );
+	while ( $c-- ) {
+		wp_dequeue_script( $d[$c] );
+	}
+	
 	//wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.0', true );
 	wp_enqueue_script( 'jquery.waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array('jquery'), '2.0.5', true );
 	wp_enqueue_script( 'siidist', get_template_directory_uri() . '/js/dist.js', array('jquery', 'jquery.waypoints'), '20140712', true );
-	/*
-	wp_enqueue_script( 'siidist-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-	
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-	*/
 }
 add_action( 'wp_enqueue_scripts', 'siidist_scripts', 40 );
 
@@ -83,11 +82,13 @@ add_action( 'wp_enqueue_scripts', 'siidist_scripts', 40 );
  * because there are some scripts that just won't go away otherwise
  */
 function siidist_wp_footer_cleanup() {
-	$ults = array( 'ultimate-appear', 'ultimate-custom', 'ultimate-row-bg' );
-	$ultcount = count( $ults);
-	while ( $ultcount-- ) {
-		wp_dequeue_script( $ults[$ultcount] );
+	$d = array( 'ultimate-appear', 'ultimate-custom', 'ultimate-row-bg', 'jquery.shake', 'jquery.vhparallax' );
+	$c = count( $d);
+	while ( $c-- ) {
+		wp_dequeue_script( $d[$c] );
 	}
+	
+	wp_dequeue_style( 'background-style' );
 }
 
 /**
