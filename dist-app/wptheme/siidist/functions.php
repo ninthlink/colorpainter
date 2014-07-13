@@ -60,6 +60,7 @@ function siidist_scripts() {
 	//wp_dequeue_script( 'jQuery-customScroll-imapper' );
 	//wp_deregister_script( 'jquery' );
 	//wp_deregister_script( 'jquery-migrate' );
+	wp_dequeue_script( 'jQuery-ui' );
 	wp_dequeue_script( 'rollover-imapper' );
 	wp_dequeue_script( 'jquery-prettyPhoto-imapper' );
 	//wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.0', true );
@@ -73,7 +74,7 @@ function siidist_scripts() {
 	}
 	*/
 }
-add_action( 'wp_enqueue_scripts', 'siidist_scripts' );
+add_action( 'wp_enqueue_scripts', 'siidist_scripts', 40 );
 
 /**
  * Hook to wp_footer action
