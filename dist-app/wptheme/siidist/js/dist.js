@@ -18,7 +18,7 @@ jQuery(function($) {
 	menu.find('li').each(function(i) {
 		switch ( i ) {
 			case 1:
-				$(this).addClass('c').children().click(function() {
+				$(this).click(function() {
 					if ( cdopen ) {
 						body.removeClass('cd');
 					} else {
@@ -33,7 +33,7 @@ jQuery(function($) {
 				});
 				break
 			case 2:
-				$(this).addClass('j').children().click(function() {
+				$(this).children().click(function() {
 					if ( jdopen ) {
 						body.removeClass('jd');
 					} else {

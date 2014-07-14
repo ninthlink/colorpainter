@@ -51,7 +51,7 @@ add_action( 'after_setup_theme', 'siidist_setup' );
  * but mostly deregister / dequeue other scripts & styles from plugins...
  */
 function siidist_scripts() {
-	wp_enqueue_style( 'siidist', get_stylesheet_uri(), array(), '20140711' );
+	wp_enqueue_style( 'siidist', get_stylesheet_uri(), array(), '20140714' );
 	
 	$d = array( 'ultimate-style', 'ultimate-animate', 'js_composer_front' );
 	$c = count( $d );
@@ -65,7 +65,7 @@ function siidist_scripts() {
 		wp_dequeue_style( $d[$c] );
 	}
 	
-	$d = array( 'swatchbook-js', 'modernizr-79639-js', 'jquery-prettyPhoto-imapper', 'jQuery-mousew-imapper', 'rollover-imapper', 'jQuery-ui' );
+	$d = array( 'swatchbook-js', 'modernizr-79639-js', 'jquery-prettyPhoto-imapper', 'rollover-imapper', 'jQuery-ui' );
 	$c = count( $d );
 	while ( $c-- ) {
 		wp_dequeue_script( $d[$c] );
@@ -73,7 +73,7 @@ function siidist_scripts() {
 	
 	//wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.0', true );
 	wp_enqueue_script( 'jquery.waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array('jquery'), '2.0.5', true );
-	wp_enqueue_script( 'siidist', get_template_directory_uri() . '/js/dist.js', array('jquery', 'jquery.waypoints'), '20140712', true );
+	wp_enqueue_script( 'siidist', get_template_directory_uri() . '/js/dist.js', array('jquery', 'jquery.waypoints'), '20140714', true );
 }
 add_action( 'wp_enqueue_scripts', 'siidist_scripts', 40 );
 
@@ -131,4 +131,20 @@ function siidist_body_class( $classes ) {
 		}
 	}
 	return $classes;
+}
+
+add_action('generate_rewrite_rules', 'siidist_ht_rewrites');
+function siidist_ht_rewrites($content) {
+  $theme_name = next(explode('/themes/', get_stylesheet_directory()));
+  global $wp_rewrite;
+  $siidist_rules = array(
+    'cache.manifest' => 'wp-content/themes/'. $theme_name . '/cache.manifest',
+    'favicon.ico' => 'wp-content/themes/'. $theme_name . '/favicon.ico',
+    'favicon.png' => 'wp-content/themes/'. $theme_name . '/favicon.png',
+    'style.css' => 'wp-content/themes/'. $theme_name . '/style.css',
+    'fonts/(.*)' => 'wp-content/themes/'. $theme_name . '/fonts/$1',
+    'js/(.*)' => 'wp-content/themes/'. $theme_name . '/js/$1',
+    'images/(.*)' => 'wp-content/themes/'. $theme_name . '/images/$1',
+  );
+  $wp_rewrite->non_wp_rules += $siidist_rules;
 }

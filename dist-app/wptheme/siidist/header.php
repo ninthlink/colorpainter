@@ -14,15 +14,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="768">
-<meta name="apple-mobile-web-app-title" content="Seiko Dist">
+<meta name="apple-mobile-web-app-title" content="Distr0134">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-touch-fullscreen" content="yes">
 
-<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="<?php echo WP_SITEURL; ?>/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo WP_SITEURL; ?>/favicon.ico">
+<link rel="apple-touch-icon" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon-152x152.png">
 
 <?php wp_head(); ?>
 </head>
@@ -31,10 +33,14 @@
 <div class="rap">
 	<div class="site-content">
 		<div class="site-header">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/sii.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
+			<a href="<?php echo WP_SITEURL .'/'; ?>" rel="home" class="logo" onclick="window.open(this.href,'_self'); return false;"><img src="<?php bloginfo('template_url'); ?>/images/sii.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
 			<div class="nav">
 				<button class="toggler"><?php _e( 'Primary Menu', 'siidist' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>' ) ); ?>
+				<ul>
+				<li><a href="<?php echo WP_SITEURL; ?>/why-seiko/" onclick="window.open(this.href,'_self'); return false;">Why Seiko</a></li>
+				<li class="c"><a href="<?php echo WP_SITEURL; ?>/colorpainter/">ColorPainter</a></li>
+				<li class="j"><a href="<?php echo WP_SITEURL; ?>/jetrix/">Jetrix</a></li>
+				</ul>
 			</div>
 			<?php get_sidebar('printermenus'); ?>
 			<div class="left-end">

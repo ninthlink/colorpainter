@@ -427,7 +427,7 @@ ul.soc .fb a {
 	background-position: 0 0;
 	margin-left: -36px;
 }
-ul.soc .tw a {
+ul.soc .yt a {
 	background-position: 100% 0;
 	margin-left: 16px;
 }
@@ -1130,8 +1130,14 @@ ul.w {
 	width: 48px;
 	position: fixed;
 	right: 0;
-	top: 30%;
+	top: 55%;
 	z-index: 90;
+}
+@media screen and (max-height: 400px) {
+	ul.w {
+		top: auto;
+		bottom: 0;
+	}
 }
 ul.w li {
 	background: url(images/dots.png) no-repeat 100% 0;

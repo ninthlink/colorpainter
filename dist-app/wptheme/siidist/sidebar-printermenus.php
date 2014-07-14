@@ -118,7 +118,7 @@
 					$pitem .= '</p>'. "\n";
 				}
 			}
-			$pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_rounded">'. $l .'</a></li>' ."\n";
+			$pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_rounded" onclick="window.open(this.href,\'_self\'); return false;">'. $l .'</a></li>' ."\n";
 			$printermenu = $pitem . $printermenu;
 		}
 		echo '<ul class="m '. ($i ? 'c' : 'j') .'">'. "\n" .'<li class="back"><a href="#">Back</a></li>'. "\n" . $printermenu .'</ul>'. "\n";
