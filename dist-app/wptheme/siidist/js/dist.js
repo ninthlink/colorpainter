@@ -97,6 +97,9 @@ jQuery(function($) {
 			}
 			// also floating nav waypoints
 			thismarker = $('<li />');
+			if ( i == 0 ) {
+				thismarker.addClass('active');
+			}
 			thismarker.append('<a href="#'+ thisid +'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_round">'+ ht +'</a>');
 			thismarker.appendTo(wpul);
 		});
@@ -108,7 +111,7 @@ jQuery(function($) {
 					thismarker.removeClass('active').prev().addClass('active');
 				}
 			}, {
-				offset: 50
+				offset: 70
 			});
 			sections.push(thissection);
 			thismarker.children('a').click(function(event) {
