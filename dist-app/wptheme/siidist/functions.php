@@ -141,10 +141,12 @@ function siidist_ht_rewrites($content) {
     'cache.manifest' => 'wp-content/themes/'. $theme_name . '/cache.manifest',
     'favicon.ico' => 'wp-content/themes/'. $theme_name . '/favicon.ico',
     'favicon.png' => 'wp-content/themes/'. $theme_name . '/favicon.png',
+	/*
     'style.css' => 'wp-content/themes/'. $theme_name . '/style.css',
     'fonts/(.*)' => 'wp-content/themes/'. $theme_name . '/fonts/$1',
     'js/(.*)' => 'wp-content/themes/'. $theme_name . '/js/$1',
     'images/(.*)' => 'wp-content/themes/'. $theme_name . '/images/$1',
+	*/
   );
   $wp_rewrite->non_wp_rules += $siidist_rules;
 }

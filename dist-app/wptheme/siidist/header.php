@@ -21,10 +21,10 @@
 
 <link rel="icon" type="image/png" href="<?php echo WP_SITEURL; ?>/favicon.png">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo WP_SITEURL; ?>/favicon.ico">
-<link rel="apple-touch-icon" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="76x76" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="<?php echo WP_SITEURL; ?>/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" href="<?php bloginfo( 'template_url' ); ?>/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo( 'template_url' ); ?>/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo( 'template_url' ); ?>/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo( 'template_url' ); ?>/images/apple-touch-icon-152x152.png">
 
 <?php wp_head(); ?>
 </head>
