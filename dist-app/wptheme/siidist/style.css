@@ -3752,6 +3752,11 @@ body .wpb_gallery_slides ul li,
 .vc_carousel .vc-carousel-indicators li.vc-active {
   background-color: transparent;
 }
+
+.site-main .vc-carousel.vc-per-view-more .vc-carousel-slideline .vc-carousel-slideline-inner > .vc-item > .vc-inner {
+	margin: 0;
+}
+
 /* CSS Animations */
 .wpb_animate_when_almost_visible {
   opacity: 0;

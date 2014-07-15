@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# v 20140715.1515
+# v 20140715.1531
 
 CACHE:
 http://fastprecisereliable.com/favicon.ico
@@ -241,6 +241,11 @@ http://fastprecisereliable.com/colorpainter/
 http://fastprecisereliable.com/why-seiko/
 http://fastprecisereliable.com/hello-world/
 http://fastprecisereliable.com/
+http://fastprecisereliable.com/wp-content/plugins/js_composer/assets/lib/vc_carousel/css/vc_carousel.css?ver=4.2.3
+http://fastprecisereliable.com/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.css?ver=4.2.3
+http://fastprecisereliable.com/wp-content/plugins/js_composer/assets/lib/vc_carousel/js/transition.js?ver=4.2.3
+http://fastprecisereliable.com/wp-content/plugins/js_composer/assets/lib/vc_carousel/js/vc_carousel.js?ver=4.2.3
+http://fastprecisereliable.com/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.js?ver=4.2.3
 
 NETWORK:
 *
