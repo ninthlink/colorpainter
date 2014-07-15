@@ -26,6 +26,9 @@ function siidist_setup() {
 		'primary' => __( 'Primary Menu', 'siidist' ),
 	) );
 	
+	if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size( 'galleryhalf', 720, 580, true ); //cropped
+	}
 	// Remove the version number of WP + some other meta tags
 	$unactions = array( 'rel_canonical', 'rsd_link', 'wlwmanifest_link', 'wp_generator', 'wp_shortlink_wp_head' );
 	$unacts = count( $unactions );
