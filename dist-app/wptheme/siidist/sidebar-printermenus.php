@@ -15,8 +15,8 @@
 				'n' => 'KX5',
 				'c' => 7,
 				's' => array(
-					'size' => '64&rdquo;',
-					'speed' => '66.5 smph',
+					'size' => '4&rsquo; x 8&rsquo;',
+					'speed' => '322 sfph',
 				),
 				'i' => 147,
 			),
@@ -24,8 +24,8 @@
 				'n' => 'KX3',
 				'c' => 4,
 				's' => array(
-					'size' => '104&rdquo;, 64&rdquo;',
-					'speed' => '79.5 smph',
+					'size' => '4&rsquo; x 4&rsquo;',
+					'speed' => '284 sfph',
 				),
 				'i' => 149,
 			),
@@ -52,7 +52,7 @@
 				'n' => 'H2P-104s /<br />H2P-74s',
 				'c' => 4,
 				's' => array(
-					'size' => '104&rdquo;, 64&rdquo;',
+					'size' => '104&rdquo;, 74&rdquo;',
 					'speed' => '79.5 smph',
 				),
 				'i' => 151,
@@ -61,8 +61,8 @@
 				'n' => 'H2-104s /<br />H2-74s',
 				'c' => 4,
 				's' => array(
-					'size' => '104&rdquo;, 64&rdquo;',
-					'speed' => '100 smph',
+					'size' => '104&rdquo;, 74&rdquo;',
+					'speed' => '70.6 smph',
 				),
 				'i' => 140,
 			),
@@ -71,8 +71,8 @@
 				'c' => 8,
 				's' => array(
 					'ink' => 'Neon Ink Available',
-					'size' => '104&rdquo;, 64&rdquo;',
-					'speed' => '100 smph',
+					'size' => '64&rdquo;',
+					'speed' => '17.8 smph',
 				),
 				'i' => 144,
 			),
