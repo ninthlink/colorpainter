@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v 1.6.4 / 2014-07-31
+# v 1.6.5 / 2014-07-31
 
 CACHE:
 index.html
@@ -29,7 +29,7 @@ includes/images/icons-svg/delete-white.svg
 includes/jquery-1.10.2.min.js
 includes/jquery.mobile.custom.min.js
 includes/autoNumeric.min.js
-includes/roi.min.js
+includes/roi.js
 includes/add2home.min.js
 includes/images/printers/h2p74.jpg
 includes/images/printers/h2p104.jpg

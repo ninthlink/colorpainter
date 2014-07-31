@@ -7,7 +7,7 @@ var siip = [
 		spd: 11.9,
 		img: 'w64s',
 		iht: 212,
-		desc: '64" flexible, reliable high-performance low-solvent printer. Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers. Industrial piezo print heads offer high resolution, high speeds and reliability. Available with two neon florescent inks that glow under black light. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
+		desc: 'Impresora flexible, fiable, de alto rendimiento, con tinta baja en solventes. Reproducciones en  vinilo, lona, pel&iacute;culas retroiluminados, textiles y otros sustratos dise&ntilde;ados para impresoras solventes. Cabezales de impresi&oacute;n piezoel&eacute;ctricos industriales, que ofrecen alta resoluci&oacute;n, alta velocidad y fiabilidad. ONYX RIP Center incluido. 3M &trade; Garant&iacute;a MCS &trade;'
 	},
 	{
 		name: 'ColorPainter M-64s LCIS - 6 color Wx ink',
@@ -16,7 +16,7 @@ var siip = [
 		spd: 33.1,
 		img: 'm64',
 		iht: 225,
-		desc: '64" high-speed eco-solvent printer with low odor inks. Very low cost per square foot to operate. Superior durability of outdoor and indoor graphics. SX inks offer a wide color gamut, high vividness and high density great for backlit applications. Unmatched productivity and quality. Automatic Print Adjustment. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
+		desc: 'Impresora eco-solvente de alta velocidad con sistema de tinta de gran capacidad. Bajo costos de operaci&oacute;n por metro cuadrado. Durabilidad superior de los gr&aacute;ficos al aire libre y bajo techo. Sus tintas WX de bajo olor ofrecen una amplia gama de colores, de alta intensidad y alta densidad. Excelente para aplicaciones retroiluminadas. Productividad  y calidad sin igual. Ajuste impresi&oacute;n autom&aacute;tica. ONYX RIP Center incluido Garant&iacute;a. 3M &trade; MCS &trade;.'
 	},
 	{
 		name: 'ColorPainter H2-74s - 8 color',
@@ -25,7 +25,7 @@ var siip = [
 		spd: 26.4,
 		img: 'h274',
 		iht: 216,
-		desc: '74" high-performance outdoor and indoor graphics printer. Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
+		desc: 'Impresora de alto rendimiento para gr&aacute;ficos de exteriores e interiores. Buena opci&oacute;n para el vinilo, lona, pel&iacute;culas retroiluminadas, textiles, rotulaci&oacute;n vehicular, lienzos, y trasl&uacute;cido. Tintas de alta densidad con mayor pigmentaci&oacute;n para generar colores m&aacute;s brillantes para los backlits pel&iacute;culas retroiluminadas. Cabezales de impresi&oacute;n piezoel&eacute;ctricos Industrial ofrecen alta resoluci&oacute;n, alta velocidad y fiabilidad. Resoluci&oacute;n hasta 900x900 dpi. Bajos costos de operaci&oacute;n. 3M &trade; MCS &trade; Garant&iacute;a.'
 	},
 	{
 		name: 'ColorPainter H2-74s - 4 color',
@@ -34,7 +34,7 @@ var siip = [
 		spd: 52.7,
 		img: 'h274',
 		iht: 216,
-		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
+		desc: 'Impresora de alto rendimiento para  gr&aacute;ficos de exteriores e interiores. Cabezales de impresi&oacute;n piezoel&eacute;ctricos industriales que ofrecen alta resoluci&oacute;n, alta velocidad y fiabilidad para entornos de impresi&oacute;n de alto volumen. Bajos Bajos costos de operaci&oacute;n. Garant&iacute;a 3M &trade; MCS &trade;.'
 	},
 	{
 		name: 'ColorPainter H2-104s - 8 color',
@@ -43,7 +43,7 @@ var siip = [
 		spd: 28.6,
 		img: 'h2104',
 		iht: 254,
-		desc: '104" High-performance outdoor and indoor graphics printer. Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
+		desc: 'Impresora de alto rendimiento para  gr&aacute;ficos de exteriores e interiores. Perfecta para el vinilo, lona, pel&iacute;culas retroiluminadas, textiles, rotulaci&oacute;n vehicular, lienzos, y trasl&uacute;cidos. Tintas de alta densidad con mayor pigmentaci&oacute;n para generar colores m&aacute;s brillantes para los backlits pel&iacute;culas retroiluminadas. Cabezales de impresi&oacute;n piezoel&eacute;ctricos Industrial ofrecen alta resoluci&oacute;n, alta velocidad y fiabilidad. Resoluci&oacute;n hasta 900x900 dpi. Bajos costos de operaci&oacute;n. 3M &trade; MCS &trade; Garant&iacute;a.'
 	},
 	{
 		name: 'ColorPainter H2-104s - 4 color',
@@ -52,7 +52,7 @@ var siip = [
 		spd: 79.5,
 		img: 'h2104',
 		iht: 254,
-		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
+		desc: 'Impresora de alto rendimiento para  gr&aacute;ficos de exteriores e interiores. Cabezales de impresi&oacute;n piezoel&eacute;ctricos industriales que ofrecen alta resoluci&oacute;n, alta velocidad y fiabilidad para entornos de impresi&oacute;n de alto volumen. Bajos Bajos costos de operaci&oacute;n. Garant&iacute;a 3M &trade; MCS &trade;.'
 	},
 	{
 		name: 'ColorPainter H2P-74s',
@@ -61,7 +61,7 @@ var siip = [
 		spd: 70.9,
 		img: 'h2p74',
 		iht: 172,
-		desc: '74" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
+		desc: 'Impresora a 4 colores con sistema de alta capacidad de tinta. Contiene ocho dep&oacute;sitos de tinta de gran capacidad con seis litros de tinta por color. Dise&ntilde;ado para talleres de alta producci&oacute;n donde el mantener los costos de producci&oacute;n bajos es lo m&aacute;s importantes. Cabezales de impresi&oacute;n piezoel&eacute;ctricos Industriales que ofrecen alta resoluci&oacute;n, alta velocidad y fiabilidad. Buena opci&oacute;n  para los gr&aacute;ficos de rotulaci&oacute;n vehicular, pancartas, carteles, lienzos, y flexfaces.'
 	},
 	{
 		name: 'ColorPainter H2P-104s',
@@ -70,7 +70,7 @@ var siip = [
 		spd: 79.5,
 		img: 'h2p104',
 		iht: 152,
-		desc: '104" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
+		desc: 'Impresora de alta velocidad de la a 4 colores con sistema de tinta de gran capacidad. Contiene ocho dep&oacute;sitos de tinta de gran capacidad con seis litros de tinta por color. Dise&ntilde;ado para talleres de alta producci&oacute;n donde el mantener los costos de producci&oacute;n bajos es lo m&aacute;s importantes. Cabezales de impresi&oacute;n piezoel&eacute;ctricos industriales ofrecen una alta resoluci&oacute;n , altas velocidades y confiabilidad. Buena opci&oacute;n  para los gr&aacute;ficos de rotulaci&oacute;n vehicular, pancartas, carteles, lienzos, y flexfaces.'
 	}
 ];
 var siid = 0; // index to choose
