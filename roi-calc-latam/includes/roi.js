@@ -2,9 +2,9 @@ var siip = [
 	{ name: 'Selecciones Modelo Por Favor' },
 	{
 		name: 'ColorPainter W-64s - 4 color GX ink',
-		ink: 1.1,
+		ink: 1.46,
 		msrp: 17999,
-		spd: 128,
+		spd: 11.9,
 		img: 'w64s',
 		iht: 212,
 		desc: '64" flexible, reliable high-performance low-solvent printer. Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers. Industrial piezo print heads offer high resolution, high speeds and reliability. Available with two neon florescent inks that glow under black light. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
@@ -13,16 +13,16 @@ var siip = [
 		name: 'ColorPainter M-64s LCIS - 6 color Wx ink',
 		ink: 1.8,
 		msrp: 45040,
-		spd: 356,
+		spd: 33.1,
 		img: 'm64',
 		iht: 225,
 		desc: '64" high-speed eco-solvent printer with low odor inks. Very low cost per square foot to operate. Superior durability of outdoor and indoor graphics. SX inks offer a wide color gamut, high vividness and high density great for backlit applications. Unmatched productivity and quality. Automatic Print Adjustment. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-74s - 8 color',
-		ink: 3.14,
+		ink: 3.15,
 		msrp: 59999.95,
-		spd: 284,
+		spd: 26.4,
 		img: 'h274',
 		iht: 216,
 		desc: '74" high-performance outdoor and indoor graphics printer. Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
@@ -31,16 +31,16 @@ var siip = [
 		name: 'ColorPainter H2-74s - 4 color',
 		ink: 1.85,
 		msrp: 59999.95,
-		spd: 567,
+		spd: 52.7,
 		img: 'h274',
 		iht: 216,
 		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2-104s - 8 color',
-		ink: 3.14,
+		ink: 3.15,
 		msrp: 79999.95,
-		spd: 308,
+		spd: 28.6,
 		img: 'h2104',
 		iht: 254,
 		desc: '104" High-performance outdoor and indoor graphics printer. Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
@@ -49,25 +49,25 @@ var siip = [
 		name: 'ColorPainter H2-104s - 4 color',
 		ink: 1.85,
 		msrp: 79999.95,
-		spd: 856,
+		spd: 79.5,
 		img: 'h2104',
 		iht: 254,
 		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H2P-74s',
-		ink: 1.9,
+		ink: 1.12,
 		msrp: 66999.95,
-		spd: 763,
+		spd: 70.9,
 		img: 'h2p74',
 		iht: 172,
 		desc: '74" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
 	},
 	{
 		name: 'ColorPainter H2P-104s',
-		ink: 1.9,
+		ink: 1.12,
 		msrp: 86999.95,
-		spd: 856,
+		spd: 79.5,
 		img: 'h2p104',
 		iht: 152,
 		desc: '104" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
