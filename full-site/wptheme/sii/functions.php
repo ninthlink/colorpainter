@@ -54,9 +54,9 @@ add_action( 'after_setup_theme', 'sii_setup' );
  * but mostly deregister / dequeue other scripts & styles from plugins...
  */
 function sii_scripts() {
-	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), '20140714' );
+	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), '20141013' );
 	
-	$d = array( 'ultimate-style', 'ultimate-animate', 'js_composer_front' );
+	$d = array( 'ultimate-style', 'ultimate-animate' );
 	$c = count( $d );
 	while ( $c-- ) {
 		wp_deregister_style( $d[$c] );
