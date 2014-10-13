@@ -1,0 +1,1234 @@
+/*
+Theme Name: sii
+Theme URI: http://underscores.me/
+Author: Ninthlink, Inc.
+Author URI: http://www.ninthlink.com
+Description: WordPress theme for Seiko Instruments U.S.A., Inc., initially based off the Seiko Printers Distributor App, designed and developed by Ninthlink, Inc., started from _s
+Version: 0.1
+
+Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Typography
+3.0 - Elements
+4.0 - Forms
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6.0 - Alignments & Content
+7.0 - Clearings
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+.rap {
+min-height: 100%;
+}
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+}
+body {
+	background: #fff;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+/* Museo : A font by Jos Buivenga (exljbris) -> http://www.exljbris.com */
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/museo-300-webfont.eot');
+    src: url('fonts/museo-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-300-webfont.woff') format('woff'),
+         url('fonts/museo-300-webfont.ttf') format('truetype'),
+         url('fonts/museo-300-webfont.svg#museo300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/museo-500-webfont.eot');
+    src: url('fonts/museo-500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-500-webfont.woff') format('woff'),
+         url('fonts/museo-500-webfont.ttf') format('truetype'),
+         url('fonts/museo-500-webfont.svg#museo500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/museo-700-webfont.eot');
+    src: url('fonts/museo-700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-700-webfont.woff') format('woff'),
+         url('fonts/museo-700-webfont.ttf') format('truetype'),
+         url('fonts/museo-700-webfont.svg#museo700') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-regular-webfont.eot');
+    src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-regular-webfont.woff') format('woff'),
+         url('fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-italic-webfont.eot');
+    src: url('fonts/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-italic-webfont.woff') format('woff'),
+         url('fonts/opensans-italic-webfont.ttf') format('truetype'),
+         url('fonts/opensans-italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-bold-webfont.eot');
+    src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-bold-webfont.woff') format('woff'),
+         url('fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/opensans-extrabold-webfont.eot');
+    src: url('fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-extrabold-webfont.woff') format('woff'),
+         url('fonts/opensans-extrabold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-size: 1.7rem;
+	line-height: 1.5;
+}
+body.home,
+.hello {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+h4,
+h5,
+h6,
+.nav a,
+.m a,
+.m .ibox,
+p.imapper-content-header,
+.specs strong,
+ul.w a {
+	font-family: 'OpenSans', Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+blockquote,
+.m h4 {
+	font-family: 'Museo', Georgia, serif;
+}
+/* H1 48/54 Museo 300 / 700 : "High performance..." headline on CP overview page */
+h1 {
+	font-size: 48px;
+	font-size: 4.8rem;
+	font-weight: 300;
+	line-height: 1.125;
+	margin: 0.5em 0;
+}
+/* H2 40 Museo 500 : section titles "Key Product Benefits" / ... */
+h2 {
+	font-size: 40px;
+	font-size: 4rem;
+	font-weight: 500;
+	margin: 1em 0;
+}
+.section h2 {
+	border-top: 3px solid #c4c4c4;
+	padding: 0.4em 0 0;
+	margin-bottom: 0.5em;
+}
+.section.hh h2 {
+	display: none;
+}
+/* H3 32/42 Museo ( 300 / 700 ) : big home text / headline on M64 "The next generation...." */
+h3 {
+	font-size: 32px;
+	font-size: 3.2rem;
+	font-weight: 300;
+	line-height: 1.3125;
+	margin: 1em 0;
+}
+h1 strong,
+h3 strong {
+	font-weight: 700;
+}
+/* H4 22 OpenSans Bold : Speed / Ink / Technology */
+h4 {
+	font-size: 22px;
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin: 1em 0;
+}
+/* H5 16/22 OpenSans (Bold / Extrabold / Italic) : left menu, "TAKE A GUIDE" / "SALES"... / "- Mark Land.." */
+h5,
+.nav a {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.375;
+	text-transform: uppercase;
+	margin: 1em 0;
+}
+h5 em {
+	font-weight: 400;
+	font-style: italic;
+}
+/* H6 12 OpenSans Extrabold : left LOGOUT / M64 table labels & WATCH btn */
+h6 {
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin: 1em 0;
+}
+p {
+	margin-bottom: 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+/* <blockquote> 26/36 Museo 700 : testimonial quote */ 
+blockquote {
+	font-size: 26px;
+	font-size: 2.6rem;
+	font-weight: 700;
+	line-height: 1.385;
+	margin: 0 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+a.logo {
+	display: block;
+	margin: 27px auto 0;
+	width: 184px;
+	max-width: 76%;
+}
+a.logo img {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+.shg {
+	background: url(images/shg.png) no-repeat 50% 50%;
+	border-top: 1px solid #e1e1e1;
+	display: block;
+	width: 100%;
+	height: 110px;
+	text-indent: -999em;
+}
+.site-footer .shg {
+	background-image: url(images/shg_f.png);
+	border-top: none;
+	width: 147px;
+	height: 47px;
+	float: right;
+}
+ul.soc {
+	display: block;
+	list-style: none;
+	margin: 35px 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	height: 20px;
+}
+ul.soc a {
+	background: url(images/soc.png) no-repeat 50% 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -999em;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -10px;
+}
+ul.soc .fb a {
+	background-position: 0 0;
+	margin-left: -36px;
+}
+ul.soc .yt a {
+	background-position: 100% 0;
+	margin-left: 16px;
+}
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb; 
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 100%;
+}
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+h3 strong,
+a {
+	color: #428bca;
+	text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
+.site-main a {
+	font-weight: 700;
+}
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+/*
+.nav {
+	clear: both;
+	display: block;
+	float: left;
+	width: 240px;
+}
+*/
+.nav ul {
+	border-bottom: 1px solid #e1e1e1;
+	float: left;
+	list-style: none;
+	margin: 43px 0 0;
+	padding: 0;
+	position: fixed;
+	width: 240px;
+	z-index: 4;
+	left: -240px;
+	-webkit-transition: left 200ms;
+	-moz-transition: left 200ms;
+	transition: left 200ms;
+}
+.nav li {
+	border-top: 1px solid #e1e1e1;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+.nav a {
+	background: url(images/navarro.png) no-repeat 100% 50%; 
+	color: #333;
+	display: block;
+	margin: 0;
+	padding: 18px 41px 18px 28px;
+	text-transform: none;
+}
+body.tog.cd .nav li.c a,
+body.tog.jd .nav li.j a {
+	background: #fff;
+}
+.nav ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+.nav ul ul ul {
+	left: -999em;
+	top: 0;
+}
+.nav ul ul a {
+	width: 200px;
+}
+.nav ul ul li {
+}
+.nav li:hover > a {
+}
+.nav ul ul :hover > a {
+}
+.nav ul ul a:hover {
+}
+.nav ul li:hover > ul {
+	left: auto;
+}
+.nav ul ul li:hover > ul {
+	left: 100%;
+}
+.nav .current_page_item a,
+.nav .current-menu-item a {
+}
+/*--------------------------------------------------------------
+6.0 Alignments & Content
+--------------------------------------------------------------*/
+.rap {
+	border-top: 6px solid #31669a;
+	float: left;
+	width: 100%;
+	overflow-x: hidden;
+}
+.site-content,
+.nav ul {
+	background: #efefef;
+}
+.content-area {
+	float: right;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+.site-main {
+	margin: 0;
+	background: #fff;
+}
+.site-header {
+	background: #fff;
+	border-top: 6px solid #31669a;
+	border-bottom: 1px solid #efefef;
+	float: left;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 66px;
+	z-index: 3;
+}
+.left-end {
+	float: left;
+	text-align: center;
+	width: 240px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 3;
+}
+.left-end h6 a {
+	color: #333;
+	text-transform: uppercase;
+}
+.site-footer {
+	background: #3f3f40;
+	clear: both;
+	width: 100%;
+}
+.site-info {
+	display: block;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.75;
+	margin: 34px 41px;
+}
+.site-info,
+.site-info a {
+	color: #fff;
+	font-weight: normal;
+}
+button.toggler {
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	padding: none;
+	float: left;
+	width: 34px;
+	height: 27px;
+	background: url(images/menu.png) no-repeat 0 0;
+	background-size: contain;
+	text-indent: -999em;
+	cursor: pointer;
+	position: absolute;
+	top: 16px;
+	left: 15px;
+}
+button.toggler:focus,
+button.toggler:hover {
+	border: none;
+	box-shadow: none;
+}
+.tog.cd .content-area,
+.tog.jd .content-area {
+	background-color: #fff;
+}
+ul.m {
+	background: #fff;
+	border-right: 1px solid #efefef;
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 240px;
+	width: 240px;
+	height: 100%;
+}
+.tog.cd ul.m.c,
+.tog.jd ul.m.j {
+	display: block;
+}
+ul.m li {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #efefef;
+	list-style: none;
+	text-align: center;
+	padding: 0 0 20px;
+}
+ul.m li.back {
+	display: none;
+}
+ul.m li.p0 {
+	border-bottom: 6px solid #31669a;
+	border-top: 6px solid #31669a;
+	padding: 0 0 32px;
+}
+.m .img {
+	background: url(images/nav-print.jpg) no-repeat 0 0;
+	display: block;
+	margin: 0 auto;
+	width: 143px;
+	height: 78px;
+	text-indent: -999em;
+}
+.m .p0 .img {
+	background: url(images/colorpainter.png) no-repeat 0 0;
+	background-size: contain;
+	height: 35px;
+	margin: 28px auto 19px;
+	max-width: 90%;
+}
+.m.j .p0 .img {
+	background-image: url(images/jetrix.png);
+	width: 201px;
+}
+.m .p1 .img {
+	width: 151px;
+	height: 77px;
+}
+.m.j .p1 .img {
+	background-position: 50% -271px;
+	width: 151px;
+	height: 70px;
+	margin-bottom: 8px;
+}
+.m .p2 .img {
+	background-position: 50% -77px;
+	width: 142px;
+	height: 56px;
+}
+.m.j .p2 .img {
+	background-position: 50% -341px;
+	width: 151px;
+	height: 120px;
+	margin-bottom: 8px;
+}
+.m .p3 .img {
+	background-position: 50% -133px;
+	width: 146px;
+	height: 59px;
+}
+.m .p4 .img {
+	background-position: 50% -192px;
+	width: 146px;
+	height: 79px;
+}
+.m h4 {
+	line-height: 1.25;
+	margin: 17px 0 7px;
+}
+ul.m li ul.inks {
+	display: block;
+	width: 160px;
+	height: 16px;
+	margin: 0 auto;
+}
+ul.m li ul.inks.i7 {
+	width: 140px;
+}
+ul.m li ul.inks.i4 {
+	width: 80px;
+}
+ul.m li ul.inks li {
+	width: 15px;
+	height: 15px;
+	margin: 0 2px;
+	padding: 0;
+	border: none;
+	border-radius: 7px;
+}
+ul.m li ul.inks li.i0 {
+	background: #fff200;
+}
+ul.m li ul.inks li.i1 {
+	background: #ec008c;
+}
+ul.m li ul.inks li.i2 {
+	background: #00aeef;
+}
+ul.m li ul.inks li.i3 {
+	background: #000;
+}
+ul.m li ul.inks li.i4 {
+	background: #6dcff6;
+}
+ul.m li ul.inks li.i5 {
+	background: #f49ac1;
+}
+ul.m li ul.inks li.i6 {
+	background: #898989;
+}
+ul.m li ul.inks li.i7 {
+	background: #ccc;
+}
+.m em.ibox {
+	border: 1px solid #ccc;
+	color: #333;
+	display: inline-block;
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-style: italic;
+	font-weight: 400;
+	margin: 0 0 5px;
+	padding: 2px 10px;
+}
+.m p {
+	margin: 11px 0;
+}
+.m li a.vc_btn_xs.vc_btn_rounded {
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+/* responsive response */
+/* admin-bar spacing... */
+@media screen and (max-width: 600px) {
+	body.admin-bar .content-area {
+		padding-top: 14px;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 782px) {
+	body.admin-bar .site-header,
+	body.admin-bar ul.m {
+		top: 46px;
+	}
+}
+@media screen and (min-width: 783px) {
+	body.admin-bar .site-header,
+	body.admin-bar ul.m {
+		top: 32px;
+	}
+}
+@media screen and (max-width: 991px) {
+	.content-area,
+	.site-header,
+	.left-end	{
+		left: 0;
+		-webkit-transition: left 200ms;
+		-moz-transition: left 200ms;
+		transition: left 200ms;
+	}
+	.content-area {
+		padding-top: 60px;
+	}
+	.left-end {
+		left: -240px;
+	}
+	.tog .left-end,
+	.tog .nav ul {
+		left: 0;
+	}
+	.tog .content-area,
+	.tog .site-header {
+		left: 240px;
+	}
+	.tog.cd .content-area,
+	.tog.cd .site-header,
+	.tog.jd .content-area,
+	.tog.jd .site-header {
+		left: 480px;
+		-webkit-transition: none;
+		-moz-transition: none;
+		transition: none;
+	}
+	.nav ul {
+		left: -240px;
+		margin-top: -6px;
+		border-top: 6px solid #31669a;
+	}
+	a.logo {
+		display: block;
+		margin: 0;
+		width: 115px;
+		height: 37px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		margin-left: -57px;
+		background: url(images/sii_m.png) no-repeat 0 0;
+		background-size: contain;
+	}
+	a.logo img {
+		display: none;
+	}
+}
+@media (min-width: 992px) {	
+	ul.m {
+		width: 18%;
+		left: 18%;
+	}
+	.site-header {
+		background: none;
+		border-bottom: none;
+		width: 240px;
+		height: 100%;
+	}
+	.nav,
+	.nav ul {
+		width: 100%;
+		left: 0;
+		position: relative;
+	}
+	a.logo {
+		display: block;
+		margin: 27px auto 0;
+		width: 184px;
+		max-width: 76%;
+	}
+	a.logo img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+	.content-area {
+		margin-left: -18%;
+	}
+	.site-main {
+		margin-left: 18%;
+	}
+	.site-header,
+	.left-end {
+		width: 18%;
+	}
+	.toggler {
+		display: none;
+	}
+	.tog.cd .content-area,
+	.tog.jd .content-area {
+		left: 18%;
+	}
+}
+@media screen and (max-width: 530px) {
+	ul.m {
+		left: 0;
+	}
+	ul.m li.back {
+		display: block;
+		padding: 0;
+		text-align: left;
+		border-top: 6px solid #31669a;
+		border-bottom: 1px solid #e1e1e1;
+	}
+	ul.m li.back a {
+		background: #efefef url(images/navarror.png) no-repeat 0 50%;
+		color: #333;
+		display: block;
+		padding: 19px 41px;
+	}
+	ul.m li.p0 {
+		border-top: none;
+	}
+	.tog.cd .content-area,
+	.tog.cd .site-header,
+	.tog.jd .content-area,
+	.tog.jd .site-header {
+		left: 240px;
+	}
+	.tog.cd .nav ul,
+	.tog.cd .left-end,
+	.tog.jd .nav ul,
+	.tog.jd .left-end {
+		display: none;
+	}
+}
+.vc_responsive .site-main .wpb_row .vc_span12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+.textcenter {
+	text-align: center;
+}
+.fullw img {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: auto;
+}
+.diff3 p {
+	padding: 0 1em 1.5em !important;
+}
+.wpb_row.diff3 .wpb_row .wpb_column.vc_span3 {
+	margin: 0 4% 4%;
+}
+@media (min-width: 768px) {
+	.wpb_row.diff3 .wpb_row .wpb_column.vc_span3.c1 {
+		margin: 0 2% 0 6%;
+	}
+	.wpb_row.diff3 .wpb_row .wpb_column.vc_span3.c2 {
+		margin: 0 4%;
+	}
+	.wpb_row.diff3 .wpb_row .wpb_column.vc_span3.c3 {
+		margin: 0 6% 0 2%;
+	}
+}
+/* printer image tooltip thing */
+.imagemapper-wrapper {
+	margin: 0 auto;
+}
+p.imapper-content-header {
+	color: #333;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: left;
+	text-transform: uppercase;
+}
+.imapper-content-text,
+.imapper-content,
+.imCSB_container.imCS_no_scrollbar {
+	font-size: 14px;
+	line-height: 24px;
+	margin-top: 0 !important;
+	text-align: left;
+}
+/* specs table */
+.vc_responsive .wpb_row .vc_span6.specs {
+	width: 45%;
+	margin: 32px 0 0 4.5%;
+	border: 4px solid #fff;
+	background: #f1f1f1;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+	padding: 25px;
+}
+@media (max-width: 767px) {
+	.vc_responsive .wpb_row .vc_span6.specs {
+		width: 100%;
+		margin: 32px auto 0;
+	}
+}
+.specs th,
+.specs td {
+	border-bottom: 1px solid #e1e1e1;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.15;
+	padding: 7px 0;
+}
+.specs th {
+	color: #666;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+.specs strong {
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.specs h5 {
+	text-transform: none;
+}
+.specs img.alignleft {
+	margin-right: 10px;
+}
+.specs a.vc_btn_xs {
+	padding: 0.6em 1.5em;
+}
+/* floating right waypoints nav */
+ul.w {
+	background: #efefef;
+	border: 1px solid #eaeaea;
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 11px 0;
+	width: 48px;
+	position: fixed;
+	right: 0;
+	top: 55%;
+	z-index: 90;
+}
+@media screen and (max-height: 400px) {
+	ul.w {
+		top: auto;
+		bottom: 0;
+	}
+}
+ul.w li {
+	background: url(images/dots.png) no-repeat 100% 0;
+	display: block;
+	position: relative;
+	font-size: 12px;
+	line-height: 1.6;
+	height: 20px;
+	z-index: 91;
+}
+ul.w li:hover {
+	z-index: 92;
+}
+ul.w li.active {
+	background-position: 100% -20px;
+}
+ul.w a.vc_btn_xs.vc_btn_blue {
+	background: url(images/fx.gif) repeat 0 0;
+	display: block;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 2;
+	padding: 0;
+	text-transform: uppercase;
+	text-indent: -999em;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	white-space: nowrap;
+	width: 28px;
+	height: 20px;
+	z-index: 92;
+	
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+/*ul.w li:focus a.vc_btn_xs,
+ul.w li:hover a.vc_btn_xs,
+*/
+@media screen and (min-width: 1040px) {
+	ul.w a.vc_btn_xs:hover {
+		background: #428bca url(images/dots.png) no-repeat 100% 100%;
+		text-indent: 0;
+		padding: 0 30px 0 20px;
+		width: auto;
+		height: 24px;
+		top: -2px;
+	}
+}
+/*--------------------------------------------------------------
+7.0 Clearings?
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/* and then */
+.site-main a.vc_btn.vc_btn_grey.vc_btn_lg.vc_btn_rounded.pdf {
+	background: url(images/downloadpdf.png) no-repeat 100% 50%;
+	border: 2px solid #e7e7e7;
+	border-radius: 39px;
+	color: #31669a !important;
+	padding: 0 255px 0 37px;
+	text-align: center;
+	font-size: 24px;
+	font-size: 2.4rem;
+	line-height: 3.25;
+}
+*:focus {
+	outline: none;
+}
+*::-moz-focus-inner {
+	border: none;
+}
