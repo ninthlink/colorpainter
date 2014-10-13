@@ -21,6 +21,13 @@ if ( ! function_exists( 'sii_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function sii_setup() {
+	if ( ! defined( 'WP_SITEURL' ) ) {
+		define('WP_SITEURL', site_url() );
+	}
+	if ( ! defined( 'WP_HOME' ) ) {
+		define('WP_HOME', home_url() );
+	}
+	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'sii' ),
