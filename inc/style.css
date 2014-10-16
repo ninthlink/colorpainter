@@ -347,10 +347,10 @@ a.cta {
 		float: left;
 		padding: 2px 0;
 		text-align: center;
-		width: 150px;
-		bottom: 140px;
+		width: 136px;
+		top: 62%;
 		left: 50%;
-		margin-left: -77px;
+		margin-left: -145px;
 		border: 2px solid #dbd4cd;
 		border-radius: 16px;
 		font-size: 13px;
@@ -358,6 +358,9 @@ a.cta {
 		font-weight: 800;
 		line-height: 2;
 		text-decoration: none;
+}
+a.cta.top {
+	margin-left: 5px;
 }
 @media screen and (min-width: 480px) {
 	.site-main h1 {
@@ -372,10 +375,12 @@ a.cta {
 		font-size: 44px;
 	}
 	a.cta {
-		bottom: auto;
+		margin-left: -70px;
+	}
+	a.cta.top {
+		margin-left: 0;
 		left: auto;
 		top: 36px;
 		right: 40px;
-		margin-left: 0;
 	}
 }
