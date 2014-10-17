@@ -103,9 +103,8 @@ body {
 }
 a.logo {
 	display: block;
-	margin: 27px auto 0;
+	margin: 23px auto 0;
 	width: 184px;
-	max-width: 76%;
 }
 a.logo img {
 	width: 100%;
@@ -113,11 +112,11 @@ a.logo img {
 	float: left;
 }
 .shg {
-	background: url(shg.png) no-repeat 50% 50%;
+	background: url(seiko-ftr.png) no-repeat 50% 50%;
 	border-top: 1px solid #e1e1e1;
 	display: block;
 	width: 100%;
-	height: 110px;
+	height: 68px;
 	text-indent: -999em;
 }
 .rap {
@@ -128,7 +127,7 @@ a.logo img {
 }
 .site-content,
 .nav ul {
-	background: #efefef;
+	background: #eee;
 }
 .content-area {
 	float: right;
@@ -144,7 +143,7 @@ a.logo img {
 .site-header {
 	background: #fff;
 	border-top: 6px solid #31669a;
-	border-bottom: 1px solid #efefef;
+	border-bottom: 1px solid #eee;
 	float: left;
 	position: fixed;
 	left: 0;
@@ -218,17 +217,6 @@ a.logo img {
 		border-bottom: none;
 		width: 240px;
 		height: 100%;
-	}
-	a.logo {
-		display: block;
-		margin: 27px auto 0;
-		width: 184px;
-		max-width: 76%;
-	}
-	a.logo img {
-		width: 100%;
-		height: auto;
-		float: left;
 	}
 	.content-area {
 		margin-left: -240px;
@@ -342,29 +330,53 @@ body,
 	font-weight: 700;
 }
 a.cta {
-		color: #fff;
-		position: absolute;
-		float: left;
-		padding: 2px 0;
-		text-align: center;
-		width: 136px;
-		top: 62%;
-		left: 50%;
-		margin-left: -145px;
-		border: 2px solid #dbd4cd;
-		border-radius: 16px;
-		font-size: 13px;
-		font-family: "OpenSans", Arial, sans-serif;
-		font-weight: 800;
-		line-height: 2;
-		text-decoration: none;
+	color: #fff;
+	position: absolute;
+	float: left;
+	padding: 2px 0;
+	text-align: center;
+	width: 136px;
+	top: 62%;
+	left: 50%;
+	margin-left: -145px;
+	border: 2px solid rgba(219, 212, 205, 0.6);
+	border-radius: 16px;
+	font-size: 13px;
+	font-family: "OpenSans", Arial, sans-serif;
+	font-weight: 800;
+	line-height: 2;
+	text-decoration: none;
+	
+	-webkit-transition: border-color 90ms ease-in-out;
+	-moz-transition: border-color 90ms ease-in-out;
+	-ms-transition: border-color 90ms ease-in-out;
+	-o-transition: border-color 90ms ease-in-out;
+	transition: border-color 90ms ease-in-out;
+}
+a.cta:hover,
+a.cta:focus {
+	border-color: rgba(219, 212, 205, 1.0);
+}
+a.cta.vid {
+	margin-left: 5px;
 }
 a.cta.top {
-	margin-left: 5px;
+	margin-left: -70px;
+	margin-top: 41px;
 }
 @media screen and (min-width: 480px) {
 	.site-main h1 {
 		font-size: 38px;
+	}
+	a.cta {
+		margin-left: -215px;
+	}
+	a.cta.vid {
+		margin-left: -70px;
+	}
+	a.cta.top {
+		margin-left: 75px;
+		margin-top: 0;
 	}
 }
 @media screen and (min-width: 600px) {
@@ -377,10 +389,14 @@ a.cta.top {
 	a.cta {
 		margin-left: -70px;
 	}
+	a.cta.vid,
 	a.cta.top {
 		margin-left: 0;
 		left: auto;
 		top: 36px;
 		right: 40px;
+	}
+	a.cta.vid {
+		right: 190px;
 	}
 }
