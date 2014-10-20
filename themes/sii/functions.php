@@ -149,7 +149,7 @@ function sii_nav_class( $classes ) {
 			$nc[] = $chk;
 		}
 	}
-	return $chk;
+	return $nc;
 }
 
 /**
