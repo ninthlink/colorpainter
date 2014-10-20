@@ -1146,6 +1146,7 @@ ul.w li.active {
 }
 ul.w a.vc_btn_xs.vc_btn_blue {
 	background: url(images/fx.gif) repeat 0 0;
+	color: #fff;
 	display: block;
 	font-size: 12px;
 	font-size: 1.2rem;
