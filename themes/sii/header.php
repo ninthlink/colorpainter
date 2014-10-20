@@ -33,14 +33,10 @@
 <div class="rap">
 	<div class="site-content">
 		<div class="site-header">
-			<a href="<?php echo WP_SITEURL .'/'; ?>" rel="home" class="logo" onClick="window.open(this.href,'_self'); return false;"><img src="<?php bloginfo('template_url'); ?>/images/sii.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
+			<a href="<?php echo WP_SITEURL .'/'; ?>" rel="home" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/sii.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
 			<div class="nav">
 				<button class="toggler"><?php _e( 'Primary Menu', 'sii' ); ?></button>
-				<ul>
-				<li><a href="<?php echo WP_SITEURL; ?>/why-seiko/" onClick="window.open(this.href,'_self'); return false;">Why Seiko</a></li>
-				<li class="c"><a href="<?php echo WP_SITEURL; ?>/colorpainter/">ColorPainter</a></li>
-				<li class="j"><a href="<?php echo WP_SITEURL; ?>/jetrix/">Jetrix</a></li>
-				</ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 			<?php get_sidebar('printermenus'); ?>
 			<div class="left-end">

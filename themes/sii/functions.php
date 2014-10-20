@@ -36,7 +36,7 @@ function sii_setup() {
 	if ( function_exists( 'add_image_size' ) ) { 
 		add_image_size( 'galleryhalf', 720, 580, true ); //cropped
 	}
-	// Remove the version number of WP + some other meta tags
+	// Remove the version number of WP + some other meta tags?
 	$unactions = array( 'rel_canonical', 'rsd_link', 'wlwmanifest_link', 'wp_generator', 'wp_shortlink_wp_head' );
 	$unacts = count( $unactions );
 	while ( $unacts-- ) {
@@ -56,19 +56,38 @@ function sii_setup() {
 endif; // sii_setup
 add_action( 'after_setup_theme', 'sii_setup' );
 
+function sii_postvcinit() {
+	global $wp_filter;
+	if ( isset( $wp_filter['wp_head'] ) ) {
+		foreach ( $wp_filter['wp_head'] as $i => $a ) {
+			foreach ( $a as $n => $v ) {
+				if ( is_array( $v['function'] ) ) {
+					if ( isset( $v['function'][1] ) ) {
+						if ( $v['function'][1] == 'addMetaData' ) {
+							unset( $wp_filter['wp_head'][$i][$n] );
+						}
+					}
+				}
+			}
+		}
+	}
+	//wp_die('<pre>'. print_r($wp_filter,true) .'</pre>');
+}
+add_action( 'vc_after_init_base', 'sii_postvcinit' );
+
 /**
  * Enqueue a couple scripts and styles,
  * but mostly deregister / dequeue other scripts & styles from plugins...
  */
 function sii_scripts() {
 	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), '20141013' );
-	
+	/*
 	$d = array( 'ultimate-style', 'ultimate-animate' );
 	$c = count( $d );
 	while ( $c-- ) {
 		wp_deregister_style( $d[$c] );
 	}
-	
+	*/
 	$d = array( 'image-mapper-css', 'swatchbook-css', 'font-awesome-css', 'prettyPhoto-css-imapper', 'customScroll-css-imapper', 'bsf-Defaults' );
 	$c = count( $d );
 	while ( $c-- ) {
@@ -92,6 +111,7 @@ add_action( 'wp_enqueue_scripts', 'sii_scripts', 40 );
  * because there are some scripts that just won't go away otherwise
  */
 function sii_wp_footer_cleanup() {
+	/*
 	$d = array( 'ultimate-appear', 'ultimate-custom', 'ultimate-row-bg', 'jquery.shake', 'jquery.vhparallax' );
 	$c = count( $d);
 	while ( $c-- ) {
@@ -99,6 +119,7 @@ function sii_wp_footer_cleanup() {
 	}
 	
 	wp_dequeue_style( 'background-style' );
+	*/
 }
 
 /**
@@ -119,14 +140,15 @@ function sii_noprevnext() {
  * hook to nav_menu_css_class to wipe it out
  */
 function sii_nav_class( $classes ) {
-	return array();
+	//return array();
+	return $classes;
 }
 
 /**
  * hook to nav_menu_item_id to wipe that out
  */
 function sii_nav_id( $id ) {
-	return '';
+	return $id; //'';
 }
 
 /**
