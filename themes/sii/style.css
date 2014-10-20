@@ -326,11 +326,15 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 body,
+strong {
+	color: #3a4145;
+}
 button,
 input,
 select,
 textarea,
-.specs th {
+.specs th,
+p {
 	color: #666;
 }
 input[type="text"]:focus,
@@ -340,14 +344,6 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	color: #111;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #3a4145;
 }
 a {
 	color: #31669a;
