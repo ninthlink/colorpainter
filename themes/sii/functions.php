@@ -141,7 +141,7 @@ function sii_noprevnext() {
  */
 function sii_nav_class( $classes ) {
 	$nc = array();
-	$allowed = array( 'c', 'd', 'j' );
+	$allowed = array( 'd', 'j', 'c' );
 	$count = count( $allowed );
 	while( $count-- ) {
 		$chk = $allowed[$count];
