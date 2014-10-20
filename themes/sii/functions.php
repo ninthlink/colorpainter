@@ -140,15 +140,23 @@ function sii_noprevnext() {
  * hook to nav_menu_css_class to wipe it out
  */
 function sii_nav_class( $classes ) {
-	//return array();
-	return $classes;
+	$nc = array();
+	$allowed = array( 'c', 'd', 'j' );
+	$count = count( $allowed );
+	while( $count-- ) {
+		$chk = $allowed[$count];
+		if ( in_array( $chk, $classes ) ) {
+			$nc[] = $chk;
+		}
+	}
+	return $chk;
 }
 
 /**
  * hook to nav_menu_item_id to wipe that out
  */
 function sii_nav_id( $id ) {
-	return $id; //'';
+	return '';
 }
 
 /**
