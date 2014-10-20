@@ -567,12 +567,14 @@ a:active {
 	width: 100%;
 }
 .nav a {
-	background: url(images/navarro.png) no-repeat 100% 50%; 
 	color: #333;
 	display: block;
 	margin: 0;
 	padding: 18px 41px 18px 28px;
 	text-transform: none;
+}
+.nav .d a {
+	background: url(images/navarro.png) no-repeat 100% 50%; 
 }
 body.tog.cd .nav li.c a,
 body.tog.jd .nav li.j a {
