@@ -179,16 +179,11 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #666;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 17px;
-	font-size: 1.7rem;
+	font-size: 16px;
+	font-size: 1.6rem;
 	line-height: 1.5;
-}
-body.home,
-.hello {
-	font-size: 14px;
-	font-size: 1.4rem;
 }
 h4,
 h5,
@@ -208,19 +203,19 @@ blockquote,
 .m h4 {
 	font-family: 'Museo', Georgia, serif;
 }
-/* H1 48/54 Museo 300 / 700 : "High performance..." headline on CP overview page */
+/* font sizings */
 h1 {
-	font-size: 48px;
-	font-size: 4.8rem;
+	font-size: 44px;
+	font-size: 4.4rem;
 	font-weight: 300;
-	line-height: 1.125;
+	line-height: 1.3;
 	margin: 0.5em 0;
 }
-/* H2 40 Museo 500 : section titles "Key Product Benefits" / ... */
 h2 {
-	font-size: 40px;
-	font-size: 4rem;
-	font-weight: 500;
+	font-size: 36px;
+	font-size: 3.6rem;
+	font-weight: 300;
+	line-height: 1.1;
 	margin: 1em 0;
 }
 .section h2 {
@@ -231,30 +226,27 @@ h2 {
 .section.hh h2 {
 	display: none;
 }
-/* H3 32/42 Museo ( 300 / 700 ) : big home text / headline on M64 "The next generation...." */
 h3 {
-	font-size: 32px;
-	font-size: 3.2rem;
-	font-weight: 300;
-	line-height: 1.3125;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 1.25;
 	margin: 1em 0;
 }
 h1 strong,
 h3 strong {
 	font-weight: 700;
 }
-/* H4 22 OpenSans Bold : Speed / Ink / Technology */
 h4 {
-	font-size: 22px;
-	font-size: 2.2rem;
-	font-weight: 700;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: 500;
 	margin: 1em 0;
 }
-/* H5 16/22 OpenSans (Bold / Extrabold / Italic) : left menu, "TAKE A GUIDE" / "SALES"... / "- Mark Land.." */
 h5,
 .nav a {
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 14px;
+	font-size: 1.4rem;
 	font-weight: 700;
 	line-height: 1.375;
 	text-transform: uppercase;
@@ -264,7 +256,6 @@ h5 em {
 	font-weight: 400;
 	font-style: italic;
 }
-/* H6 12 OpenSans Extrabold : left LOGOUT / M64 table labels & WATCH btn */
 h6 {
 	font-size: 12px;
 	font-size: 1.2rem;
@@ -280,7 +271,6 @@ b, strong {
 dfn, cite, em, i {
 	font-style: italic;
 }
-/* <blockquote> 26/36 Museo 700 : testimonial quote */ 
 blockquote {
 	font-size: 26px;
 	font-size: 2.6rem;

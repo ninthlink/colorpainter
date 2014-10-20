@@ -80,7 +80,7 @@ add_action( 'vc_after_init_base', 'sii_postvcinit' );
  * but mostly deregister / dequeue other scripts & styles from plugins...
  */
 function sii_scripts() {
-	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), '20141013' );
+	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), '201410120' );
 	/*
 	$d = array( 'ultimate-style', 'ultimate-animate' );
 	$c = count( $d );
