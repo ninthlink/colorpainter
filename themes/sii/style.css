@@ -925,8 +925,8 @@ ul.m li ul.inks li.i7 {
 }
 @media (min-width: 992px) {	
 	ul.m {
-		width: 18%;
-		left: 18%;
+		width: 240px;
+		left: 240px;
 	}
 	.site-header {
 		background: none;
@@ -944,7 +944,6 @@ ul.m li ul.inks li.i7 {
 		display: block;
 		margin: 27px auto 0;
 		width: 184px;
-		max-width: 76%;
 	}
 	a.logo img {
 		width: 100%;
@@ -952,21 +951,21 @@ ul.m li ul.inks li.i7 {
 		float: left;
 	}
 	.content-area {
-		margin-left: -18%;
+		margin-left: -240px;
 	}
 	.site-main {
-		margin-left: 18%;
+		margin-left: 240px;
 	}
 	.site-header,
 	.left-end {
-		width: 18%;
+		width: 240px;
 	}
 	.toggler {
 		display: none;
 	}
 	.tog.cd .content-area,
 	.tog.jd .content-area {
-		left: 18%;
+		left: 240px;
 	}
 }
 @media screen and (max-width: 530px) {
