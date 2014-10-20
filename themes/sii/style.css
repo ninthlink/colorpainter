@@ -360,7 +360,9 @@ p.imapper-content-header {
 }
 .site-info,
 .site-info a,
-ul.w a.vc_btn_xs.vc_btn_blue {
+ul.w a.vc_btn_xs.vc_btn_blue,
+.txtw,
+.txtw p {
 	color: #fff;
 }
 
