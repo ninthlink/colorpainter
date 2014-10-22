@@ -77,7 +77,7 @@ jQuery(function($) {
 	// first
 	$('.site-main .wpb_row:first').each(function() {
 		if ( $(this).hasClass('section') == false ) {
-			$(this).addClass('section hh').prepend('<h2>Overview</h2>');
+			$(this).addClass('section hh').prepend('<h2 class="hh">Overview</h2>');
 		}
 	});
 	$('.section').each(function(i) {

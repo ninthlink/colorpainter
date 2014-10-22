@@ -223,6 +223,10 @@ h2 {
 	margin-bottom: 0.5em;
 }
 .section.hh h2 {
+	border-top: none;
+	padding-top: 0;
+}
+.section.hh h2.hh {
 	display: none;
 }
 h3 {
