@@ -1250,6 +1250,17 @@ ul.w li:hover a.vc_btn_xs,
 	font-size: 2.4rem;
 	line-height: 3.25;
 }
+.site-main a.vc_btn-xs {
+	padding: 2px 30px;
+}
+.site-main a.vc_btn-blue {
+	background: #31669a;
+	color: #fff;
+}
+.site-main a.vc_btn-blue:hover {
+	background: #27527c;
+	color: #fff !important;
+}
 *:focus {
 	outline: none;
 }
