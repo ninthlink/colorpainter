@@ -12,11 +12,8 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 992; /* pixels, but why? */
 }
 
-if ( ! defined( 'SII_CSS_DATE' ) ) {
-	define('SII_CSS_DATE', '20141022' );
-}
-if ( ! defined( 'SII_JS_DATE' ) ) {
-	define('SII_JS_DATE', '20141022' );
+if ( ! defined( 'SII_MOD_DATE' ) ) {
+	define('SII_MOD_DATE', '20141028' );
 }
 
 if ( ! function_exists( 'sii_setup' ) ) :
@@ -62,7 +59,7 @@ add_action( 'after_setup_theme', 'sii_setup' );
  * and deregister / dequeue other scripts & styles from plugins...
  */
 function sii_scripts() {
-	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), SII_CSS_DATE );
+	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), SII_MOD_DATE );
 	
 	$d = array( 'image-mapper-css', 'swatchbook-css', 'font-awesome-css', 'prettyPhoto-css-imapper', 'customScroll-css-imapper', 'bsf-Defaults' );
 	$c = count( $d );
@@ -77,7 +74,7 @@ function sii_scripts() {
 	}
 	
 	wp_enqueue_script( 'jquery.waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array('jquery'), '2.0.5', true );
-	wp_enqueue_script( 'sii', get_template_directory_uri() . '/js/sii.js', array('jquery', 'jquery.waypoints'), SII_JS_DATE, true );
+	wp_enqueue_script( 'sii', get_template_directory_uri() . '/js/sii.js', array('jquery', 'jquery.waypoints'), SII_MOD_DATE, true );
 }
 add_action( 'wp_enqueue_scripts', 'sii_scripts', 40 );
 
