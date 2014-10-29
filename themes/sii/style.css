@@ -368,7 +368,8 @@ p.imapper-content-header {
 .site-info a,
 ul.w a.vc_btn_xs.vc_btn_blue,
 .txtw,
-.txtw p {
+.txtw p,
+.txtw strong {
 	color: #fff;
 }
 
