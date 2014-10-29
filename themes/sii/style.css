@@ -1236,12 +1236,15 @@ ul.w li:hover a.vc_btn_xs,
 }
 
 /* and then */
+/*
 .site-main a.vc_btn.vc_btn-sm.vc_btn_rounded {
 	border-radius: 16px;
 }
+*/
 .site-main a.vc_btn-white.vc_btn-sm {
 	background: rgba(255,255,255,0.8);
 }
+/*
 .site-main a.vc_btn.vc_btn_grey.vc_btn_lg.vc_btn_rounded.pdf {
 	background: url(images/downloadpdf.png) no-repeat 100% 50%;
 	border: 2px solid #e7e7e7;
@@ -1253,6 +1256,7 @@ ul.w li:hover a.vc_btn_xs,
 	font-size: 2.4rem;
 	line-height: 3.25;
 }
+*/
 .site-main a.vc_btn-xs {
 	padding: 2px 30px;
 }
