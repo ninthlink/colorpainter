@@ -1268,6 +1268,14 @@ ul.w li:hover a.vc_btn_xs,
 	background: #27527c;
 	color: #fff !important;
 }
+.site-main a.vc_btn-blue.vc_btn_outlined,
+.site-main a.vc_btn-blue.vc_btn_square_outlined {
+	color: #31669a !important;
+}
+.site-main a.vc_btn-blue.vc_btn_outlined:hover,
+.site-main a.vc_btn-blue.vc_btn_square_outlined:hover {
+	color: #27527c !important;
+}
 *:focus {
 	outline: none;
 }
