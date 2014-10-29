@@ -13,7 +13,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 if ( ! defined( 'SII_MOD_DATE' ) ) {
-	define('SII_MOD_DATE', '20141028' );
+	define('SII_MOD_DATE', '20141029' );
 }
 
 if ( ! function_exists( 'sii_setup' ) ) :
