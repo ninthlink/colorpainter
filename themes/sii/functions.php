@@ -146,7 +146,7 @@ add_action('generate_rewrite_rules', 'sii_ht_rewrites');
 /**
  * Hook to vc_after_init_base to remove that meta tag with latest JS Visual Composer
  */
-function sii_postvcinit() {
+function sii_vc_afterinitbase() {
 	global $wp_filter;
 	if ( isset( $wp_filter['wp_head'] ) ) {
 		foreach ( $wp_filter['wp_head'] as $i => $a ) {
@@ -161,6 +161,20 @@ function sii_postvcinit() {
 			}
 		}
 	}
-	//wp_die('<pre>'. print_r($wp_filter,true) .'</pre>');
 }
-add_action( 'vc_after_init_base', 'sii_postvcinit' );
+add_action( 'vc_after_init_base', 'sii_vc_afterinitbase' );
+
+/**
+ * Hook to vc_after_init to tweak some params
+ * based off http://kb.wpbakery.com/index.php?title=Update_single_param_values
+ *
+function sii_vc_tweaks() {
+	//Get current values stored in the color param in "Call to Action" element
+  $param = WPBMap::getParam('vc_button2', 'style');
+  //Append new value to the 'value' array
+  $param['value'][__('Super color', 'js_composer')] = 'btn-super-color';
+  //Finally "mutate" param with new values
+  WPBMap::mutateParam('vc_cta_button', $param);
+}
+add_action( 'vc_after_init', 'sii_vc_tweaks' );
+*/
