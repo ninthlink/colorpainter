@@ -80,6 +80,7 @@ function sii_scripts() {
   // check if we are on a single blog page or on /blog, and if so, wp_enqueue_style('js_composer_front');
   if ( is_home() || is_archive() || is_single() ) {
     wp_enqueue_style( 'js_composer_front' );
+    wp_enqueue_style( 'js_composer_custom_css' );
   }
 }
 add_action( 'wp_enqueue_scripts', 'sii_scripts', 40 );

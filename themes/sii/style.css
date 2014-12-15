@@ -483,13 +483,26 @@ h6.byline {
 	padding: 0;
 	background: #fff;
 }
+.blogpost.vc_col-sm-4 h3,
+.blogpost.vc_col-sm-4 h6.byline {
+	padding-left: 20px;
+	padding-right: 20px;
+}
 @media screen and (min-width: 768px) {
 	.blogpost.vc_col-sm-4 {
 		width: 32%;
+		border-radius: 5px;
 	}
 	.blogpost.vc_col-sm-4.col1{ 
 		margin-left: 2%;
 		margin-right: 2%;
+	}
+	.blogpost.vc_col-sm-4 img {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		width: 100%;
+		height: auto;
+		margin: 0;
 	}
 }
 /*--------------------------------------------------------------
