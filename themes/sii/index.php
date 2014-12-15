@@ -23,8 +23,10 @@ get_header(); ?>
 	<div class="vc_col-sm-12 wpb_column vc_column_container">
 		<div class="wpb_wrapper">
 			<div class="vc_row wpb_row vc_inner vc_row-fluid">
-			<?php while ( have_posts() ) : the_post(); ?>
-        <div class="vc_col-sm-4 wpb_column vc_column_container blogpost">
+			<?php
+			$blogcount = 0;
+			while ( have_posts() ) : the_post(); ?>
+        <div class="vc_col-sm-4 wpb_column vc_column_container blogpost col<?php echo ''. ( $blogcount % 3 ) ;?>">
           <div class="wpb_wrapper">
             <a href="<?php the_permalink(); ?>">
               <div class="wpb_single_image wpb_content_element vc_align_left">
@@ -49,7 +51,9 @@ get_header(); ?>
             </a>
           </div>
         </div> 
-			<?php endwhile; // end of the loop. ?>
+			<?php
+			$blogcount++;
+			endwhile; // end of the loop. ?>
       </div>
 		</div> 
 	</div> 
