@@ -38,9 +38,10 @@ get_header(); ?>
                     </div> 
                   </div>
                   <div class="ult-spacer" style="height:70px;clear:both;display:block;"></div>
-                  <div class="vc_separator wpb_content_element vc_el_width_100 vc_sep_color_grey">
-                    <span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span>
-                    <span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
+                  <div class="wpb_content_element">
+                    <div class="wpb_wrapper">
+                      <hr />
+                    </div>
                   </div>
                   <div class="ult-spacer" style="height:20px;clear:both;display:block;"></div>
                   <div class="vc_row wpb_row vc_inner vc_row-fluid">
