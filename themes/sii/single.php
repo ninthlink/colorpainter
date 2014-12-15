@@ -65,6 +65,7 @@ get_header(); ?>
                 </div> 
               </div> 
             </div><!-- Row Backgrounds -->
+            <?php get_sidebar( 'blogbottom3' ); ?>
 					</div>
 				</div>
 			<?php endwhile; // end of the loop. ?>
