@@ -19,7 +19,7 @@
 			global $post;
 			$args = array(
 				'post_type' => 'post',
-				'post_count' => 3,
+				'posts_per_page' => 3,
 				'post__not_in' => array(
 					$post->ID
 				) // exclude current?
