@@ -80,7 +80,11 @@ function sii_scripts() {
   // check if we are on a single blog page or on /blog, and if so, wp_enqueue_style('js_composer_front');
   if ( is_home() || is_archive() || is_single() ) {
     wp_enqueue_style( 'js_composer_front' );
-    wp_enqueue_style( 'js_composer_custom_css' );
+		// overwrite to add dependency so order is ok?!
+		$upload_dir = wp_upload_dir();
+		if ( is_file( $upload_dir['basedir'] . '/' . vc_upload_dir() . '/custom.css' ) ) {
+			wp_enqueue_style( 'js_composer_custom_css', $upload_dir['baseurl'] . '/' .  vc_upload_dir() . '/custom.css', array( 'js_composer_front' ), WPB_VC_VERSION, 'screen' );
+		}
   }
 }
 add_action( 'wp_enqueue_scripts', 'sii_scripts', 40 );
