@@ -76,6 +76,11 @@ function sii_scripts() {
 	
 	wp_enqueue_script( 'jquery.waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array('jquery'), '2.0.5', true );
 	wp_enqueue_script( 'sii', get_template_directory_uri() . '/js/sii.js', array('jquery', 'jquery.waypoints'), SII_MOD_DATE, true );
+  
+  // check if we are on a single blog page or on /blog, and if so, wp_enqueue_style('js_composer_front');
+  if ( is_home() || is_archive() || is_single() ) {
+    wp_enqueue_style( 'js_composer_front' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'sii_scripts', 40 );
 
