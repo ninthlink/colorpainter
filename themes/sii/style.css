@@ -4,7 +4,7 @@ Theme URI: http://sii.ninthlink.me/
 Author: Ninthlink, Inc.
 Author URI: http://www.ninthlink.com
 Description: WordPress theme initially based off the Seiko Printers Distributor App, designed and developed by Ninthlink, Inc., started from _s
-Version: 0.1
+Version: 0.1.2
 
 Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
@@ -372,6 +372,9 @@ ul.w a.vc_btn_xs.vc_btn_blue,
 .txtw strong {
 	color: #fff;
 }
+h6.byline {
+  color: #999;
+}
 
 hr {
 	background-color: #ccc;
@@ -467,6 +470,9 @@ ul.soc .fb a {
 ul.soc .yt a {
 	background-position: 100% 0;
 	margin-left: 16px;
+}
+h6.byline {
+  text-transform: uppercase;
 }
 /*--------------------------------------------------------------
 4.0 Forms
