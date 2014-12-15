@@ -10,10 +10,11 @@
 			<div class="vc_row wpb_row vc_inner vc_row-fluid">
         <div class="vc_col-sm-12 wpb_column vc_column_container">
           <div class="wpb_wrapper">
-          	<h4>EXPLORE THE LATEST BLOG ARTICLES</h4>
+          	<h5>Explore the latest Blog Articles</h5>
           </div>
         </div>
       </div>
+      <div class="ult-spacer" style="height:30px;clear:both;display:block;"></div>
 			<div class="vc_row wpb_row vc_inner vc_row-fluid">
 			<?php
 			global $post;
