@@ -28,9 +28,10 @@ get_header(); ?>
                   <?php if ( has_post_thumbnail() ) { ?>
                   <div class="wpb_single_image wpb_content_element vc_align_left">
                     <div class="wpb_wrapper">
-                      <span class="vc_box_shadow_3d_wrap"><?php the_post_thumbnail( 'full', array( 'class' => 'vc_box_shadow_3d vc_box_border_grey attachment-full' ) ); ?></span>
+                      <span class="vc_box_shadow_3d_wrap"><?php the_post_thumbnail( 'full' ); ?></span>
                     </div> 
                   </div>
+                  <div class="ult-spacer" style="height:50px;clear:both;display:block;"></div>
                   <?php } ?>
                   <div class="wpb_text_column wpb_content_element ">
                     <div class="wpb_wrapper">
