@@ -34,7 +34,8 @@ function sii_setup() {
 	) );
 	
 	if ( function_exists( 'add_image_size' ) ) { 
-		add_image_size( 'galleryhalf', 720, 580, true ); //cropped
+		add_image_size( 'galleryhalf', 720, 580, true );
+		add_image_size( 'blogthird', 296, 197, true );
 	}
 	// Remove the version number of WP + some other meta tags?
 	$unactions = array( 'rel_canonical', 'rsd_link', 'wlwmanifest_link', 'wp_generator', 'wp_shortlink_wp_head' );
