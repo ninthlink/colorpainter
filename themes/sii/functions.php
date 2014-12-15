@@ -119,6 +119,7 @@ function sii_nav_id( $id ) {
  * Hook to body_class to clean that up
  */
 function sii_body_class( $classes ) {
+  /*
 	$whitelist = array( 'home', 'admin-bar', 'vc_responsive' );
 	$c = count( $classes );
 	while( $c-- ) {
@@ -126,6 +127,7 @@ function sii_body_class( $classes ) {
 			unset( $classes[$c] );
 		}
 	}
+  */
 	return $classes;
 }
 
