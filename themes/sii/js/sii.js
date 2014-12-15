@@ -133,7 +133,7 @@ jQuery(function($) {
   }
 	// /community teaser fix
 	if ( $('.wpb_teaser_grid').size() > 0 ) {
-		$('wpb_thumbnails-fluid li').each(function(i) {
+		$('.wpb_thumbnails-fluid li').each(function(i) {
 			// theres only 2, so add classes for better css'ing
 			$(this).addClass( i == 0 ? 'first' : 'last' );
 		});
