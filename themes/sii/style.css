@@ -475,7 +475,12 @@ ul.soc .yt a {
 h6.byline {
   text-transform: uppercase;
 }
-
+.isotope-item-first {
+	padding-right: 6%;
+}
+.isotope-item-last {
+	padding-left: 6%;
+}
 .blogpostscontainer {
 	background: #f7f7f7;
 	padding: 60px 0;

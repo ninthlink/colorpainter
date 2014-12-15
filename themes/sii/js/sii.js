@@ -131,4 +131,19 @@ jQuery(function($) {
       }
     });
   }
+	// /community teaser fix
+	if ( $('.wpb_teaser_grid').size() > 0 ) {
+		$('.isotope-item').each(function(i) {
+			// theres only 2, so add classes for better css'ing
+			$(this).addClass( 'isotope-item-' + ( i == 0 ? 'first' : 'last' ) );
+		});
+	$('.wpb_teaser_grid h2').each(function() {
+		// change h2 to h5
+		$(this).wrapInner('<h5 />').children().insertAfter($(this));
+		// add shadow to imgs
+		$(this).prev().find('img').wrap('<span class="vc_box_shadow_3d_wrap" />');
+		// remove old h2
+		$(this).remove();
+	});
+	}
 });
