@@ -21,7 +21,7 @@ get_header(); ?>
                   <div class="wpb_text_column wpb_content_element ">
                     <div class="wpb_wrapper">
                       <h2><?php the_title(); ?></h2>
-                      <h6><?php the_time('F j, Y'); ?></h6>
+                      <h6 class="byline"><?php the_time('F j, Y'); ?></h6>
                     </div> 
                   </div>
                   <div class="ult-spacer" style="height:30px;clear:both;display:block;"></div>
