@@ -83,7 +83,8 @@ function sii_scripts() {
 		// overwrite to add dependency so order is ok?!
 		$upload_dir = wp_upload_dir();
 		if ( is_file( $upload_dir['basedir'] . '/' . vc_upload_dir() . '/custom.css' ) ) {
-			wp_enqueue_style( 'js_composer_custom_css', $upload_dir['baseurl'] . '/' .  vc_upload_dir() . '/custom.css', array( 'js_composer_front' ), WPB_VC_VERSION, 'screen' );
+			wp_deregister_style( 'js_composer_custom_css' );
+			wp_enqueue_style( 'js_composer_custom_css', $upload_dir['baseurl'] . '/' .  vc_upload_dir() . '/custom.css', array( 'js_composer_front' ), SII_MOD_DATE, 'screen' ); //WPB_VC_VERSION, 'screen' );
 		}
   }
 }
