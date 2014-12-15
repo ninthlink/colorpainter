@@ -1282,3 +1282,12 @@ ul.w li:hover a.vc_btn_xs,
 *::-moz-focus-inner {
 	border: none;
 }
+
+/**
+ *custom css in the /wp-admin/options-general.php?page=vc_settings
+ * duplicated here for reference :
+.vc_row { margin-left: 0; margin-right: 0;}
+.wpb_wrapper, .max9 { max-width: 925px; margin: 0 auto; }
+.max6 { max-width: 625px; margin: 0 auto; }
+.vc_col-sm-1, .vc_non_responsive .vc_row .vc_col-sm-1, .vc_col-sm-2, .vc_non_responsive .vc_row .vc_col-sm-2, .vc_col-sm-3, .vc_non_responsive .vc_row .vc_col-sm-3, .vc_col-sm-4, .vc_non_responsive .vc_row .vc_col-sm-4, .vc_col-sm-5, .vc_non_responsive .vc_row .vc_col-sm-5, .vc_col-sm-6, .vc_non_responsive .vc_row .vc_col-sm-6, .vc_col-sm-7, .vc_non_responsive .vc_row .vc_col-sm-7, .vc_col-sm-8, .vc_non_responsive .vc_row .vc_col-sm-8, .vc_col-sm-9, .vc_non_responsive .vc_row .vc_col-sm-9, .vc_col-sm-10, .vc_non_responsive .vc_row .vc_col-sm-10, .vc_col-sm-11, .vc_non_responsive .vc_row .vc_col-sm-11, .vc_col-sm-12, .vc_non_responsive .vc_row .vc_col-sm-12 { padding-left: 0; padding-right: 0; }
+ */
