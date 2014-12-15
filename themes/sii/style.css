@@ -477,7 +477,7 @@ h6.byline {
 
 .blogpostscontainer {
 	background: #f7f7f7;
-	padding: 55px 0;
+	padding: 60px 0;
 }
 .blogpost.vc_col-sm-4 {
 	padding: 0;
@@ -490,8 +490,10 @@ h6.byline {
 }
 @media screen and (min-width: 768px) {
 	.blogpost.vc_col-sm-4 {
-		width: 32%;
 		border-radius: 5px;
+		margin-bottom: 40px;
+		width: 32%;
+		height: 337px;
 	}
 	.blogpost.vc_col-sm-4.col1{ 
 		margin-left: 2%;
@@ -503,6 +505,19 @@ h6.byline {
 		width: 100%;
 		height: auto;
 		margin: 0;
+	}
+	.blogpost.vc_col-sm-4 .wpb_single_image.vc_align_left {
+		height: 225px;
+	}
+	.blogpost.vc_col-sm-4 h3 {
+		font-size: 20px;
+		font-size: 2rem;
+		height: 100px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.blogpost.vc_col-sm-4 h6.byline {
+		margin-top: 0;
 	}
 }
 /*--------------------------------------------------------------
