@@ -125,8 +125,11 @@
         $pitem .= '</a></li>' ."\n";
 			} else {
         // its the first one?
-        $pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="vc_btn vc_btn_blue vc_btn-blue vc_btn-xs vc_btn_round">OVERVIEW</a><br /><br />' ."\n";
-        $pitem .= '<a href="#" class="vc_btn vc_btn_blue vc_btn-blue vc_btn-xs vc_btn_outlined vc_btn_round">INK TECHNOLOGY</a></li>' ."\n";
+        $pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="vc_btn vc_btn_blue vc_btn-blue vc_btn-xs vc_btn_round">OVERVIEW</a>' ."\n";
+        if ( $i ) {
+          // ColorPainter : add Ink Tech btn too
+          $pitem .= '<br /><br /><a href="#" class="vc_btn vc_btn_blue vc_btn-blue vc_btn-xs vc_btn_outlined vc_btn_round">INK TECHNOLOGY</a></li>' ."\n";
+        }
       }
 			$printermenu = $pitem . $printermenu;
 		}
