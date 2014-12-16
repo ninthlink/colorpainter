@@ -891,6 +891,7 @@ ul.m li.p0 {
 .m .pl {
   background: #31669a;
   color: #fff;
+  padding-bottom: 30px;
 }
 .m h4 {
   font-weight: 700;
@@ -1333,23 +1334,30 @@ ul.w li:hover a.vc_btn_xs,
 	line-height: 3.25;
 }
 */
-.site-main a.vc_btn-xs {
+.site-main a.vc_btn-xs,
+.m a.vc_btn-xs {
 	padding: 2px 30px;
 }
-.site-main a.vc_btn-blue {
+.site-main a.vc_btn-blue,
+.m a.vc_btn-blue {
 	background: #31669a;
 	color: #fff;
 }
-.site-main a.vc_btn-blue:hover {
+.site-main a.vc_btn-blue:hover,
+.m a.vc_btn-blue:hover {
 	background: #27527c;
 	color: #fff !important;
 }
 .site-main a.vc_btn-blue.vc_btn_outlined,
-.site-main a.vc_btn-blue.vc_btn_square_outlined {
+.site-main a.vc_btn-blue.vc_btn_square_outlined,
+.m a.vc_btn-blue.vc_btn_outlined:hover,
+.m a.vc_btn-blue.vc_btn_square_outlined:hover {
 	color: #31669a !important;
 }
 .site-main a.vc_btn-blue.vc_btn_outlined:hover,
-.site-main a.vc_btn-blue.vc_btn_square_outlined:hover {
+.site-main a.vc_btn-blue.vc_btn_square_outlined:hover,
+.m a.vc_btn-blue.vc_btn_outlined:hover,
+.m a.vc_btn-blue.vc_btn_square_outlined:hover {
 	color: #27527c !important;
 }
 *:focus {
