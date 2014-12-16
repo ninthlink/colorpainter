@@ -87,7 +87,10 @@
 		$pcount = count( $printers );
 		while ( $pcount-- ) {
 			$pitem = '<li class="p'. $pcount .'">'. "\n";
-			
+			if ( $ps ) {
+        // wrap the whole thing
+        $pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="p">' ."\n";
+      }
 			$h4 = $printers[$pcount]['n'];
 			if ( $h4 ) $pitem .= '<h4>'. $h4 .'</h4>'. "\n";
 			
@@ -102,15 +105,15 @@
 				}
 				$pitem .= $inkhtml .'</ul>'. "\n";
 			}
-			$l = 'OVERVIEW';
 			$ps = $printers[$pcount]['s'];
 			if ( $ps ) {
-				$l = 'LEARN MORE';
 				if ( is_array( $ps ) ) {
 					$pitem .= '<p>';
+          /*
 					if ( isset( $ps['ink'] ) ) {
 						$pitem .= '<em class="ibox">'. $ps['ink'] .'</em><br />'. "\n";
 					}
+          */
 					if ( isset( $ps['size'] ) ) {
 						$pitem .= 'Size: <strong>'. $ps['size'] .'</strong><br />'. "\n";
 					}
@@ -119,10 +122,18 @@
 					}
 					$pitem .= '</p>'. "\n";
 				}
-			}
-			$pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="vc_btn vc_btn_blue vc_btn_xs vc_btn_rounded" onclick="window.open(this.href,\'_self\'); return false;">'. $l .'</a></li>' ."\n";
+        $pitem .= '</a></li>' ."\n";
+			} else {
+        // its the first one?
+        $pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="vc_btn vc_btn-blue vc_btn-xs vc_btn_round">OVERVIEW</a>' ."\n";
+        $pitem .= '<a href="#" class="vc_btn vc_btn-blue vc_btn-xs vc_btn_outlined vc_btn_round">INK TECHNOLOGY</a></li>' ."\n";
+      }
 			$printermenu = $pitem . $printermenu;
 		}
+    if ( $i ) {
+      // add ColorPainter Legacy CTA
+      $printermenu .= '<li class="pl"><h4>COLORPAINTER LEGACY</h4><a href="#" class="vc_btn vc_btn-white vc_btn-xs vc_btn_outlined vc_btn_round">LEARN MORE</a></li>' ."\n";
+    }
 		echo '<ul class="m '. ($i ? 'c' : 'j') .'">'. "\n" .'<li class="back"><a href="#">Back</a></li>'. "\n" . $printermenu .'</ul>'. "\n";
 	}
 	?>

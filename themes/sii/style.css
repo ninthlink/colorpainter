@@ -192,14 +192,14 @@ h6,
 .m .ibox,
 p.imapper-content-header,
 .specs strong,
-ul.w a {
+ul.w a,
+.m h4 {
 	font-family: 'OpenSans', Tahoma, sans-serif;
 }
 h1,
 h2,
 h3,
-blockquote,
-.m h4 {
+blockquote {
 	font-family: 'Museo', Georgia, serif;
 }
 /* font sizings */
@@ -819,7 +819,16 @@ ul.m li {
 	border-bottom: 1px solid #efefef;
 	list-style: none;
 	text-align: center;
-	padding: 0 0 20px;
+	padding: 0;
+}
+.m a.p {
+  float: left;
+  width: 100%;
+  padding: 0 0 20px;
+}
+.m a.p:hover {
+  background-color: #f7f7f7;
+  text-decoration: none;
 }
 ul.m li.back {
 	display: none;
@@ -879,7 +888,12 @@ ul.m li.p0 {
 	width: 146px;
 	height: 79px;
 }
+.m .pl {
+  background: #31669a;
+  color: #fff;
+}
 .m h4 {
+  font-weight: 700;
 	line-height: 1.25;
 	margin: 17px 0 7px;
 }
@@ -939,6 +953,9 @@ ul.m li ul.inks li.i7 {
 }
 .m p {
 	margin: 11px 0;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 1.4;
 }
 .m li a.vc_btn_xs.vc_btn_rounded {
 	font-weight: 700;
