@@ -1334,9 +1334,12 @@ ul.w li:hover a.vc_btn_xs,
 	line-height: 3.25;
 }
 */
-.site-main a.vc_btn-xs,
-.m a.vc_btn-xs {
+.site-main a.vc_btn-xs {
 	padding: 2px 30px;
+}
+.m a.vc_btn-xs {
+	padding: 2px 0;
+  width: 140px;
 }
 .site-main a.vc_btn-blue,
 .m a.vc_btn-blue {
