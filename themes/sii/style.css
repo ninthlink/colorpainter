@@ -188,7 +188,7 @@ h4,
 h5,
 h6,
 .nav a,
-.m a,
+.m a.vc_btn,
 .m .ibox,
 p.imapper-content-header,
 .specs strong,
@@ -362,7 +362,9 @@ a:hover {
 .left-end h6 a,
 .m em.ibox,
 ul.m li.back a,
-p.imapper-content-header {
+p.imapper-content-header,
+.m h4,
+.m p strong {
 	color: #333;
 }
 .site-info,
@@ -373,7 +375,8 @@ ul.w a.vc_btn_xs.vc_btn_blue,
 .txtw strong {
 	color: #fff;
 }
-h6.byline {
+h6.byline,
+.m p {
   color: #999;
 }
 
