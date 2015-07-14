@@ -3,8 +3,8 @@ Theme Name: sii
 Theme URI: http://sii.ninthlink.me/
 Author: Ninthlink, Inc.
 Author URI: http://www.ninthlink.com
-Description: WordPress theme initially based off the Seiko Printers Distributor App, designed and developed by Ninthlink, Inc., started from _s
-Version: 0.1.4
+Description: WordPress theme for Seiko Instruments / ColorPainter Printers, originally based on _s
+Version: 0.1.5
 
 Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
@@ -130,7 +130,6 @@ a img {
     font-weight: 700;
     font-style: normal;
 }
-/*
 @font-face {
     font-family: 'OpenSans';
     src: url('fonts/opensans-regular-webfont.eot');
@@ -141,7 +140,6 @@ a img {
     font-weight: 400;
     font-style: normal;
 }
-*/
 @font-face {
     font-family: 'OpenSans';
     src: url('fonts/opensans-italic-webfont.eot');
@@ -179,7 +177,7 @@ button,
 input,
 select,
 textarea {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'OpenSans', Tahoma, sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -238,7 +236,7 @@ h3 {
 	font-size: 2.4rem;
 	font-weight: 500;
 	line-height: 1.25;
-	margin: 1em 0;
+	margin: 0 0 1em;
 }
 h1 strong,
 h3 strong {
@@ -514,39 +512,6 @@ body ul.wpb_thumbnails-fluid li.last {
 .blogpost.vc_col-sm-4 h6.byline {
 	padding-left: 20px;
 	padding-right: 20px;
-}
-@media screen and (min-width: 768px) {
-	.blogpost.vc_col-sm-4 {
-		border-radius: 5px;
-		margin-bottom: 40px;
-		width: 32%;
-		height: 380px;
-	}
-	.blogpost.vc_col-sm-4.col1{ 
-		margin-left: 2%;
-		margin-right: 2%;
-	}
-	.blogpost.vc_col-sm-4 img {
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
-		width: 100%;
-		height: auto;
-		margin: 0;
-	}
-	.blogpost.vc_col-sm-4 .wpb_single_image.vc_align_left {
-		height: 225px;
-	}
-	.blogpost.vc_col-sm-4 h3 {
-		font-size: 20px;
-		font-size: 2rem;
-		height: 100px;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	.blogpost.vc_col-sm-4 h6.byline {
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
 }
 /* socialticker */
 .vc_row.wpb_row.vc_row-fluid.socialticker {
@@ -1196,6 +1161,74 @@ ul.m li ul.inks li.i7 {
 	.wpb_row.diff3 .wpb_row .wpb_column.vc_span3.c3 {
 		margin: 0 6% 0 2%;
 	}
+	.blogpost.vc_col-sm-4 {
+		border-radius: 5px;
+		margin-bottom: 40px;
+		width: 32%;
+		height: 380px;
+	}
+	.blogpost.vc_col-sm-4.col1{ 
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	.blogpost.vc_col-sm-4 img {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		width: 100%;
+		height: auto;
+		margin: 0;
+	}
+	.blogpost.vc_col-sm-4 .wpb_single_image.vc_align_left {
+		height: 225px;
+	}
+	.blogpost.vc_col-sm-4 h3 {
+		font-size: 20px;
+		font-size: 2rem;
+		height: 100px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.blogpost.vc_col-sm-4 h6.byline {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* more spacing in general? */
+  .wpb_column.vc_col-sm-6.rcol2,
+  .wpb_column.vc_col-sm-6.lcol2,
+  .wpb_column.vc_col-sm-4.lcol3,
+  .wpb_column.vc_col-sm-4.mcol3,
+  .wpb_column.vc_col-sm-4.rcol3 {
+    padding-left: 15px;
+  }
+  .wpb_column.vc_col-sm-6.rcol2,
+  .wpb_column.vc_col-sm-6.lcol2,
+  .wpb_column.vc_col-sm-4.lcol3,
+  .wpb_column.vc_col-sm-4.mcol3,
+  .wpb_column.vc_col-sm-4.rcol3 {
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* more spacing in general? */
+  .wpb_column.vc_col-sm-6.lcol2 {
+    padding-right: 30px;
+  }
+  .wpb_column.vc_col-sm-6.rcol2 {
+    padding-left: 40px;
+  }
+  .wpb_column.vc_col-sm-4.lcol3 {
+    padding-right: 33px;
+  }
+  .wpb_column.vc_col-sm-4.mcol3 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .wpb_column.vc_col-sm-4.rcol3 {
+    padding-left: 33px;
+  }
 }
 /* printer image tooltip thing */
 .imagemapper-wrapper {

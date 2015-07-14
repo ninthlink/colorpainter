@@ -2,7 +2,7 @@ jQuery(function($) {
 	$('p:empty').remove();
 	
 	var body = $('body'), container = $('.nav'), button = container.children(':first'), menu = button.next(), mopen = false, cdopen = false, jdopen = false;
-	// main Menu button
+	// main Menu buttons functionality
 	button.click(function() {
 		if ( mopen ) {
 			// close
@@ -49,7 +49,7 @@ jQuery(function($) {
 				break;
 		}
 	});
-	
+	// make the main nav flopouts "Back" links work correctly?
 	$('.c > .back > a').click(function() {
 		cdopen = false;
 		body.removeClass('cd');
@@ -68,7 +68,7 @@ jQuery(function($) {
 	});
 	
   if ( body.hasClass('single-post') == false ) {
-    // section quicklinks
+    // add section quicklinks
     var sitemain = $('.site-main');
     //sitemain.find('.wpb_row:first').addClass('section').prepend('<a id="top"></a>');
     var wpul = $('<ul />').addClass('w');
@@ -146,4 +146,17 @@ jQuery(function($) {
 			$(this).remove();
 		});
 	}
+  
+  // add some extra column classes for spacing fine tuning?
+  $('.vc_row.wpb_row').each(function() {
+    var childrens = $(this).children();
+    switch( childrens.size() )  {
+      case 2:
+        childrens.eq(0).addClass('lcol2').next().addClass('rcol2');
+        break;
+      case 3:
+        childrens.eq(0).addClass('lcol3').next().addClass('mcol3').next().addClass('rcol3');
+        break;
+    }
+  });
 });
