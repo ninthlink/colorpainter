@@ -49,7 +49,7 @@
 					<li class="tw"><a href="https://twitter.com/SEIKO_I_JP" target="_blank">Twitter</a></li>
 					<li class="yt"><a href="https://www.youtube.com/channel/UCipI9rHoGpgXtcx_cGhMK0g" target="_blank">YouTube</a></li>
 				</ul>
-				<div class="shg">Seiko Holdings Group</div>
+				<div class="lcp">ColorPainter</div>
 			</div>
 		</div>
 
