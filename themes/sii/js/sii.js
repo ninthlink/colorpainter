@@ -15,40 +15,19 @@ jQuery(function($) {
 		}
 		mopen = !mopen;
 	});
-	menu.find('li').each(function(i) {
-		switch ( i ) {
-			case 1:
-				$(this).click(function() {
-					if ( cdopen ) {
-						body.removeClass('cd');
-					} else {
-						body.addClass('tog cd');
-						if ( jdopen ) {
-							jdopen = false;
-							body.removeClass('jd');
-						}
-					}
-					cdopen = !cdopen;
-					return false;
-				});
-				break
-			case 2:
-				$(this).children().click(function() {
-					if ( jdopen ) {
-						body.removeClass('jd');
-					} else {
-						body.addClass('tog jd');
-						if ( cdopen ) {
-							cdopen = false;
-							body.removeClass('cd');
-						}
-					}
-					jdopen = !jdopen;
-					return false;
-				});
-				break;
-		}
-	});
+	menu.find('li').eq(1).click(function() {
+    if ( cdopen ) {
+      body.removeClass('cd');
+    } else {
+      body.addClass('tog cd');
+      if ( jdopen ) {
+        jdopen = false;
+        body.removeClass('jd');
+      }
+    }
+    cdopen = !cdopen;
+    return false;
+  });
 	// make the main nav flopouts "Back" links work correctly?
 	$('.c > .back > a').click(function() {
 		cdopen = false;
