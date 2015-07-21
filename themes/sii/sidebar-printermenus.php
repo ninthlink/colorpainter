@@ -1,8 +1,8 @@
 <?php
 /**
- * sidebar : printermenu(s)
+ * sidebar : ColorPainter printers menu flopout
  *
- * TODO : make more dynamic now for full site?!
+ * TODO : make more dynamic now for full site?! but how?!
  */
 $printers = array(
   array(
@@ -28,7 +28,7 @@ $printers = array(
       'size' => '104&rdquo;, 74&rdquo;',
       'speed' => '79.5 smph',
     ),
-    'i' => 151,
+    'i' => 1000,
   ),
   array(
     'n' => 'H2-104s /<br />H2-74s',
