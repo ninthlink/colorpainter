@@ -60,6 +60,8 @@ add_action( 'after_setup_theme', 'sii_setup' );
  * and deregister / dequeue other scripts & styles from plugins...
  */
 function sii_scripts() {
+  add_thickbox();
+  
 	wp_enqueue_style( 'sii', get_stylesheet_uri(), array(), SII_MOD_DATE );
 	
 	$d = array( 'image-mapper-css', 'swatchbook-css', 'font-awesome-css', 'prettyPhoto-css-imapper', 'customScroll-css-imapper', 'bsf-Defaults' );
