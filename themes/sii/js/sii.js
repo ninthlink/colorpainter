@@ -138,4 +138,9 @@ jQuery(function($) {
         break;
     }
   });
+  
+  // stripe some doc tables?
+  $('.docs table').each(function() {
+    $(this).find('tr:even').addClass('stripe');
+  });
 });
