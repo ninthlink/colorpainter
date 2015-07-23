@@ -4,7 +4,7 @@ Theme URI: http://sii.ninthlink.me/
 Author: Ninthlink, Inc.
 Author URI: http://www.ninthlink.com
 Description: WordPress theme for Seiko Instruments / ColorPainter Printers, originally based on _s
-Version: 0.1.8
+Version: 0.1.9
 
 Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
@@ -546,6 +546,10 @@ body ul.wpb_thumbnails-fluid li.last {
   padding-top: 7px;
 }
 /* Tech Specs */
+.docs p {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
 .docs .vc_tta-color-grey.vc_tta-style-flat .vc_tta-panel.vc_active .vc_tta-panel-heading,
 .docs .vc_tta-color-grey.vc_tta-style-flat .vc_tta-panel .vc_tta-panel-heading:hover {
   background-color: #31669a;
