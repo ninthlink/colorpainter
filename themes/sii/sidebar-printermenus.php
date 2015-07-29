@@ -95,11 +95,11 @@ while ( $pcount-- ) {
     // its the first one?
     $pitem .= '<a href="'. get_permalink($printers[$pcount]['i']) .'" class="vc_btn vc_btn_blue vc_btn-blue vc_btn-xs vc_btn_round">OVERVIEW</a>' ."\n";
     // ColorPainter : add Ink Tech btn too
-    $pitem .= '<br /><br /><a href="#" class="vc_btn vc_btn_blue vc_btn-blue vc_btn-xs vc_btn_outlined vc_btn_round">INK TECHNOLOGY</a></li>' ."\n";
+    //$pitem .= '<br /><br /><a href="#" class="vc_btn vc_btn_blue vc_btn-blue vc_btn-xs vc_btn_outlined vc_btn_round">INK TECHNOLOGY</a></li>' ."\n";
   }
   $printermenu = $pitem . $printermenu;
 }
 // add ColorPainter Legacy CTA
-$printermenu .= '<li class="pl"><h5>COLORPAINTER LEGACY</h5><a href="#" class="vc_btn vc_btn-white vc_btn-xs vc_btn_outlined vc_btn_round">LEARN MORE</a></li>' ."\n";
+//$printermenu .= '<li class="pl"><h5>COLORPAINTER LEGACY</h5><a href="#" class="vc_btn vc_btn-white vc_btn-xs vc_btn_outlined vc_btn_round">LEARN MORE</a></li>' ."\n";
 // and finally, output
 echo '<ul class="m c">'. "\n" .'<li class="back"><a href="#">Back</a></li>'. "\n" . $printermenu .'</ul>'. "\n";
