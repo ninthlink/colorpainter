@@ -31,6 +31,7 @@ function sii_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'sii' ),
+		'ftrtop' => __( 'Footer Top Menu', 'sii' ),
 	) );
 	
 	if ( function_exists( 'add_image_size' ) ) { 
