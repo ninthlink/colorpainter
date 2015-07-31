@@ -57,6 +57,23 @@ endif; // sii_setup
 add_action( 'after_setup_theme', 'sii_setup' );
 
 /**
+ * Register some sidebar(s) or widgetized areas?
+ */
+function sii_widgets_init() {
+  // example register_sidebar, not actually used anywhere on Front End (yet?)
+	register_sidebar( array(
+		'name'          => 'Sidebar',
+		'id'            => 'sidebar_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'sii_widgets_init' );
+
+/**
  * Enqueue a few scripts & styles,
  * and deregister / dequeue other scripts & styles from plugins...
  */
