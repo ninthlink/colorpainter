@@ -660,6 +660,31 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
 }
+
+/* custom search dealer form */
+form#locate-dealer-form {
+    background-color: #31669A;
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+    width: 570px;
+}
+form#locate-dealer-form input[type="text"] {
+    border-radius: 20px;
+    margin: 12px 12px;
+    padding: 6px 17px;
+    width: 373px;
+}
+form#locate-dealer-form input[type="submit"] {
+    background-color: #22476B;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 14px;
+    margin: 12px 12px 12px 0;
+    padding: 13px 30px;
+}
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
