@@ -26,6 +26,7 @@ and Blueprint http://www.blueprintcss.org/
 	5.2 - Menus
 6.0 - Alignments & Content
 7.0 - Clearings
+8.0 - Store Locator Plus (SLP) Plugin
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -1553,3 +1554,28 @@ ul.w li:hover a.vc_btn_xs,
 .max6 { max-width: 625px; margin: 0 auto; }
 .vc_col-sm-1, .vc_non_responsive .vc_row .vc_col-sm-1, .vc_col-sm-2, .vc_non_responsive .vc_row .vc_col-sm-2, .vc_col-sm-3, .vc_non_responsive .vc_row .vc_col-sm-3, .vc_col-sm-4, .vc_non_responsive .vc_row .vc_col-sm-4, .vc_col-sm-5, .vc_non_responsive .vc_row .vc_col-sm-5, .vc_col-sm-6, .vc_non_responsive .vc_row .vc_col-sm-6, .vc_col-sm-7, .vc_non_responsive .vc_row .vc_col-sm-7, .vc_col-sm-8, .vc_non_responsive .vc_row .vc_col-sm-8, .vc_col-sm-9, .vc_non_responsive .vc_row .vc_col-sm-9, .vc_col-sm-10, .vc_non_responsive .vc_row .vc_col-sm-10, .vc_col-sm-11, .vc_non_responsive .vc_row .vc_col-sm-11, .vc_col-sm-12, .vc_non_responsive .vc_row .vc_col-sm-12 { padding-left: 0; padding-right: 0; }
  */
+
+
+/*--------------------------------------------------------------
+8.0 - Store Locator Plus (SLP) Plugin
+--------------------------------------------------------------*/
+#sl_div .col { /* custom layout columns */
+	border: none;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+
+#sl_div form#searchForm {}
+#sl_div form#searchForm label { /* reset search label css */
+	vertical-align: middle;
+    min-width: 0;
+    width: auto;
+}
+#sl_div form#searchForm #radius_in_submit { /* reset Submit container css */
+	float: none;
+}
+#sl_div form#searchForm input#addressSubmit.slp_ui_button { /* reset Submit button css */
+
+}
