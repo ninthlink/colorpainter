@@ -1585,18 +1585,18 @@ form#searchForm #address_search {
 }
 form#searchForm #address_search #addy_in_address {
 	display: inline-block;
-	width: calc(100% - 170px);
+	margin-right: 20px;
+	width: 70%;
+	width: calc(100% - 180px);
 }
 form#searchForm #address_search #addy_in_address label {
 	display: none;
 }
 form#searchForm #address_search #addy_in_address #addressInput {
 	border-radius: 20px;
-	margin-top: -1px;
 	padding: 6px 18px;
 }
 form#searchForm #address_search #radius_in_submit {
-	float: right;
 	width: 152px;
 }
 form#searchForm #address_search #radius_in_submit #addressSubmit {
@@ -1605,11 +1605,43 @@ form#searchForm #address_search #radius_in_submit #addressSubmit {
 	border-radius: 20px;
 	color:  #ffffff;
 	display: block;
-	float: right;
 	font-family: OpenSans;
 	font-size: 14px;
 	font-weight: 700;
 	padding: 12px 30px;
 	text-align: center;
 	text-shadow: none;
+}
+
+form#searchForm #map_sidebar {
+	padding: 0 40px 40px;
+}
+form#searchForm #map_sidebar .results_entry {
+	padding: 20px;
+}
+form#searchForm #map_sidebar .results_entry > div {
+	margin-left: 40px;
+}
+form#searchForm #map_sidebar .results_entry > div:before {
+	background: url(\wp-content\themes\sii\images\Pin.png) no-repeat 0 0;
+	content: '';
+	display: inline-block;
+	height: 30px;
+	width: 21px;
+}
+form#searchForm #map_sidebar .results_entry span {
+	color:  #666666;
+	font-family: OpenSans;
+	font-size: 14px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 21px;/* Approximation due to font substitution */
+}
+form#searchForm #map_sidebar .results_entry span.location_name {
+	color:  #3a4145;
+	font-weight: 700;
+}
+form#searchForm #map_sidebar .results_entry span.slp_result_directions,
+form#searchForm #map_sidebar .results_entry span.slp_result_website {
+	color:  #31669a;
+	font-weight: 600;
 }
