@@ -1579,3 +1579,37 @@ ul.w li:hover a.vc_btn_xs,
 #sl_div form#searchForm input#addressSubmit.slp_ui_button { /* reset Submit button css */
 
 }
+
+form#searchForm #address_search {
+	padding: 40px;
+}
+form#searchForm #address_search #addy_in_address {
+	display: inline-block;
+	width: calc(100% - 170px);
+}
+form#searchForm #address_search #addy_in_address label {
+	display: none;
+}
+form#searchForm #address_search #addy_in_address #addressInput {
+	border-radius: 20px;
+	margin-top: -1px;
+	padding: 6px 18px;
+}
+form#searchForm #address_search #radius_in_submit {
+	float: right;
+	width: 152px;
+}
+form#searchForm #address_search #radius_in_submit #addressSubmit {
+	background-color: #31669a;
+	border: none;
+	border-radius: 20px;
+	color:  #ffffff;
+	display: block;
+	float: right;
+	font-family: OpenSans;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 12px 30px;
+	text-align: center;
+	text-shadow: none;
+}
