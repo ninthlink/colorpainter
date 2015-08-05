@@ -1614,35 +1614,38 @@ form#searchForm #address_search #radius_in_submit #addressSubmit {
 	text-shadow: none;
 }
 
-#map_sidebar {
+div#map_sidebar {
 	padding: 0 40px 40px;
 }
-#map_sidebar .results_entry {
+div#map_sidebar div.results_entry {
 	padding: 20px;
 }
-#map_sidebar .results_entry > div {
+div#map_sidebar div.results_entry > div {
 	margin-left: 40px;
+	position: relative;
 }
-#map_sidebar .results_entry > div:before {
-	background: url(\wp-content\themes\sii\images\Pin.png) no-repeat 0 0;
+div#map_sidebar div.results_entry > div:before {
+	background: url(images/Pin.png) no-repeat 0 0;
 	content: '';
 	display: inline-block;
 	height: 30px;
+	left: -38px;
+	position: absolute;
 	width: 21px;
 }
-#map_sidebar .results_entry span {
+div#map_sidebar div.results_entry span {
 	color:  #666666;
 	font-family: OpenSans;
 	font-size: 14px;/* Approximation due to font substitution */
 	font-weight: 400;
 	line-height: 21px;/* Approximation due to font substitution */
 }
-#map_sidebar .results_entry span.location_name {
+div#map_sidebar div.results_entry span.location_name {
 	color:  #3a4145;
 	font-weight: 700;
 }
-#map_sidebar .results_entry span.slp_result_directions,
-#map_sidebar .results_entry span.slp_result_website {
+div#map_sidebar div.results_entry span.slp_result_directions a,
+div#map_sidebar div.results_entry span.slp_result_website a {
 	color:  #31669a;
 	font-weight: 600;
 }
