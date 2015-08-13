@@ -686,6 +686,7 @@ form#locate-dealer-form input[type="submit"] {
     margin: 12px 12px 12px 0;
     padding: 13px 30px;
 }
+<<<<<<< HEAD
 /* gravity forms */
 .gform_heading {
 	display: none;
@@ -744,6 +745,8 @@ form#locate-dealer-form input[type="submit"] {
 .gform_wrapper .gform_footer .newsletter_btn {
 	margin-left: 20px;
 }
+=======
+>>>>>>> 33b84fed03df383f922ea269282b05f5fd2f77ad
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
@@ -1637,3 +1640,76 @@ ul.w li:hover a.vc_btn_xs,
 #sl_div form#searchForm input#addressSubmit.slp_ui_button { /* reset Submit button css */
 
 }
+<<<<<<< HEAD
+=======
+
+form#searchForm #address_search {
+	padding: 40px;
+}
+form#searchForm #address_search #addy_in_address {
+	display: inline-block;
+	margin-right: 20px;
+	width: 70%;
+	width: calc(100% - 180px);
+}
+form#searchForm #address_search #addy_in_address label {
+	display: none;
+}
+form#searchForm #address_search #addy_in_address #addressInput {
+	border-radius: 20px;
+	padding: 6px 18px;
+	width: 100%;
+}
+form#searchForm #address_search #radius_in_submit {
+	width: 152px;
+}
+form#searchForm #address_search #radius_in_submit #addressSubmit {
+	background-color: #31669a;
+	border: none;
+	border-radius: 20px;
+	color:  #ffffff;
+	display: block;
+	font-family: OpenSans;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 12px 30px;
+	text-align: center;
+	text-shadow: none;
+}
+
+div#map_sidebar {
+	padding: 0 40px 40px;
+}
+div#map_sidebar div.results_entry {
+	padding: 20px;
+}
+div#map_sidebar div.results_entry > div {
+	margin-left: 40px;
+	position: relative;
+}
+div#map_sidebar div.results_entry > div:before {
+	background: url(images/Pin.png) no-repeat 0 0;
+	content: '';
+	display: inline-block;
+	height: 30px;
+	left: -38px;
+	position: absolute;
+	width: 21px;
+}
+div#map_sidebar div.results_entry span {
+	color:  #666666;
+	font-family: OpenSans;
+	font-size: 14px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 21px;/* Approximation due to font substitution */
+}
+div#map_sidebar div.results_entry span.location_name {
+	color:  #3a4145;
+	font-weight: 700;
+}
+div#map_sidebar div.results_entry span.slp_result_directions a,
+div#map_sidebar div.results_entry span.slp_result_website a {
+	color:  #31669a;
+	font-weight: 600;
+}
+>>>>>>> 33b84fed03df383f922ea269282b05f5fd2f77ad
