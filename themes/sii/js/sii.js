@@ -143,4 +143,9 @@ jQuery(function($) {
   $('.docs table').each(function() {
     $(this).find('tr:even').addClass('stripe');
   });
+
+  // request info page - hiding and closing forms
+  $(".requestsample_btn button").click(function(){
+    $(".requestsample_form").toggle();
+  });
 });
