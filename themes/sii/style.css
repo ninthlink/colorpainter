@@ -26,6 +26,7 @@ and Blueprint http://www.blueprintcss.org/
 	5.2 - Menus
 6.0 - Alignments & Content
 7.0 - Clearings
+8.0 - Store Locator Plus (SLP) Plugin
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -659,6 +660,89 @@ textarea {
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
+}
+
+/* custom search dealer form */
+form#locate-dealer-form {
+    background-color: #31669A;
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+    width: 570px;
+}
+form#locate-dealer-form input[type="text"] {
+    border-radius: 20px;
+    margin: 12px 12px;
+    padding: 6px 17px;
+    width: 373px;
+}
+form#locate-dealer-form input[type="submit"] {
+    background-color: #22476B;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 14px;
+    margin: 12px 12px 12px 0;
+    padding: 13px 30px;
+}
+/* gravity forms */
+.gform_heading {
+	display: none;
+}
+.gform_wrapper .gfield_required {
+	color: #fff;
+}
+.gform_wrapper input[type=text],.gform_wrapper input[type=tel], .gform_wrapper input[type=email], .gform_wrapper textarea, .gform_wrapper .top_label select.medium {
+	border-radius: 20px;
+}
+.gform_wrapper .top_label .gfield_label {
+	font-family: 'OpenSans';
+	font-size: 14px;
+	font-weight: 400;
+}
+.gform_wrapper .top_label select[multiple] {
+	padding: 5px;
+	position:relative;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.gform_wrapper .top_label select.medium {
+	padding: 5px;
+}
+.gform_wrapper .top_label select.medium::-webkit-scrollbar {
+	width: 12px;
+}
+.gform_wrapper .top_label select.medium::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.gform_wrapper .top_label select.medium::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #c2c5c7; 
+}
+.gform_wrapper input[placeholder] {
+	padding: 5px;
+}
+.gform_wrapper .gform_footer input[type=submit] {
+	border-radius: 20px;
+	background-color: #22476b;
+	box-shadow: none;
+	border: none;
+	color: #fff;
+	text-shadow: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600;
+	font-family: 'OpenSans';
+	width: 170px;
+	padding: 12px;
+}
+.gform_wrapper .gform_footer .newsletter_btn {
+	margin-left: 20px;
 }
 /*--------------------------------------------------------------
 5.0 Navigation
@@ -1528,3 +1612,28 @@ ul.w li:hover a.vc_btn_xs,
 .max6 { max-width: 625px; margin: 0 auto; }
 .vc_col-sm-1, .vc_non_responsive .vc_row .vc_col-sm-1, .vc_col-sm-2, .vc_non_responsive .vc_row .vc_col-sm-2, .vc_col-sm-3, .vc_non_responsive .vc_row .vc_col-sm-3, .vc_col-sm-4, .vc_non_responsive .vc_row .vc_col-sm-4, .vc_col-sm-5, .vc_non_responsive .vc_row .vc_col-sm-5, .vc_col-sm-6, .vc_non_responsive .vc_row .vc_col-sm-6, .vc_col-sm-7, .vc_non_responsive .vc_row .vc_col-sm-7, .vc_col-sm-8, .vc_non_responsive .vc_row .vc_col-sm-8, .vc_col-sm-9, .vc_non_responsive .vc_row .vc_col-sm-9, .vc_col-sm-10, .vc_non_responsive .vc_row .vc_col-sm-10, .vc_col-sm-11, .vc_non_responsive .vc_row .vc_col-sm-11, .vc_col-sm-12, .vc_non_responsive .vc_row .vc_col-sm-12 { padding-left: 0; padding-right: 0; }
  */
+
+
+/*--------------------------------------------------------------
+8.0 - Store Locator Plus (SLP) Plugin
+--------------------------------------------------------------*/
+#sl_div .col { /* custom layout columns */
+	border: none;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+
+#sl_div form#searchForm {}
+#sl_div form#searchForm label { /* reset search label css */
+	vertical-align: middle;
+    min-width: 0;
+    width: auto;
+}
+#sl_div form#searchForm #radius_in_submit { /* reset Submit container css */
+	float: none;
+}
+#sl_div form#searchForm input#addressSubmit.slp_ui_button { /* reset Submit button css */
+
+}
