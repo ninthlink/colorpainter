@@ -144,8 +144,35 @@ jQuery(function($) {
     $(this).find('tr:even').addClass('stripe');
   });
 
-  // request info page - hiding and closing forms
-  $(".requestsample_btn button").click(function(){
-    $(".requestsample_form").toggle();
+  // show/hide forms on request info page
+  $('.requestsample_form').hide();
+  $('.newsletter_form').hide();
+  $('.other_form').hide();
+  $('.register_form').hide();
+  $(window).load(function() {
+    $('.requestsample_btn button').click(function(){
+        $('.requestsample_form').show();
+    });
+    $('.requestsample_btn_close button').click(function(){
+        $('.requestsample_form').hide();
+    });
+    $('.newsletter_btn button').click(function(){
+        $('.newsletter_form').show();
+    });
+    $('.newsletter_btn_close button').click(function(){
+        $('.newsletter_form').hide();
+    });
+    $('.other_btn button').click(function(){
+        $('.other_form').show();
+    });
+    $('.other_btn_close button').click(function(){
+        $('.other_form').hide();
+    });
+    $('.register_btn button').click(function(){
+        $('.register_form').show();
+    });
+    $('.register_btn_close button').click(function(){
+        $('.register_form').hide();
+    });
   });
 });

@@ -745,6 +745,25 @@ form#locate-dealer-form input[type="submit"] {
 .gform_wrapper .gform_footer .newsletter_btn {
 	margin-left: 20px;
 }
+/* form buttons */
+.form_btn button {
+	background-color: #22476b!important;
+	text-shadow: none;
+	box-shadow: none;
+	color: #fff!important;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px!important;
+}
+.btn_close button {
+	background-color: #22476b!important;
+	text-shadow: none;
+	box-shadow: none;
+	font-size: 13px;
+	color: #d6dde4!important;
+	margin-right:20px
+}
+
 =======
 >>>>>>> 33b84fed03df383f922ea269282b05f5fd2f77ad
 /*--------------------------------------------------------------
