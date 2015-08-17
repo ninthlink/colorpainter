@@ -1647,7 +1647,9 @@ ul.w li:hover a.vc_btn_xs,
 	width: 50%;
 }
 
-#sl_div form#searchForm {}
+#sl_div form#searchForm {
+	padding: 40px;
+}
 #sl_div form#searchForm label { /* reset search label css */
 	vertical-align: middle;
     min-width: 0;
@@ -1705,7 +1707,7 @@ div#map_sidebar div.results_entry > div {
 	position: relative;
 }
 div#map_sidebar div.results_entry > div:before {
-	background: url(images/Pin.png) no-repeat 0 0;
+	background: url(images/pin_small.png) no-repeat 0 0;
 	content: '';
 	display: inline-block;
 	height: 30px;
@@ -1728,4 +1730,24 @@ div#map_sidebar div.results_entry span.slp_result_directions a,
 div#map_sidebar div.results_entry span.slp_result_website a {
 	color:  #31669a;
 	font-weight: 600;
+}
+
+
+@media all and (max-width: 768px) {
+	#sl_div .col {
+		width: 100%;
+	}
+
+	form#searchForm #address_search #addy_in_address {
+		margin-bottom: 10px;
+		margin-right: 0px;
+		width: 100%;
+	}
+	form#searchForm #address_search #radius_in_submit {
+		width: 100%;
+	}
+	form#searchForm #address_search #radius_in_submit #addressSubmit {
+		width: 100%;
+	}
+
 }
