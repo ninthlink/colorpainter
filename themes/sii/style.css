@@ -1659,8 +1659,6 @@ ul.w li:hover a.vc_btn_xs,
 #sl_div form#searchForm input#addressSubmit.slp_ui_button { /* reset Submit button css */
 
 }
-<<<<<<< HEAD
-=======
 
 form#searchForm #address_search {
 	padding: 40px;
@@ -1731,4 +1729,3 @@ div#map_sidebar div.results_entry span.slp_result_website a {
 	color:  #31669a;
 	font-weight: 600;
 }
->>>>>>> 33b84fed03df383f922ea269282b05f5fd2f77ad
