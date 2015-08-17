@@ -1737,7 +1737,9 @@ div#map_sidebar div.results_entry span.slp_result_website a {
 	#sl_div .col {
 		width: 100%;
 	}
-
+	#sl_div form#searchForm {
+		padding: 0 40px;
+	}
 	form#searchForm #address_search #addy_in_address {
 		margin-bottom: 10px;
 		margin-right: 0px;
