@@ -686,7 +686,21 @@ form#locate-dealer-form input[type="submit"] {
     margin: 12px 12px 12px 0;
     padding: 13px 30px;
 }
-<<<<<<< HEAD
+@media screen and (max-width: 768px) {
+	form#locate-dealer-form {
+	    border-radius: 28px;
+	    padding: 12px;
+	    width: 100%;
+	}
+	form#locate-dealer-form input[type="text"] {
+	    margin: 0;
+	    width: 100%;
+	}
+	form#locate-dealer-form input[type="submit"] {
+	    margin: 12px 0 0;
+	    width: 100%;
+	}
+}
 /* gravity forms */
 .gform_heading {
 	display: none;
@@ -764,8 +778,6 @@ form#locate-dealer-form input[type="submit"] {
 	margin-right:20px
 }
 
-=======
->>>>>>> 33b84fed03df383f922ea269282b05f5fd2f77ad
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
