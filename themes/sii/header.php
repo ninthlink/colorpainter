@@ -33,7 +33,7 @@
 <div class="rap">
 	<div class="site-content">
 		<div class="site-header">
-			<a href="<?php echo WP_SITEURL .'/'; ?>" rel="home" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/sii.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
+			<a href="<?php echo WP_SITEURL .'/'; ?>" rel="home" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/colorpainter-left.png" alt="<?php esc_attr_e( get_bloginfo( 'name' ) ); ?>" /></a>
 			<div class="nav">
 				<button class="toggler"><?php _e( 'Primary Menu', 'sii' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
