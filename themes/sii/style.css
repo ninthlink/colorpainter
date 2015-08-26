@@ -777,8 +777,10 @@ form#locate-dealer-form input[type="submit"] {
 	color: #d6dde4!important;
 	margin-right:20px
 }
-.form_btn button:hover, .btn_close button:hover {
+.form_btn button:hover, .btn_close button:hover, .gform_wrapper .gform_footer input[type=submit]:hover {
 	background-color: #1d3b58!important;
+	-webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 /*--------------------------------------------------------------
