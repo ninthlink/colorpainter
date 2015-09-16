@@ -51,7 +51,6 @@ function sii_setup() {
 	add_filter( 'next_post_rel_link', 'sii_noprevnext' );
 	add_filter( 'nav_menu_css_class', 'sii_nav_class' );
 	add_filter( 'nav_menu_item_id', 'sii_nav_id' );
-	add_filter( 'body_class', 'sii_body_class', 99 );
 }
 endif; // sii_setup
 add_action( 'after_setup_theme', 'sii_setup' );
@@ -148,23 +147,7 @@ function sii_nav_id( $id ) {
 }
 
 /**
- * Hook to body_class to clean that up
- */
-function sii_body_class( $classes ) {
-  /*
-	$whitelist = array( 'home', 'admin-bar', 'vc_responsive' );
-	$c = count( $classes );
-	while( $c-- ) {
-		if ( in_array( $classes[$c], $whitelist ) == false ) {
-			unset( $classes[$c] );
-		}
-	}
-  */
-	return $classes;
-}
-
-/**
- * Hook to generate_rewrite_rules to add our favicon
+ * Hook to generate_rewrite_rules to add our favicon that way
  */
 function sii_ht_rewrites($content) {
   $theme_name = next(explode('/themes/', get_stylesheet_directory()));
