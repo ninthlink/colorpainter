@@ -182,7 +182,7 @@ function sii_vc_afterinitbase() {
 add_action( 'vc_after_init_base', 'sii_vc_afterinitbase' );
 
 /**
- * Hook to vc_after_init to tweak some params
+ * Hook to vc_after_init to tweak some params?
  * based off http://kb.wpbakery.com/index.php?title=Update_single_param_values
  *
 function sii_vc_tweaks() {
@@ -195,3 +195,14 @@ function sii_vc_tweaks() {
 }
 add_action( 'vc_after_init', 'sii_vc_tweaks' );
 */
+
+/**
+ * Hook to admin_bar_menu to clean up remove Customize link
+ */
+function sii_clean_admin_bar( $wp_admin_bar ) {
+  $bye = array( 'customize', 'themes', 'widgets', 'wp-logo' );
+  foreach ( $bye as $b ) {
+    $wp_admin_bar->remove_node( $b );
+  }
+}
+add_action( 'admin_bar_menu', 'sii_clean_admin_bar', 999 );
