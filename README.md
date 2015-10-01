@@ -1,21 +1,7 @@
-Seiko
-=======
+ColorPainter Printers
+=====================
 
-Here be code for Seiko Instruments Inc. / Seiko Printers projects, by Ninthlink, Inc.
-
-## 2015 Seiko Printers Full Site - coming soon
-
-Full website for Seiko Instruments U.S.A., Inc., built in WordPress. This is probably just the custom WordPress theme, initially based on the Distributor App theme too.
-
-- http://sii.ninthlink.me/
-- /trunk/full-site/wptheme
-
-## 2015 Seiko Printers Full Site : HTML Splash Page
-
-Fast. Precise. Reliable. Full site Coming Soon. HTML5 single screen page.
-
-- http://ninthlink.me/seiko/splash/
-- /trunk/full-splash
+Here be code for WP themes and some other pieces, by Ninthlink, Inc.
 
 ## Distributor App
 
