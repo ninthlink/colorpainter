@@ -1,22 +1,22 @@
 var siip = [
 	{ name: 'Please Select' },
 	{
-		name: 'ColorPainter W-64s - 6 color',
+		name: 'ColorPainter W-64s - 6 Color GX Inks',
 		ink: 0.22,
 		msrp: 20998,
 		spd: 128,
 		img: 'w64s',
 		iht: 236,
-		desc: '64" flexible, reliable high-performance low-solvent printer. Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers. Industrial piezo print heads offer high resolution, high speeds and reliability. Available with two neon florescent inks that glow under black light. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
+		desc: '64" entry-level printer over-delivers with the advanced print technology and innovative ink formulations that provide fast, rich glossy colors, with sharp detail on a host of materials&mdash;from banners to backlit film&mdash;making it the ultimate choice for a majority of print shops. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
-		name: 'ColorPainter M-64s - 7 color',
+		name: 'ColorPainter M-64s - 7 Color SX Inks',
 		ink: 0.18,
 		msrp: 29999,
 		spd: 356,
 		img: 'm64',
 		iht: 201,
-		desc: '64" high-speed eco-solvent printer with low odor inks. Very low cost per square foot to operate. Superior durability of outdoor and indoor graphics. SX inks offer a wide color gamut, high vividness and high density great for backlit applications. Unmatched productivity and quality. Automatic Print Adjustment. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
+		desc: '64" industrial eco-solvent printer for high-volume environments provides distinct competitive advantages that equate to higher productivity and profits. Its low cost per square foot, advanced technologies and quality at fast speeds make this the best value on the market. The SX inks offer a wide color gamut, high vividness and high density great for a variety of applications. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter H3-104s - 8 color',
@@ -25,7 +25,7 @@ var siip = [
 		spd: 609,
 		img: 'h3104',
 		iht: 165,
-		desc: '104" High-performance outdoor and indoor graphics printer. Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
+		desc: '104" high-performance printer engineered for fast print speed, rugged durability and standout performance in mid-range, high-volume environments. It\'s designed with a host of innovative features that streamline operation, boost productivity and simplify operator input for exceptional ROI. 3M&trade; MCS&trade; Warranty.'
 	}
 ];
 var siid = 0; // index to choose
@@ -195,7 +195,7 @@ function siiC(e) {
 		//roiDbg('C9 c_inkpermonth "inkpermonth" = '+ c_inkpermonth);
 		$('#inkpermonth,#sinkpermonth').val(c_inkpermonth).autoNumeric('update');
 		
-		years = $('#amortper-5').prop('checked') ? 5 : 3;
+		years = $('#amortper-5').prop('checked') ? 5 : ( $('#amortper-4').prop('checked') ? 4 : 3 );
 		//roiDbg('C21 years "pamortper" = '+ years);
 		$('#pamortper, #samortper, #spamortper').val(years);
 		
@@ -346,7 +346,7 @@ function roiDbg(m) {
 */
 function siiP(n) {
 	//roiDbg('roiAmortper : '+ n);
-	$( '#amortper-'+ ( n == 3 ? 3 : 5 ) ).trigger('roiCheck');
+	$( '#amortper-'+ n ).trigger('roiCheck');
 }
 
 jQuery(document).one('pagechange', function() {
