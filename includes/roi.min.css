@@ -21,12 +21,12 @@ inset 0 0 2px rgba(255,255,255,0.9);background-repeat:no-repeat;width:57px;heigh
 input,textarea,select,.ui-select .ui-btn,.printerinfos,.plaintext.stripe,.plaintext.stripe input,a.rpop,.ui-popup{font-family:Arial, sans-serif}
 body,.plaintext input,.ui-btn{font-family:'Mts', sans-serif}
 h1.ui-title strong,.ui-mobile label strong{font-family:'Mts-B', sans-serif;font-weight:400}
-.ui-page-theme-a .ui-bar-inherit{background:#fff;border-top:5px solid #31669a;border-bottom:1px solid #d3d3d3}
+.ui-page-theme-a .ui-bar-inherit{background:#fff;border-top:5px solid #db0100;border-bottom:1px solid #d3d3d3}
 body,.ui-page-theme-a{background:#eee}
 .ui-body-a{background:none;border:none}
 .ui-body-a.ui-popup{background:#fff;font-size:13px;line-height:1.2;text-shadow:none}
 .ui-body-a,.ui-header .ui-title{width:676px;margin:0 auto}
-h1.ui-title,.ui-header h1.ui-title{color:#31669a;font-size:3em;font-weight:normal;line-height:1;padding:0.5em 0;text-align:left}
+h1.ui-title,.ui-header h1.ui-title{color:#db0100;font-size:3em;font-weight:normal;line-height:1;padding:0.45em 0;text-align:left}
 h1.ui-title strong{color:#333}
 h1.ui-title img{display:block;margin-bottom:0.3em}
 .ui-block-c.twocol{width:75%}
@@ -44,11 +44,11 @@ h1.ui-title img{display:block;margin-bottom:0.3em}
 .progress.p2{background-position:0 -77px}
 .j .progress{background-position:0 -154px}
 .disabled{opacity:0.4}
-.ui-page-theme-a .ui-body-a a.ui-btn.next{background:#2a86ce;border:none;color:#fff;font-size:1.6em;font-weight:400;padding:0.3em;margin:2em 0;text-shadow:none;text-transform:uppercase;width:40%}
+.ui-page-theme-a .ui-body-a a.ui-btn.next{background:#db0100;border:none;color:#fff;font-size:1.6em;font-weight:400;padding:0.3em;margin:2em 0;text-shadow:none;text-transform:uppercase;width:40%}
 a.ui-btn.disabled{cursor:default}
 label.ui-btn{font-weight:400;font-size:21px;line-height:1.9;padding:0 0.7em}
 label.ui-btn.ui-radio-off{color:#dedede;background:#a6a6a6;text-shadow:none}
-label.ui-btn.ui-btn-active.ui-radio-on{background:#286398;text-shadow:none}
+label.ui-btn.ui-btn-active.ui-radio-on{background:#db0100;border-color:#db0100;text-shadow:none}
 .ui-page-theme-a .ui-select .ui-btn{background:#fff;font-weight:400;text-align:left}
 .ui-mobile fieldset.fieldrow,.ui-mobile div.fieldrow{margin:0 0 1.5em}
 .plaintext{border-bottom:1px solid #c8c8c8;float:left;margin:4em 0;width:100%}

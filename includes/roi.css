@@ -42,7 +42,7 @@ h1.ui-title strong,
 /* and then */
 .ui-page-theme-a .ui-bar-inherit {
 	background: #fff;
-	border-top: 5px solid #31669a;
+	border-top: 5px solid #db0100;
 	border-bottom: 1px solid #d3d3d3;
 }
 body,
@@ -66,11 +66,11 @@ body,
 }
 h1.ui-title,
 .ui-header h1.ui-title {
-	color: #31669a;
+	color: #db0100;
 	font-size: 3em;
 	font-weight: normal;
 	line-height: 1;
-	padding: 0.5em 0;
+	padding: 0.45em 0;
 	text-align: left;
 }
 h1.ui-title strong {
@@ -138,7 +138,7 @@ html .plaintext .ui-input-text.ui-body-inherit,
 	opacity: 0.4;
 }
 .ui-page-theme-a .ui-body-a a.ui-btn.next {
-	background: #2a86ce;
+	background: #db0100;
 	border: none;
 	color: #fff;
 	font-size: 1.6em;
@@ -164,7 +164,8 @@ label.ui-btn.ui-radio-off {
 	text-shadow: none;
 }
 label.ui-btn.ui-btn-active.ui-radio-on {
-	background: #286398;
+	background: #db0100;
+	border-color: #db0100;
 	text-shadow: none;
 }
 .ui-page-theme-a .ui-select .ui-btn {

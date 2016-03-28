@@ -3,83 +3,29 @@ var siip = [
 	{
 		name: 'ColorPainter W-64s - 6 color',
 		ink: 0.22,
-		msrp: 17000,
+		msrp: 20998,
 		spd: 128,
 		img: 'w64s',
-		iht: 212,
+		iht: 236,
 		desc: '64" flexible, reliable high-performance low-solvent printer. Prints vinyl, banner, backlit films, textiles and other media designed for solvent printers. Industrial piezo print heads offer high resolution, high speeds and reliability. Available with two neon florescent inks that glow under black light. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
 		name: 'ColorPainter M-64s - 7 color',
 		ink: 0.18,
-		msrp: 42600,
+		msrp: 29999,
 		spd: 356,
 		img: 'm64',
-		iht: 225,
+		iht: 201,
 		desc: '64" high-speed eco-solvent printer with low odor inks. Very low cost per square foot to operate. Superior durability of outdoor and indoor graphics. SX inks offer a wide color gamut, high vividness and high density great for backlit applications. Unmatched productivity and quality. Automatic Print Adjustment. ONYX RIP Center included. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
-		name: 'ColorPainter H2-74s - 8 color',
-		ink: 0.18,
-		msrp: 50000,
-		spd: 284,
-		img: 'h274',
-		iht: 216,
-		desc: '74" high-performance outdoor and indoor graphics printer. Good fit for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
-	},
-	{
-		name: 'ColorPainter H2-74s - 4 color',
-		ink: 0.14,
-		msrp: 50000,
-		spd: 567,
-		img: 'h274',
-		iht: 216,
-		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
-	},
-	{
-		name: 'ColorPainter H2-104s - 8 color',
-		ink: 0.18,
-		msrp: 69000,
-		spd: 308,
-		img: 'h2104',
-		iht: 254,
+		name: 'ColorPainter H3-104s - 8 color',
+		ink: 0.22,
+		msrp: 75995,
+		spd: 609,
+		img: 'h3104',
+		iht: 165,
 		desc: '104" High-performance outdoor and indoor graphics printer. Perfect for vinyl, banner, backlit films, textiles, fleet, fine art canvas, banners, flexface. Higher density inks with higher pigment loading means rich glossy colors for backlit or frontlit films. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Resolution up to 900x900 dpi. Low running costs. 3M&trade; MCS&trade; Warranty.'
-	},
-	{
-		name: 'ColorPainter H2-104s - 4 color',
-		ink: 0.14,
-		msrp: 69000,
-		spd: 856,
-		img: 'h2104',
-		iht: 254,
-		desc: '74" High-performance outdoor and indoor graphics printer. Industrial piezo print heads offer high resolution, high speeds and reliability for high-volume print environments. Low running costs. 3M&trade; MCS&trade; Warranty.'
-	},
-	{
-		name: 'ColorPainter H2P-74s',
-		ink: 0.08,
-		msrp: 53000,
-		spd: 763,
-		img: 'h2p74',
-		iht: 172,
-		desc: '74" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
-	},
-	{
-		name: 'ColorPainter H2P-104s',
-		ink: 0.08,
-		msrp: 72000,
-		spd: 856,
-		img: 'h2p104',
-		iht: 152,
-		desc: '104" high-speed 4 color printer with large-capacity ink system. Contains eight large-capacity ink reservoirs with six liters of ink per color. Designed for high-production shops where low running costs are important. Industrial piezo print heads offer high resolution, high speeds and reliability. Good fit for fleet graphics, banners, signs, fine art canvas and flex faces.'
-	},
-	{
-		name: 'Jetrix KX5',
-		ink: 0.10,
-		msrp: 132000,
-		spd: 1,
-		img: 'jetrix',
-		iht: 348,
-		desc: '4\' x 8\' UV flatbed printer with roll-feed option and white, primer/varnish options. High-performance, reliable and easy operations under high-volume conditions. Quality components engineered for long-term reliability. InkTec UMS UV inks are half the price of comparable UV inks without sacrificing quality or reliability. That means lower operational and running costs, lower inventory costs and more profit for your business. Indoor, outdoor and industrial applications including 1, 2, or 3 layer printing on signs, trophies, awards, packaging, control panels and more.'
 	}
 ];
 var siid = 0; // index to choose
@@ -157,17 +103,17 @@ function siiU() {
  * show/hide some fields for Jetrix or not-Jetrix...
  */
 function siiJ() {
-	$('#seiko a').attr('href', ( siij ? '#results' : '#competitor' ) );
+	$('#cpp a').attr('href', ( siij ? '#results' : '#competitor' ) );
 	if ( siij ) {
 		// show Jetrix stuff, and hide some others
-		$('#seiko').addClass('j').find('.ui-controlgroup, .plaintext').hide();
+		$('#cpp').addClass('j').find('.ui-controlgroup, .plaintext').hide();
 		$('#results').addClass('j').find('h1.printonly + div').hide();
 		$('#results .bigger.col2').removeClass('col2').addClass('jetrix');
 		//$('#vinkcost').hide().parent().removeClass('bigger col2').addClass('mainline');
 		//$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(0)').parent().children(':gt(5)').hide();
 	} else {
 		// hide Jetrix stuff
-		$('#seiko').removeClass('j').find('.ui-controlgroup, .plaintext').show();
+		$('#cpp').removeClass('j').find('.ui-controlgroup, .plaintext').show();
 		$('#results').removeClass('j').find('h1.printonly + div').show();
 		$('#results .bigger.jetrix').removeClass('jetrix').addClass('col2');
 		//$('#vinkcost').show().parent().addClass('bigger col2').removeClass('mainline');
