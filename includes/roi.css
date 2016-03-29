@@ -177,6 +177,11 @@ label.ui-btn.ui-btn-active.ui-radio-on {
 .ui-mobile div.fieldrow {
 	margin: 0 0 1.5em;
 }
+.lpyr,
+.lrf {
+  float: left;
+  width: 50%;
+}
 .plaintext {
 	border-bottom: 1px solid #c8c8c8;
 	float: left;
