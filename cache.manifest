@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v 1.6.3 / 2013-05-06
+# v 2.0.1 / 2016-03-29
 
 CACHE:
 index.html
@@ -11,6 +11,7 @@ includes/jquery.mobile-1.4.1.min.css
 includes/roi.min.css
 includes/print.css
 includes/logo.png
+includes/profinance.png
 includes/fonts/mts-b.eot
 includes/fonts/mts-b.woff
 includes/fonts/mts-b.ttf
@@ -31,13 +32,9 @@ includes/jquery.mobile.custom.min.js
 includes/autoNumeric.min.js
 includes/roi.min.js
 includes/add2home.min.js
-includes/images/printers/h2p74.jpg
-includes/images/printers/h2p104.jpg
-includes/images/printers/h274.jpg
-includes/images/printers/h2104.jpg
+includes/images/printers/h3104.jpg
 includes/images/printers/m64.jpg
 includes/images/printers/w64s.jpg
-includes/images/printers/jetrix.jpg
 
 NETWORK:
 *
