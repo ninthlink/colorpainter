@@ -30,7 +30,7 @@ var siip = [
 ];
 var siilrfs = [0,0,0,0.03195,0.02495,0.02068];
 var siid = 0; // index to choose
-var siib = 'http://ninthlink.me/seiko/calc/';
+var siib = 'http://nlkdev.net/roicalc/';
 //var roiDebug = true; // = console.log debug msgs ?
 var siio = {
 	aSign: '$'
