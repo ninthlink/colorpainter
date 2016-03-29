@@ -28,6 +28,7 @@ var siip = [
 		desc: '104" high-performance printer engineered for fast print speed, rugged durability and standout performance in mid-range, high-volume environments. It\'s designed with a host of innovative features that streamline operation, boost productivity and simplify operator input for exceptional ROI. 3M&trade; MCS&trade; Warranty.'
 	}
 ];
+var siilrfs = [0,0,0,0.03195,0.02495,0.02068];
 var siid = 0; // index to choose
 var siib = 'http://ninthlink.me/seiko/calc/';
 //var roiDebug = true; // = console.log debug msgs ?
@@ -66,7 +67,7 @@ function siiU() {
 		
 		// also printer name
 		var pname = siip[C14]['name'];
-		$('.pname').html( function(i, h) {
+    $('.pname').html( function(i, h) {
 			var o = pname;
 			if ( $(this).hasClass('dashd') ) o += ' - ';
 			if ( $(this).parent().is('h1') && ( pname == 'Jetrix KX5' ) ) o += ' Flatbed';
@@ -105,6 +106,7 @@ function siiU() {
 function siiJ() {
 	$('#cpp a').attr('href', ( siij ? '#results' : '#competitor' ) );
 	if ( siij ) {
+    //console.log('siiJ = true');
 		// show Jetrix stuff, and hide some others
 		$('#cpp').addClass('j').find('.ui-controlgroup, .plaintext').hide();
 		$('#results').addClass('j').find('h1.printonly + div').hide();
@@ -112,6 +114,7 @@ function siiJ() {
 		//$('#vinkcost').hide().parent().removeClass('bigger col2').addClass('mainline');
 		//$('#results .ui-field-contain.hd').insertAfter('#results .ui-field-contain:eq(0)').parent().children(':gt(5)').hide();
 	} else {
+    //console.log('siiJ = false');
 		// hide Jetrix stuff
 		$('#cpp').removeClass('j').find('.ui-controlgroup, .plaintext').show();
 		$('#results').removeClass('j').find('h1.printonly + div').show();
@@ -145,7 +148,7 @@ function siiC(e) {
 	var sqftperwk = 600 * rollsperwk;
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
 	$('#sqftperwk,#ssqftperwk,#psqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
-	
+	/*
 	if ( siij ) {
 		years = 5; // arbitrary hardcoding to make the SAVE function happy
 		
@@ -183,6 +186,7 @@ function siiC(e) {
 		$('#japrofit,#sjaprofit').parent().siblings('label').find('.save').html( sprofits >= 0 ? 'Profit' : 'Loss');
 		//$('#vjprofit').html($('#sjprofit').val());
 	} else {
+  */
 		c_price = $('#price').autoNumeric('get');
 		$('#sprice').val(c_price).autoNumeric('update');
 		c_speed = $('#speed').autoNumeric('get');
@@ -198,7 +202,9 @@ function siiC(e) {
 		years = $('#amortper-5').prop('checked') ? 5 : ( $('#amortper-4').prop('checked') ? 4 : 3 );
 		//roiDbg('C21 years "pamortper" = '+ years);
 		$('#pamortper, #samortper, #spamortper').val(years);
-		
+		// also change lf..
+    $('#lrf').val( siilrfs[ years ] ).autoNumeric('update');
+    
 		var c_monthly = siiR(c_price/(years*12));
 		//roiDbg('C11 "monthlyamort" = '+ C11);
 		$('#monthlyamort,#smonthlyamort').val(c_monthly).autoNumeric('update');
@@ -251,7 +257,7 @@ function siiC(e) {
 		// & check for "Savings" vs "Loss"
 		$('#esthrs').parent().siblings('label').find('.save').html( C29 >= 0 ? 'Savings' : 'Loss');
 		$('#vesthrs').html($('#esthrs').val());
-	}
+	//}
 	siiS(years, s_printer, c_price, c_speed, c_ink00, rollsperwk);
 }
 /*
@@ -318,17 +324,18 @@ function siiL() {
 	//roiDbg('rest of save becomes : ' + save);
 	var C6 = siiB2I(save) / 100;
 	//roiDbg('C6 = ' + C6);
-	
+	/*
 	if ( C14 == 9 ) {
 		siij = true;
 		$('#jvper').val(C4 / 100).autoNumeric('update');
 		$('#jlper').val(C5 / 100).autoNumeric('update');
 		$('#jiper').val(C6).autoNumeric('update');
 	} else {
+  */
 		$('#price').val(C4).autoNumeric('update');
 		$('#speed').val(C5).autoNumeric('update');
 		$('#inkpersqft').val(C6).autoNumeric('update');
-	}
+	//}
 	// go to results?
 	$('#competitor a.next').click();
 }
@@ -386,8 +393,8 @@ jQuery(document).one('pagechange', function() {
 		siiL();
 	} else {
 		//roiDbg('NO SAVE FOUND present');
-		// just default amortper-5 on
-		siiP(5);
+		// just default amortper-3 on
+		siiP(3);
 	}
 	
 	$('#printer').each(function() {
