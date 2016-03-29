@@ -86,15 +86,15 @@ h1.ui-title  img {
 .ui-input-text input.bold { font-weight: 700 }
 
 .ui-field-contain>label {
-	width: 81%;
+	width: 78%;
 }
 .ui-field-contain>label~[class*=ui-],
 .ui-field-contain .ui-controlgroup-controls {
-	width: 17%;
+	width: 20%;
 }
 .ui-field-contain.mo>label,
 .ui-field-contain.nomo>label {
-	width: 75%;
+	width: 72%;
 }
 .ui-field-contain.nomo>label~[class*=ui-] {
 	width: 23%;
@@ -149,6 +149,16 @@ html .plaintext .ui-input-text.ui-body-inherit,
 	text-transform: uppercase;
 	width: 40%;
 }
+.ui-page-theme-a .ui-body-a a.ui-btn.next.b {
+  float: left;
+  font-size: 1.25em;
+  margin: 0 0 0.5em;
+  padding: 0.5em 2.1em;
+  width: auto;
+}
+.ui-page-theme-a .ui-body-a a.ui-btn.next.b.d {
+  float: right;
+}
 a.ui-btn.disabled {
 	cursor: default;
 }
@@ -201,6 +211,13 @@ label.ui-btn.ui-btn-active.ui-radio-on {
 	margin: 0;
 	padding: 0;
 }
+.plaintext .ui-field-contain.doubleline  {
+	border-top: 2px solid #909090;
+}
+.plaintext .ui-field-contain.bottomline  {
+	border-bottom: 1px solid #c8c8c8;
+  margin-bottom: 1.5em;
+}
 .plaintext.stripe .ui-field-contain {
 	border: none;
 	padding: 0 4px;
@@ -236,13 +253,28 @@ label.ui-btn.ui-btn-active.ui-radio-on {
 	margin-right: 7%;
 }
 .plaintext .ui-field-contain.bigger .val {
-	font-size: 3.8em;
+	font-size: 3.375em;
 	line-height: 1;
 	display: inline-block;
 }
 .plaintext .ui-field-contain.bigger.mo small {
-	font-size: 2em;
+	font-size: 1.3125em;
 	margin-top: 0;
+}
+.col3,
+.plaintext .ui-field-contain.bigger.col3 {
+  width: 100%;
+}
+.plaintext .ui-field-contain.bigger.mo.col3 label small,
+.ui-field-contain.mainline.mo label small {
+  font-size: 0.8125em;
+  font-family: "Montserrat-Regular", sans-serif;
+  display: inline;
+  text-transform: none;
+  width: auto;
+}
+.col3h {
+  float: left;
 }
 #results .ui-body h1 {
 	font-size: 1.9em;
@@ -274,7 +306,7 @@ h4 {
 	margin-top: 0.8em;
 }
 .ui-mobile .mainline label strong {
-	font-size: 1.25em;
+	font-size: 1.2em;
 }
 .plaintext .mainline .ui-input-text input {
 	font-size: 1.4em;
@@ -323,7 +355,7 @@ a.rpop,
 	float: left;
 	width: 32px;
 	height: 32px;
-	background: #0085ca url(images/btns.gif) no-repeat 0 0;
+	background: #db0100 url(images/btns.gif) no-repeat 0 0;
 	border-radius: 16px;
 	text-align: left;
 	text-indent: -999em;
