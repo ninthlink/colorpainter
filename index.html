@@ -77,12 +77,8 @@
 	  </div>
 	  <div class="plaintext disabled">
 		  <div class="ui-field-contain">
-			  <label for="pspeed">Advertised Production Mode Speed SQFT per Hour</label>
+			  <label for="pspeed">Advertised Production/Normal Speed SQFT per&nbsp;Hour</label>
 			  <input name="pspeed" id="pspeed" value="356" type="text" readonly class="number" data-m-dec="0">
-		  </div>
-		  <div class="ui-field-contain">
-			  <label for="psqftperwk">Printed SQFT per Week</label>
-			  <input name="psqftperwk" id="psqftperwk" value="3000" type="text" class="number" readonly data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
 			  <label for="psqftpermo">Printed SQFT per Month</label>
@@ -91,10 +87,6 @@
 		  <div class="ui-field-contain">
 			  <label for="pinkpermonth">Total Ink Cost per Month</label>
 			  <input name="pinkpermonth" id="pinkpermonth" value="832" type="text" readonly class="money">
-		  </div>
-		  <div class="ui-field-contain">
-			  <label for="pmonthlyamort">Printer Lease Payment per Month</label>
-			  <input name="i" id="pmonthlyamort" value="958.47" type="text" readonly class="money">
 		  </div>
 	  </div>
 	  <a href="#competitor" class="ui-btn next disabled">Next</a>
@@ -108,19 +100,19 @@
   <div class="ui-body ui-body-a">
 	  <div class="progress p2"></div>
 	  <div class="fieldrow">
-		  <label for="price">Price of Competitive Printer</label>
+		  <label for="price">Retail Price of Printer</label>
 		  <input name="price" id="price" value="" placeholder="$20,000" type="text" class="money" data-m-dec="0">
 	  </div>
 	  <div class="fieldrow">
-		  <label for="speed">Advertised Production/Normal Mode Speed SQFT per&nbsp;Hour</label>
+		  <label for="speed">Advertised Production/Normal Speed SQFT per&nbsp;Hour</label>
 		  <input name="speed" id="speed" value="100" type="text" class="number" data-m-dec="0">
 	  </div>
 	  <div class="fieldrow">
-		  <label for="inkpersqft">Cost of Ink per&nbsp;SQFT &nbsp; <a href="#costinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
+		  <label for="inkpersqft">Ink Cost per&nbsp;SQFT &nbsp; <a href="#costinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
 		  <input name="inkpersqft" id="inkpersqft" value="0.28" type="text" class="money">
 		  <div data-role="popup" id="costinfo" class="ui-content" data-theme="a" style="max-width:320px">
 			  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-			  <p>** This is the industry average. To calculate, take the price of ink and divide by Average SQFT you get out of one ink cartridge. (industry average of 1 mL ink cartridge = 1 SQFT actual usage but can vary based on ink type, media, profile, print file, saturation level and environmental conditions.</p>
+			  <p>** Note: For this example, we default to the industry average of 1 mL ink cartridge = 1 SQFT actual usage. To calculate, take the price of ink and divide by Average SQFT you get out of one ink cartridge. Value can vary based on ink type, media, profile, print file, saturation level and environmental conditions.</p>
 		  </div>
 	  </div>
 	  <div class="plaintext">
@@ -141,12 +133,8 @@
 			  <input name="inkpermonth" id="inkpermonth" value="1456" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="pamortper">Lease Period Years</label>
+			  <label for="pamortper">Lease Period in Years</label>
 			  <input name="pamortper" id="pamortper" value="5" type="text" readonly />
-		  </div>
-		  <div class="ui-field-contain">
-			  <label for="monthlyamort">Printer Lease Payment per Month</label>
-			  <input name="monthlyamort" id="monthlyamort" value="499.00" type="text" readonly class="money">
 		  </div>
 	  </div>
 	  <a href="#results" class="ui-btn next">Next</a>
@@ -232,7 +220,7 @@
 			  <input name="sprice" id="sprice" value="20000" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sspeed">Advertised Product/Normal Mode Speed SQFT per&nbsp;Hour&nbsp;<sup>1</sup></label>
+			  <label for="sspeed">Advertised Product/Normal Speed SQFT per&nbsp;Hour&nbsp;<sup>1</sup></label>
 			  <input name="sspeed" id="sspeed" value="128" type="text" class="number" readonly data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
@@ -252,23 +240,27 @@
 			  <input name="sinkpermonth" id="sinkpermonth" value="1456" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spamortper">Amortization Period Years</label>
+			  <label for="spamortper">Lease Period in Years</label>
 			  <input name="spamortper" id="spamortper" value="5" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="smonthlyamort">Monthly Amortization&nbsp;<sup>4</sup></label>
+			  <label for="smonthlyamort">Printer Lease Payment Per Month&nbsp;<sup>4</sup></label>
 			  <input name="smonthlyamort" id="smonthlyamort" value="333.33" type="text" readonly class="money">
 		  </div>
 	  </div>
 	  <div class="plaintext stripe cp">
 		  <h5>COLORPAINTER PRINTER</h5>
 		  <div class="ui-field-contain">
-			  <label for="sprinter">ColorPainter ROI</label>
+			  <label for="sprinter">ColorPainter Printer</label>
 			  <input name="sprinter" id="sprinter" value="" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spsellprice">Price of ColorPainter Printer</label>
+			  <label for="spsellprice">MSRP Price of ColorPainter Printer</label>
 			  <input name="spsellprice" id="spsellprice" value="" type="text" class="money" data-m-dec="0" readonly />
+		  </div>
+		  <div class="ui-field-contain">
+			  <label for="spspeed">Advertised Production Mode Speed SQFT per Hour&nbsp;<sup>1</sup></label>
+			  <input name="spspeed" id="spspeed" value="356" type="text" readonly class="number" data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
 			  <label for="spinkpersqft"><!--span class="pname dashd"></span-->Ink cost per SQFT&nbsp;<sup>2</sup></label>
@@ -279,23 +271,19 @@
 			  <input name="srollsperwk" id="srollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="samortper">Amortization Period Years</label>
-			  <input name="samortper" id="samortper" value="5" type="text" readonly />
-		  </div>
-		  <div class="ui-field-contain">
-			  <label for="spspeed">Advertised Production Mode Speed SQFT per Hour&nbsp;<sup>1</sup></label>
-			  <input name="spspeed" id="spspeed" value="356" type="text" readonly class="number" data-m-dec="0">
-		  </div>
-		  <div class="ui-field-contain">
 			  <label for="spsqftperwk">Printed SQFT per Week</label>
 			  <input name="spsqftperwk" id="spsqftperwk" value="1200" type="text" class="number" readonly data-m-dec="0">
+		  </div>
+		  <div class="ui-field-contain">
+			  <label for="samortper">Lease Period in Years</label>
+			  <input name="samortper" id="samortper" value="5" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
 			  <label for="spinkpermonth">Total Ink Cost per Month</label>
 			  <input name="spinkpermonth" id="spinkpermonth" value="832" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spmonthlyamort">Monthly Amortization&nbsp;<sup>4</sup></label>
+			  <label for="spmonthlyamort">Printer Lease Payment per Month&nbsp;<sup>4</sup></label>
 			  <input name="spmonthlyamort" id="spmonthlyamort" value="" type="text" readonly class="money">
 		  </div>
 	  </div>

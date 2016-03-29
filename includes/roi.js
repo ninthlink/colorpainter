@@ -154,7 +154,7 @@ function siiC(e) {
   // Printed SQFT per Week = 600 * rollsperwk
 	var sqftperwk = 600 * rollsperwk;
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
-	$('#sqftperwk,#ssqftperwk,#psqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
+	$('#sqftperwk,#ssqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
   
   // Printed SQFT per Month = sqftperwk * (52/12)
 	var sqftpermo = siiR( sqftperwk * (52/12) );
@@ -184,7 +184,7 @@ function siiC(e) {
   //var c_monthly = siiR(c_price/(years*12));
   var c_monthly = siiR( c_price * lrf );
   //roiDbg('C11 "monthlyamort" = '+ C11);
-  $('#monthlyamort,#smonthlyamort').val(c_monthly).autoNumeric('update');
+  $('#smonthlyamort').val(c_monthly).autoNumeric('update');
   
   var s_inkpermonth = siiR((s_ink*sqftperwk)*(52/12));
   //roiDbg('C20 "pinkpermonth: = '+ s_inkpermonth);
@@ -194,7 +194,7 @@ function siiC(e) {
   var s_monthly = siiR( s_price * lrf );
   //var s_monthly = siiR(s_price/(years*12));
   //roiDbg('C22 "pmonthlyamort" = '+ s_monthly);
-  $('#pmonthlyamort,#spmonthlyamort').val(s_monthly).autoNumeric('update');
+  $('#spmonthlyamort').val(s_monthly).autoNumeric('update');
   
   var c_total = c_monthly+c_inkpermonth;
   //roiDbg('C25 "cmonthlytotal" = '+ c_total);
