@@ -1,15 +1,6 @@
 var siip = [
 	{ name: 'Please Select' },
 	{
-		name: 'ColorPainter W-64s - 6 Color GX Ink',
-		ink: 0.22,
-		msrp: 20998,
-		spd: 128,
-		img: 'w64s',
-		iht: 236,
-		desc: '64" entry-level printer over-delivers with the advanced print technology and innovative ink formulations that provide fast, rich glossy colors, with sharp detail on a host of materials&mdash;from banners to backlit film&mdash;making it the ultimate choice for a majority of print shops. 3M&trade; MCS&trade; Warranty.'
-	},
-	{
 		name: 'ColorPainter M-64s - 7 Color SX Ink',
 		ink: 0.18,
 		msrp: 29999,
@@ -26,6 +17,15 @@ var siip = [
 		img: 'h3104',
 		iht: 165,
 		desc: '104" high-performance printer engineered for fast print speed, rugged durability and standout performance in mid-range, high-volume environments. It\'s designed with a host of innovative features that streamline operation, boost productivity and simplify operator input for exceptional ROI. 3M&trade; MCS&trade; Warranty.'
+	},
+	{
+		name: 'ColorPainter W-64s - 6 Color GX Ink',
+		ink: 0.22,
+		msrp: 20998,
+		spd: 128,
+		img: 'w64s',
+		iht: 236,
+		desc: '64" entry-level printer over-delivers with the advanced print technology and innovative ink formulations that provide fast, rich glossy colors, with sharp detail on a host of materials&mdash;from banners to backlit film&mdash;making it the ultimate choice for a majority of print shops. 3M&trade; MCS&trade; Warranty.'
 	}
 ];
 var siilrfs = [0,0,0,0.03195,0.02495,0.02068];
@@ -154,12 +154,10 @@ function siiC(e) {
   // Printed SQFT per Week = 600 * rollsperwk
 	var sqftperwk = 600 * rollsperwk;
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
-	$('#sqftperwk,#ssqftperwk,#spsqftperwk').val(sqftperwk).autoNumeric('update');
-  
-  // Printed SQFT per Month = sqftperwk * (52/12)
+	// Printed SQFT per Month = sqftperwk * (52/12)
 	var sqftpermo = siiR( sqftperwk * (52/12) );
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
-	$('#psqftpermo').val(sqftpermo).autoNumeric('update');
+	$('#psqftpermo,#sqftpermo,#ssqftpermo,#spsqftpermo').val(sqftpermo).autoNumeric('update');
   
   c_price = $('#price').autoNumeric('get');
   $('#sprice').val(c_price).autoNumeric('update');
@@ -180,6 +178,7 @@ function siiC(e) {
   
   // Lease Rate Factor
   var lrf = $('#lrf').autoNumeric('get');
+  $('#clrf, #slrf').val(lrf);
   
   //var c_monthly = siiR(c_price/(years*12));
   var c_monthly = siiR( c_price * lrf );
