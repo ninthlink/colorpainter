@@ -48,9 +48,9 @@
 		  <select name="rollsperwk" id="rollsperwk" disabled="disabled">
 			  <option value="1">1</option>
 			  <option value="2">2</option>
-			  <option value="3">3</option>
+			  <option value="3" selected="selected">3</option>
 			  <option value="4">4</option>
-			  <option value="5" selected="selected">5</option>
+			  <option value="5">5</option>
 			  <option value="6">6</option>
 			  <option value="7">7</option>
 			  <option value="8">8</option>
@@ -72,8 +72,12 @@
 		  <input type="radio" name="amortper" id="amortper-5" value="5" disabled="disabled">
 	  </fieldset>
 	  <div class="fieldrow disabled lrf">
-		  <label for="lrf">Lease Rate Factor</label>
+		  <label for="lrf">Lease Rate Factor &nbsp; <a href="#lrfinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
 		  <input name="lrf" id="lrf" value="0.03195" type="text" class="number" data-m-dec="5" disabled="disabled">
+		  <div data-role="popup" id="lrfinfo" class="ui-content" data-theme="a" style="max-width:320px">
+			  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			  <p>Equipment monthly lease payment is determined by multiplying the printer price by the lease rate factor.</p>
+		  </div>
 	  </div>
 	  <div class="plaintext disabled">
 		  <div class="ui-field-contain">
@@ -121,8 +125,8 @@
 			  <input name="prollsperwk" id="prollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sqftperwk">Printed SQFT per&nbsp;Week &nbsp; <a href="#sqftinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
-			  <input name="sqftperwk" id="sqftperwk" value="1200" type="text" class="number" data-m-dec="0" readonly />
+			  <label for="sqftpermo">Printed SQFT per&nbsp;Month &nbsp; <a href="#sqftinfo" data-rel="popup" data-transition="pop" title="Learn more" class="rpop">?</a></label>
+			  <input name="sqftpermo" id="sqftpermo" value="3000" type="text" class="number" data-m-dec="0" readonly />
 			  <div data-role="popup" id="sqftinfo" class="ui-content" data-theme="a" style="max-width:320px">
 				  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 				  <p>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll.</p>
@@ -162,11 +166,17 @@
 			  <small>/mo</small>
 		  </div>
 		  <div class="ui-field-contain mo bigger col1">
-			  <label for="esthrs"><strong>Time <span class="save">Savings</span>*</strong></label>
+			  <label for="esthrs"><strong>Time <span class="save">Savings</span></strong></label>
 			  <input name="esthrs" id="esthrs" value="26" type="number" readonly class="number" data-m-dec="0" data-v-min="-999999999">
 			  <div class="val" id="vesthrs"></div>
 			  <small>hrs/mo</small>
 		  </div>
+		  <div class="ui-field-contain mo mainline doubleline">
+			  <label for="inkcost"><strong>Ink Cost <span class="save">Savings<!-- or Loss--></span> for Term of Lease</strong></label>
+			  <input name="inkcost" id="inkcost" value="14840" type="text" readonly class="money" data-v-min="-999999999.99">
+			  <small>&nbsp;/term</small>
+		  </div>
+      <!--
 		  <div class="ui-field-contain mo bigger col3">
 			  <label for="arp"><strong>Additional Revenue Potential <small>(based on time savings)</small></strong></label>
 			  <input name="arp" id="arp" value="199680" type="text" readonly class="money" data-m-dec="0">
@@ -180,11 +190,12 @@
 			  <small>/term</small>
         </div>
 		  </div>
+      -->
 		  <div class="ui-field-contain mainline hd">Total Cost of Printer &amp; Ink</div>
 		  <div class="ui-field-contain mo mainline doubleline">
-			  <label for="profit"><strong><span class="save">Profit<!-- or Loss--></span> for Term of Lease</strong></label>
-			  <input name="profit" id="profit" value="14840" type="text" readonly class="money" data-v-min="-999999999.99">
-			  <small>&nbsp;/term</small>
+			  <label for="costpermonth"><strong><span class="save">Savings<!-- or Loss--></span> with ColorPainter Printer</strong></label>
+			  <input name="costpermonth" id="costpermonth" value="247.33" type="text" readonly class="money" data-v-min="-999999999.99">
+			  <small>&nbsp;/mo</small>
 		  </div>
 		  <div class="ui-field-contain mo mainline">
 			  <label for="cmonthlytotal"><strong>Competitive Printer</strong></label>
@@ -197,15 +208,36 @@
 			  <small>&nbsp;/mo</small>
 		  </div>
 		  <div class="ui-field-contain mo mainline bottomline">
-			  <label for="costpermonth"><strong><span class="save">Savings<!-- or Loss--></span> with ColorPainter Printer</strong></label>
-			  <input name="costpermonth" id="costpermonth" value="247.33" type="text" readonly class="money" data-v-min="-999999999.99">
-			  <small>&nbsp;/mo</small>
-		  </div>
-		  <div class="ui-field-contain mo mainline doubleline">
-			  <label for="inkcost"><strong>Ink Cost <span class="save">Savings<!-- or Loss--></span><small>&nbsp;(ink only)</small></strong></label>
-			  <input name="inkcost" id="inkcost" value="14840" type="text" readonly class="money" data-v-min="-999999999.99">
+			  <label for="profit"><strong><span class="save">Profit<!-- or Loss--></span> for Term of Lease</strong></label>
+			  <input name="profit" id="profit" value="14840" type="text" readonly class="money" data-v-min="-999999999.99">
 			  <small>&nbsp;/term</small>
 		  </div>
+		  <div class="ui-field-contain mo mainline doubleline">
+			  <label for="arp"><strong>Additional Revenue Potential</strong></label>
+			  <input name="arp" id="arp" value="199680" type="text" readonly class="money" data-m-dec="0">
+			  <small>&nbsp;/mo</small>
+		  </div>
+		  <div class="ui-field-contain mo mainline">
+			  <label for="arptt">based on time savings and amt charged per SQFT</label>
+			  <input name="arptt" id="arptt" value="7199680" type="text" readonly class="money" data-m-dec="0">
+			  <small>&nbsp;/term</small>
+		  </div>
+      <!--
+      
+		  <div class="ui-field-contain mo bigger col3">
+			  <label for="arp"><strong>Additional Revenue Potential <small>(based on time savings)</small></strong></label>
+			  <input name="arp" id="arp" value="199680" type="text" readonly class="money" data-m-dec="0">
+			  <input name="arptt" id="arptt" value="7199680" type="text" readonly class="money" data-m-dec="0">
+        <div class="col3h">
+			  <div class="val" id="arpm"></div>
+			  <small>/mo&nbsp;&nbsp;</small>
+        </div>
+        <div class="col3h">
+			  <div class="val" id="arpt"></div>
+			  <small>/term</small>
+        </div>
+		  </div>
+      -->
 	  </div>
 	  <div class="plaintext stripe last midback">
 	  <a href="http://www.okidata.com/profinance" target="_blank" class="ui-btn next b">GET FINANCING PRE-APPROVAL IN HOURS!</a> <a href="http://www.okidata.com/profinance" target="_blank" class="ui-btn next b d">REQUEST A DEMO</a>
@@ -216,7 +248,7 @@
 	  <div class="plaintext stripe">
 		  <h5>COMPETITOR PRINTER</h5>
 		  <div class="ui-field-contain">
-			  <label for="sprice">Price of Competitive Printer</label>
+			  <label for="sprice">Retail Price of Competitive Printer</label>
 			  <input name="sprice" id="sprice" value="20000" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain">
@@ -224,7 +256,7 @@
 			  <input name="sspeed" id="sspeed" value="128" type="text" class="number" readonly data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="sinkpersqft">Cost of Ink per&nbsp;SQFT&nbsp;<sup>2</sup></label>
+			  <label for="sinkpersqft">Ink Cost per&nbsp;SQFT&nbsp;<sup>2</sup></label>
 			  <input name="sinkpersqft" id="sinkpersqft" value="0.28" type="text" class="money" readonly />
 		  </div>
 		  <div class="ui-field-contain">
@@ -232,8 +264,8 @@
 			  <input name="sprollsperwk" id="sprollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="ssqftperwk">Printed SQFT per&nbsp;Week</label>
-			  <input name="ssqftperwk" id="ssqftperwk" value="1200" type="text" class="number" readonly data-m-dec="0">
+			  <label for="ssqftpermo">Printed SQFT per&nbsp;Month</label>
+			  <input name="ssqftpermo" id="ssqftpermo" value="3000" type="text" class="number" readonly data-m-dec="0">
 		  </div>
 		  <div class="ui-field-contain">
 			  <label for="sinkpermonth">Total Ink Cost per Month</label>
@@ -242,6 +274,10 @@
 		  <div class="ui-field-contain">
 			  <label for="spamortper">Lease Period in Years</label>
 			  <input name="spamortper" id="spamortper" value="5" type="text" readonly />
+		  </div>
+		  <div class="ui-field-contain">
+			  <label for="clrf">Lease Rate Factor</label>
+			  <input name="clrf" id="clrf" value="0.03195" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
 			  <label for="smonthlyamort">Printer Lease Payment Per Month&nbsp;<sup>4</sup></label>
@@ -255,7 +291,7 @@
 			  <input name="sprinter" id="sprinter" value="" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spsellprice">MSRP Price of ColorPainter Printer</label>
+			  <label for="spsellprice">Retail Price of ColorPainter Printer</label>
 			  <input name="spsellprice" id="spsellprice" value="" type="text" class="money" data-m-dec="0" readonly />
 		  </div>
 		  <div class="ui-field-contain">
@@ -271,16 +307,20 @@
 			  <input name="srollsperwk" id="srollsperwk" value="2" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spsqftperwk">Printed SQFT per Week</label>
-			  <input name="spsqftperwk" id="spsqftperwk" value="1200" type="text" class="number" readonly data-m-dec="0">
+			  <label for="spsqftpermo">Printed SQFT per Month</label>
+			  <input name="spsqftpermo" id="spsqftpermo" value="3000" type="text" class="number" readonly data-m-dec="0">
+		  </div>
+		  <div class="ui-field-contain">
+			  <label for="spinkpermonth">Total Ink Cost per Month</label>
+			  <input name="spinkpermonth" id="spinkpermonth" value="832" type="text" readonly class="money">
 		  </div>
 		  <div class="ui-field-contain">
 			  <label for="samortper">Lease Period in Years</label>
 			  <input name="samortper" id="samortper" value="5" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
-			  <label for="spinkpermonth">Total Ink Cost per Month</label>
-			  <input name="spinkpermonth" id="spinkpermonth" value="832" type="text" readonly class="money">
+			  <label for="slrf">Lease Rate Factor</label>
+			  <input name="slrf" id="slrf" value="0.03195" type="text" readonly />
 		  </div>
 		  <div class="ui-field-contain">
 			  <label for="spmonthlyamort">Printer Lease Payment per Month&nbsp;<sup>4</sup></label>
@@ -288,7 +328,7 @@
 		  </div>
 	  </div>
 	  <div class="plaintext stripe last">
-		  <p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 ml ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. The ColorPainter ink per SQFT is calculated on the same premise using one specific image, and takes into account its higher pigment load. <sup>3</sup>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll. <sup>4</sup>Calculations do not include a lease rate or depreciation.</p>
+		  <p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 ml ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. <sup>3</sup>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll. <sup>4</sup>Printer monthly payment is determined by multiplying the printer price by the rate factor. Rates are subject to credit approval and do not reflect any promotional rates.</p>
 		  <p class="again"><a href="#cpp" data-role="none">Restart Calculator</a></p>
 	  </div>
 
