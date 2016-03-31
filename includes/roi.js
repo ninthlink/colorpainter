@@ -1,3 +1,4 @@
+var siib = 'http://nlkdev.net/roicalc/';
 var siip = [
 	{ name: 'Please Select' },
 	{
@@ -30,7 +31,6 @@ var siip = [
 ];
 var siilrfs = [0,0,0,0.03195,0.02495,0.02068];
 var siid = 0; // index to choose
-var siib = 'http://nlkdev.net/roicalc/';
 //var roiDebug = true; // = console.log debug msgs ?
 var siio = {
 	aSign: '$'
@@ -106,7 +106,7 @@ function siiU() {
  * show/hide some fields for Jetrix or not-Jetrix...
  */
 function siiJ() {
-	$('#cpp a').attr('href', ( siij ? '#results' : '#competitor' ) );
+	$('#cpp a.ui-btn:last').attr('href', ( siij ? '#results' : '#competitor' ) );
 	if ( siij ) {
     //console.log('siiJ = true');
 		// show Jetrix stuff, and hide some others
@@ -246,14 +246,14 @@ function siiC(e) {
   var arp_mo = timesavings * s_speed * ppersqft;
   $('#arp').val(arp_mo).autoNumeric('update');
   // update the ARP/mo
-  console.log('ARP/mo = '+ arp_mo +' = '+ $('#arp').val());
+  //console.log('ARP/mo = '+ arp_mo +' = '+ $('#arp').val());
   $('#arpm').html($('#arp').val());
   
   // ARP per Term
   var arp_tm = arp_mo * years * 12;
   $('#arptt').val(arp_tm).autoNumeric('update');
   // update the ARP/tm
-  console.log('ARP/tm = '+ arp_tm +' = '+ $('#arptt').val());
+  //console.log('ARP/tm = '+ arp_tm +' = '+ $('#arptt').val());
   $('#arpt').html($('#arptt').val());
   
   // and then save the output
