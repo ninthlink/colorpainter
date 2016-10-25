@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v 2.0.7 / 2016-03-31
+# v 2.1.0 / 2016-10-25
 
 CACHE:
 index.html
@@ -34,7 +34,7 @@ includes/roi.min.js
 includes/add2home.min.js
 includes/images/printers/h3104.jpg
 includes/images/printers/m64.jpg
-includes/images/printers/w64s.jpg
+includes/images/printers/e64s.jpg
 
 NETWORK:
 *
