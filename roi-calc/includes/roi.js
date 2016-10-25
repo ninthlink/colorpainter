@@ -1,4 +1,4 @@
-var siib = 'http://nlkdev.net/roicalc/';
+var siib = 'http://www.okidata.com/ColorPainterROI/';
 var siip = [
 	{ name: 'Please Select' },
 	{
@@ -20,13 +20,13 @@ var siip = [
 		desc: '104" high-performance printer engineered for fast print speed, rugged durability and standout performance in mid-range, high-volume environments. It\'s designed with a host of innovative features that streamline operation, boost productivity and simplify operator input for exceptional ROI. 3M&trade; MCS&trade; Warranty.'
 	},
 	{
-		name: 'ColorPainter W-64s - 6 Color GX Ink',
-		ink: 0.22,
-		msrp: 20998,
-		spd: 128,
-		img: 'w64s',
-		iht: 236,
-		desc: '64" entry-level printer over-delivers with the advanced print technology and innovative ink formulations that provide fast, rich glossy colors, with sharp detail on a host of materials&mdash;from banners to backlit film&mdash;making it the ultimate choice for a majority of print shops. 3M&trade; MCS&trade; Warranty.'
+		name: 'ColorPainter E-64s - 6 Color SX Ink',
+		ink: 0.15,
+		msrp: 14999,
+		spd: 161,
+		img: 'e64s',
+		iht: 222,
+		desc: 'ColorPainter E-64s shatters expectations within the lower-volume print environments. Engineered with innovative technology that produces rich, vibrant graphics with exceptional color saturation and outdoor durability; combined with ease of use and excellent ROI, the E-64s is an incredible value for professionals of all levels. It has attained the 3M MCS Warranty & GREENGUARD Gold Certification.'
 	}
 ];
 var siilrfs = [0,0,0,0.03195,0.02495,0.02068];
@@ -43,30 +43,30 @@ var siij = false;
  */
 function siiU() {
 	//roiDbg('## ROI Update :: printer change');
-	
+
 	var C14 = $('#printer').val();
 	//roiDbg('printer #'+ C14);
 	//roiDbg(siip[C14]);
-	
+
 	if ( C14 > 0 ) {
 		// enable things?
 		var sibs = $('#printer').parents('fieldset').siblings().removeClass('disabled');
 		sibs.find('.ui-input-text input').textinput('enable');
 		sibs.find('.ui-select select').selectmenu('enable');
 		sibs.find('.ui-radio input').checkboxradio('enable');
-		
+
 		var C15 = siip[C14]['msrp'];
 		//roiDbg('psellprice = '+ C15);
 		$('#psellprice').val(C15).autoNumeric('update');
-		
+
 		var C16 = siip[C14]['spd'];
 		//roiDbg('pspeed = '+ C16);
 		$('#pspeed,#spspeed').val(C16).autoNumeric('update');
-		
+
 		var C17 = siip[C14]['ink'];
 		//roiDbg('pinkpersqft = '+ C17);
 		$('#pinkpersqft').val(C17).autoNumeric('update');
-		
+
 		// also printer name
 		var pname = siip[C14]['name'];
     $('.pname').html( function(i, h) {
@@ -83,7 +83,7 @@ function siiU() {
 		//var pd = siip[C14]['desc'];
 		//pd = pd.replace(/<li>/g, '').replace(/<\/li>/g, '. ').replace(/ul>/g,'p>');
 		$('.printerinfos').html( '<h3>'+ bname +'</h3><p>'+ siip[C14]['desc'] + '</p>' );
-		
+
 		// and then : check jetrix?
 		siij = ( pname == 'Jetrix KX5' );
 		siiJ();
@@ -132,25 +132,25 @@ function siiJ() {
  */
 function siiC(e) {
 	var years, c_price, c_speed, c_ink00;
-	
+
   // the ColorPainter printer (info from the array at the top of this file)
-	var s_printer = $('#printer').val();	
-	
+	var s_printer = $('#printer').val();
+
   // Retail Price of ColorPainter Printer
-	var s_price = $('#psellprice').autoNumeric('get');	
+	var s_price = $('#psellprice').autoNumeric('get');
 	$('#spsellprice').val(s_price).autoNumeric('update');
-  
+
 	// "Advertised Production Mode Speed SQFT per Hour" aka 'spd' value
 	var s_speed = $('#pspeed').autoNumeric('get');
-	
+
   // ColorPainter Ink cost per SQFT, defaults to 'ink' value but overridable
 	var s_ink = siiR( $('#pinkpersqft').autoNumeric('get') ); //hax
 	$('#spinkpersqft').val(s_ink).autoNumeric('update');
-	
+
   // Number of Rolls per Week
 	var	rollsperwk = $('#rollsperwk').val();
 	$('#prollsperwk,#sprollsperwk,#srollsperwk').val(rollsperwk);
-	
+
   // Printed SQFT per Week = 600 * rollsperwk
 	var sqftperwk = 600 * rollsperwk;
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
@@ -158,7 +158,7 @@ function siiC(e) {
 	var sqftpermo = siiR( sqftperwk * (52/12) );
 	//roiDbg('C8 "sqftperwk" = '+ sqftperwk);
 	$('#psqftpermo,#sqftpermo,#ssqftpermo,#spsqftpermo').val(sqftpermo).autoNumeric('update');
-  
+
   c_price = $('#price').autoNumeric('get');
   $('#sprice').val(c_price).autoNumeric('update');
   c_speed = $('#speed').autoNumeric('get');
@@ -166,50 +166,50 @@ function siiC(e) {
   c_ink00 = Math.round( $('#inkpersqft').autoNumeric('get') * 100, 2 );
   var c_ink = c_ink00 / 100;
   $('#sinkpersqft').val(c_ink).autoNumeric('update');
-  
+
   var c_inkpermonth = siiR((c_ink*sqftperwk)*(52/12));
   //roiDbg('C9 c_inkpermonth "inkpermonth" = '+ c_inkpermonth);
   $('#inkpermonth,#sinkpermonth').val(c_inkpermonth).autoNumeric('update');
-  
+
   // Lease Period in Years
   years = $('#amortper-5').prop('checked') ? 5 : ( $('#amortper-4').prop('checked') ? 4 : 3 );
   //roiDbg('C21 years "pamortper" = '+ years);
   $('#pamortper, #samortper, #spamortper').val(years);
-  
+
   // Lease Rate Factor
   var lrf = $('#lrf').autoNumeric('get');
   $('#clrf, #slrf').val(lrf);
-  
+
   //var c_monthly = siiR(c_price/(years*12));
   var c_monthly = siiR( c_price * lrf );
   //roiDbg('C11 "monthlyamort" = '+ C11);
   $('#smonthlyamort').val(c_monthly).autoNumeric('update');
-  
+
   var s_inkpermonth = siiR((s_ink*sqftperwk)*(52/12));
   //roiDbg('C20 "pinkpermonth: = '+ s_inkpermonth);
   $('#pinkpermonth,#spinkpermonth').val(s_inkpermonth).autoNumeric('update');
-  
+
   // Printer Lease Payment per Month
   var s_monthly = siiR( s_price * lrf );
   //var s_monthly = siiR(s_price/(years*12));
   //roiDbg('C22 "pmonthlyamort" = '+ s_monthly);
   $('#spmonthlyamort').val(s_monthly).autoNumeric('update');
-  
+
   var c_total = c_monthly+c_inkpermonth;
   //roiDbg('C25 "cmonthlytotal" = '+ c_total);
   $('#cmonthlytotal').val(c_total).autoNumeric('update');
-  
+
   var s_total = s_monthly+s_inkpermonth;
   //roiDbg('C26 "monthlytotal" = '+ s_monthly);
   $('#monthlytotal').val(s_total).autoNumeric('update');
-  
+
   var costpermonth = siiR( c_total - s_total );
   //roiDbg('C27 "costpermonth" = '+ costpermonth);
   var cpmzs = '' + ( costpermonth >= 1000 ? 0 : 2 );
   $('#costpermonth').val(costpermonth).autoNumeric('update', { mDec: cpmzs });
   // & check for "Savings" vs "Loss"
   $('#costpermonth').parent().siblings('label').find('.save').html( costpermonth >= 0 ? 'Savings' : 'Loss');
-  
+
   var inkpermonth = siiR( c_inkpermonth - s_inkpermonth );
   //roiDbg('C27 "costpermonth" = '+ costpermonth);
   var ipmzs = '' + ( inkpermonth >= 1000 ? 0 : 2 );
@@ -217,18 +217,18 @@ function siiC(e) {
   // & check for "Savings" vs "Loss"
   $('#inkcostpermonth').parent().siblings('label').find('.save').html( inkpermonth >= 0 ? 'Savings' : 'Loss');
   $('#vinkcost').html($('#inkcostpermonth').val());
-  
+
   var inktot = inkpermonth * years * 12;
   $('#inkcost').val(inktot).autoNumeric('update');
   // & check for "Savings" vs "Loss"
   $('#inkcost').parent().siblings('label').find('.save').html( inktot >= 0 ? 'Savings' : 'Loss');
-  
+
   var profit = costpermonth*(years*12);
   //roiDbg('C28 "additional" = '+ profit);
   $('#profit').val(profit).autoNumeric('update');
   // & check for "Savings" vs "Loss"
   $('#profit').parent().siblings('label').find('.save').html( profit >= 0 ? 'Profit' : 'Loss');
-  
+
   var timesavings = (( sqftperwk / c_speed ) - ( sqftperwk / s_speed ))*52/12;
   var C29 = siiR( timesavings );
   //roiDbg('C29 "esthrs" = '+ C29);
@@ -237,10 +237,10 @@ function siiC(e) {
   $('#esthrs').parent().siblings('label').find('.save').html( C29 >= 0 ? 'Savings' : 'Loss');
   // update the TIME SAVINGS
   $('#vesthrs').html($('#esthrs').val());
-  
+
   // Price Charged per SQFT
   var ppersqft = $('#ppersqft').autoNumeric('get');
-  
+
   // Additional Revenue Potential
   // Hrs time savings x ColorPainter printer speed per SQFT x Price per SQFT
   var arp_mo = timesavings * s_speed * ppersqft;
@@ -248,14 +248,14 @@ function siiC(e) {
   // update the ARP/mo
   //console.log('ARP/mo = '+ arp_mo +' = '+ $('#arp').val());
   $('#arpm').html($('#arp').val());
-  
+
   // ARP per Term
   var arp_tm = arp_mo * years * 12;
   $('#arptt').val(arp_tm).autoNumeric('update');
   // update the ARP/tm
   //console.log('ARP/tm = '+ arp_tm +' = '+ $('#arptt').val());
   $('#arpt').html($('#arptt').val());
-  
+
   // and then save the output
 	siiS(years, s_printer, c_price, c_speed, c_ink00, rollsperwk);
 }
@@ -281,7 +281,7 @@ function siiS(C10, C14, C4, C5, C6, C7) {
 	C7 = '' + C7;
 	// combine them all into 1 compact string? here be dragons...
 	siis = C14a + C7 + C4a.length + C4a + C5a.length + C5a + C6a;
-	
+
 	//roiDbg('C10 ' + C10 + ' C14 ' + C14 + ' : C14a ' + C14a + ' C7 ' + C7 + ' C4L ' + C4a.length + ' C4a ' + C4a + ' C5L ' + C5a.length + ' C5a ' + C5a + ' C6a ' + C6a + ' :: ' + siis);
 	$('#saver').val( siib + '?s=' + siis.toUpperCase());
 }
@@ -361,7 +361,7 @@ jQuery(document).one('pagechange', function() {
 		$(this).autoNumeric('init', numopts);
 	});
 	$('input.number').attr('type','text').autoNumeric('init');
-	
+
 	// bind the update
 	$('#price, #inkpersqft, #rollsperwk, #speed, #psellprice, #pinkpersqft').bind('change', siiC);
 	$('input[type="radio"]').bind({
@@ -380,7 +380,7 @@ jQuery(document).one('pagechange', function() {
 			} catch(e) {
 				//roiDbg('xxxx checkboxradio refresh fail xxxx');
 			}
-      
+
       // also update lrf based on amortper
       if ( $(this).attr('name') == 'amortper' ) {
         $('#lrf').val( siilrfs[ $(this).val() ] ).autoNumeric('update');
@@ -398,7 +398,7 @@ jQuery(document).one('pagechange', function() {
 		// just default amortper-3 on
 		siiP(3);
 	}
-	
+
 	$('#printer').each(function() {
 		$(this).html(function() {
 			var h = '', n = '';
@@ -422,26 +422,26 @@ jQuery(document).one('pagechange', function() {
 			siiU();
 		}
 	});
-	
+
 	$('a.next').bind('click',function() {
 		if ( $(this).hasClass('disabled') ) return false;
 	});
-	
+
 	$('.plaintext.stripe').each(function() {
 		$(this).children('.ui-field-contain:even').addClass('even');
 	});
-	
+
 	$("#saver").focus(function(e){e.preventDefault();siiT($(this));}).mouseup(function(e) { e.preventDefault(); }).on('tap', function() {
 		siiT($(this));
 	}).on('vmouseup', function(e) { e.preventDefault(); });
-	
+
 	// bind for subsequent updates
 	$(document).bind('pagechange', function() {
-		//roiDbg('PPPPPPPP PAGELOAD PPPPPPP');		
+		//roiDbg('PPPPPPPP PAGELOAD PPPPPPP');
 		clearTimeout(siit);
 		siit = setTimeout(siiC, 100);
 	});
-	
+
 	$('.mailto').click(function() {
 		var emto = prompt("Please enter your email address","you@domain.com");
 		if ( emto!= null ) {
