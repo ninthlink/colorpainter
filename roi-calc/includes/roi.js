@@ -2,6 +2,15 @@ var siib = 'http://www.okidata.com/ColorPainterROI/';
 var siip = [
 	{ name: 'Please Select' },
 	{
+		name: 'ColorPainter E-64s - 6 Color SX Ink',
+		ink: 0.15,
+		msrp: 14999,
+		spd: 161,
+		img: 'e64s',
+		iht: 222,
+		desc: 'ColorPainter E-64s shatters expectations within the lower-volume print environments. Engineered with innovative technology that produces rich, vibrant graphics with exceptional color saturation and outdoor durability; combined with ease of use and excellent ROI, the E-64s is an incredible value for professionals of all levels. It has attained the 3M MCS Warranty & GREENGUARD Gold Certification.'
+	},
+	{
 		name: 'ColorPainter M-64s - 7 Color SX Ink',
 		ink: 0.18,
 		msrp: 29999,
@@ -18,15 +27,6 @@ var siip = [
 		img: 'h3104',
 		iht: 165,
 		desc: '104" high-performance printer engineered for fast print speed, rugged durability and standout performance in mid-range, high-volume environments. It\'s designed with a host of innovative features that streamline operation, boost productivity and simplify operator input for exceptional ROI. 3M&trade; MCS&trade; Warranty.'
-	},
-	{
-		name: 'ColorPainter E-64s - 6 Color SX Ink',
-		ink: 0.15,
-		msrp: 14999,
-		spd: 161,
-		img: 'e64s',
-		iht: 222,
-		desc: 'ColorPainter E-64s shatters expectations within the lower-volume print environments. Engineered with innovative technology that produces rich, vibrant graphics with exceptional color saturation and outdoor durability; combined with ease of use and excellent ROI, the E-64s is an incredible value for professionals of all levels. It has attained the 3M MCS Warranty & GREENGUARD Gold Certification.'
 	}
 ];
 var siilrfs = [0,0,0,0.03195,0.02495,0.02068];
