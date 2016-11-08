@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-touch-fullscreen" content="yes">
-	
+
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
   <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
@@ -30,13 +30,13 @@
   <div class="ui-body ui-body-a">
 	  <div class="progress p1"></div>
 	  <fieldset class="fieldrow">
-		  <label for="printer">ColorPainter Printer from OKI</label>
+		  <label for="printer">ColorPainter Printer from OKI *</label>
 		  <select name="printer" id="printer">
 			  <option value="">Please Select</option>
 		  </select>
 	  </fieldset>
 	  <div class="fieldrow disabled">
-		  <label for="psellprice">Retail Price of Printer</label>
+		  <label for="psellprice">Retail Price of Printer *</label>
 		  <input name="psellprice" id="psellprice" value="" type="text" class="money" data-m-dec="0" disabled="disabled">
 	  </div>
 	  <div class="fieldrow disabled">
@@ -47,8 +47,8 @@
 		  <label for="rollsperwk">Number of 54"x50 YD Rolls per Week</label>
 		  <select name="rollsperwk" id="rollsperwk" disabled="disabled">
 			  <option value="1">1</option>
-			  <option value="2">2</option>
-			  <option value="3" selected="selected">3</option>
+			  <option value="2" selected="selected">2</option>
+			  <option value="3">3</option>
 			  <option value="4">4</option>
 			  <option value="5">5</option>
 			  <option value="6">6</option>
@@ -93,10 +93,11 @@
 			  <input name="pinkpermonth" id="pinkpermonth" value="832" type="text" readonly class="money">
 		  </div>
 	  </div>
+    <p><small>*Printer models and pricing reflect availability in U.S. &amp; Canada, and associated MSRP in USD.</small></p>
 	  <a href="#competitor" class="ui-btn next disabled">Next</a>
   </div>
 </div>
-    
+
 <div id="competitor" data-role="page" data-title="ColorPainter ROI">
   <div data-role="header" class="ui-header ui-bar-inherit">
 	  <h1 role="heading" class="ui-title"><img src="includes/logo.png" alt="ColorPainter" width="125" height="30" /><strong>Simple</strong> ROI Calculator</h1>
@@ -223,7 +224,7 @@
 			  <small>&nbsp;/term</small>
 		  </div>
       <!--
-      
+
 		  <div class="ui-field-contain mo bigger col3">
 			  <label for="arp"><strong>Additional Revenue Potential <small>(based on time savings)</small></strong></label>
 			  <input name="arp" id="arp" value="199680" type="text" readonly class="money" data-m-dec="0">
@@ -328,7 +329,7 @@
 		  </div>
 	  </div>
 	  <div class="plaintext stripe last">
-		  <p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 ml ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. <sup>3</sup>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll. <sup>4</sup>Printer monthly payment is determined by multiplying the printer price by the rate factor. Rates are subject to credit approval and do not reflect any promotional rates.</p>
+		  <p class="disc cp">Please note: <sup>1</sup>Speed per SQFT per hour can vary based on several factors including file, ink density, image, media, profile, Ripp, etc.  <sup>2</sup>If the competitor cost of ink per SQFT is unknown, then an industry average of .28 is used based on average of 1 ml ink cartridge = 1 SQFT actual usage. This can vary based on ink type, media, profile, print file, saturation level and environmental conditions. <sup>3</sup>For this example, we estimate that you print on 600 SQFT of the 675 SQFT media roll. <sup>4</sup>Printer monthly payment is determined by multiplying the printer price by the rate factor. Rates are subject to credit approval and do not reflect any promotional rates. *Printer models and pricing reflect the availability in U.S. and Canada and the associated msrp in USD.</p>
 		  <p class="again"><a href="#cpp" data-role="none">Restart Calculator</a></p>
 	  </div>
 
